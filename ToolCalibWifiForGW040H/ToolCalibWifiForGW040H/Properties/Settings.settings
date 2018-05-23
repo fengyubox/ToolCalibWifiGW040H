@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ToolCalibWifiForGW040H.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ontIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.1</Value>
+    </Setting>
+    <Setting Name="ontUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="ontPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ttcn@77CN</Value>
+    </Setting>
+    <Setting Name="Instrument" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MT8870A</Value>
+    </Setting>
+    <Setting Name="visaAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TCPIP0::192.168.1.2::inst0::INSTR</Value>
+    </Setting>
+    <Setting Name="RFPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RFIO1</Value>
+    </Setting>
+    <Setting Name="TargetPw2G" Type="System.String" Scope="User">
+      <Value Profile="(Default)">19.5</Value>
+    </Setting>
+    <Setting Name="TargetPw5G" Type="System.String" Scope="User">
+      <Value Profile="(Default)">18</Value>
+    </Setting>
+    <Setting Name="enCalibFreq" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enCalibPw2G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enCalibPw5G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enTestRx2G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enTestRx5G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enTestTx2G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enTestTx5G" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Station" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Trước đóng vỏ</Value>
+    </Setting>
+    <Setting Name="enTestAnten1" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="enTestAnten2" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

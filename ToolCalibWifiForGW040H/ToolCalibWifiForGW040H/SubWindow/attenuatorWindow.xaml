@@ -1,0 +1,25 @@
+﻿<Window x:Class="ToolCalibWifiForGW040H.attenuatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
+        mc:Ignorable="d"
+        Title="attenuatorWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+
+    <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#FFFFFF">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Thiết lập suy hao hệ thống"/>
+                <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
+            </Grid>
+
+        </Grid>
+    </Border>
+
+</Window>

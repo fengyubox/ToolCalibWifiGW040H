@@ -1,0 +1,103 @@
+﻿<Window x:Class="ToolCalibWifiForGW040H.limitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
+        mc:Ignorable="d"
+        Title="limitWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid>
+                            <Border  Name="Border" Margin="0,0,-4,0" BorderThickness="1,1,1,1" CornerRadius="2,12,0,0" >
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2" RecognizesAccessKey="True"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Panel.ZIndex" Value="100"/>
+                                <Setter TargetName="Border" Property="Background" Value="#43d854" />
+                                <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FFEEEEEE" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="Orange" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    
+    <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#FFFFFF">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Thiết lập máy đo"/>
+                <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
+            </Grid>
+
+            <TabControl Grid.Row="1" Margin="0">
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="TX Limit-Config" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+                    <DataGrid x:Name="dgtxlimit" ItemsSource="{Binding}"></DataGrid>
+                </TabItem>
+                
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="RX Limit-Config" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+                    <DataGrid x:Name="dgrxlimit"></DataGrid>
+                </TabItem>
+
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Attenuator-Config" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+                    <DataGrid x:Name="dgattenuator"></DataGrid>
+                </TabItem>
+
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="WaveForm-Config" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+                    <DataGrid x:Name="dgwaveform"></DataGrid>
+                </TabItem>
+
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="ChannelManagement" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+                    <DataGrid x:Name="dgchannelmanagement"></DataGrid>
+                </TabItem>
+            </TabControl>
+
+
+        </Grid>
+    </Border>
+    
+</Window>

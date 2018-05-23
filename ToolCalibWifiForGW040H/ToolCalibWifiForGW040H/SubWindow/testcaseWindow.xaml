@@ -1,0 +1,452 @@
+﻿<Window x:Class="ToolCalibWifiForGW040H.testcaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="testcaseWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+
+    <Window.Resources>
+
+        <Style x:Key="commond" TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid>
+                            <Border  Name="Border" Margin="0,0,-4,0" BorderThickness="1,1,1,1" CornerRadius="2,12,0,0" >
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2" RecognizesAccessKey="True"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Panel.ZIndex" Value="100"/>
+                                <Setter TargetName="Border" Property="Background" Value="#43d854" />
+                                <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#FFEEEEEE" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <!--<Setter TargetName="Border" Property="Background" Value="Orange" />-->
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    
+    </Window.Resources>
+
+
+    <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#FFFFFF">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Thiết lập bài test wifi"/>
+                <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
+            </Grid>
+
+            <TabControl Grid.Row="1" Margin="0">
+
+                <!--Bài test Wifi TX-PCBA-->
+                <TabItem x:Name="tabwifitx" Style="{StaticResource commond}">
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Bài test Wifi TX-PCBA" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+
+                    <TabControl  TabStripPlacement="Bottom">
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Band 2.4GHz" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+
+
+                            <DataGrid Margin="5" x:Name="dgtxBand24" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbtx2wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbtx2rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbtx2bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridTextColumn x:Name="cbbtx2anten" Header="Anten" Width="*" Binding="{Binding anten}"/>
+                                    <DataGridTextColumn x:Name="cbbtx2channelfreq" Header="ChannelFreq" Width="*" Binding="{Binding channelfreq}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Band 5GHz" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+
+                            <DataGrid Margin="5" x:Name="dgtxBand50" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbtx5wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbtx5rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbtx5bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridTextColumn x:Name="cbbtx5anten" Header="Anten" Width="*" Binding="{Binding anten}"/>
+                                    <DataGridTextColumn x:Name="cbbtx5channelfreq" Header="ChannelFreq" Width="*" Binding="{Binding channelfreq}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+
+                        </TabItem>
+
+                    </TabControl>
+
+                </TabItem>
+
+                <!--Bài test Wifi RX-PCBA-->
+                <TabItem x:Name="tabwifirx" Style="{StaticResource commond}">
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Bài test Wifi RX-PCBA" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+
+                    <TabControl  TabStripPlacement="Bottom">
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Band 2.4GHz" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+
+                            <DataGrid Margin="5" x:Name="dgrxBand24" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbrx2wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx2rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx2bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridTextColumn x:Name="cbbrx2anten" Header="Anten" Width="*" Binding="{Binding anten}"/>
+                                    <DataGridTextColumn x:Name="cbbrx2channelfreq" Header="ChannelFreq" Width="*" Binding="{Binding channelfreq}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx2packet" Header="Packet" Width="*" SelectedItemBinding="{Binding packet}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                            
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Band 5GHz" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+
+                            <DataGrid Margin="5" x:Name="dgrxBand50" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbrx5wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx5rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx5bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridTextColumn x:Name="cbbrx5anten" Header="Anten" Width="*" Binding="{Binding anten}"/>
+                                    <DataGridTextColumn x:Name="cbbrx5channelfreq" Header="ChannelFreq" Width="*" Binding="{Binding channelfreq}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbrx5packet" Header="Packet" Width="*" SelectedItemBinding="{Binding packet}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+
+                </TabItem>
+
+                <!--Bài test Anten-Sau đóng vỏ-->
+                <TabItem x:Name="tabwifianten" Style="{StaticResource commond}">
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Bài test Anten-Sau đóng vỏ" FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+
+                    <TabControl  TabStripPlacement="Bottom">
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Anten1" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+                            
+                            <DataGrid Margin="5" x:Name="dganten1" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbat1wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat1rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat1bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat1anten" Header="Anten" Width="*" SelectedItemBinding="{Binding anten}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat1channelfreq" Header="ChannelFreq" Width="*" SelectedItemBinding="{Binding channelfreq}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                        </TabItem>
+
+                        <TabItem>
+                            <TabItem.Header>
+                                <Grid Height="30">
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="Anten2" FontWeight="SemiBold"/>
+                                </Grid>
+                            </TabItem.Header>
+
+                            <DataGrid Margin="5" x:Name="dganten2" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="True" CanUserDeleteRows="True"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Single"
+                                              >
+
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="FontSize" Value="15"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="25"/>
+                                        <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="Height" Value="40"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                        <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                        <Setter Property="Padding" Value="3,0,0,0"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridComboBoxColumn x:Name="cbbat2wifi" Header="WIFI Standard" Width="*" SelectedItemBinding="{Binding wifi}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat2rate" Header="RATE" Width="*" SelectedItemBinding="{Binding rate}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat2bandwidth" Header="Bandwidth" Width="*" SelectedItemBinding="{Binding bandwidth}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat2anten" Header="Anten" Width="*" SelectedItemBinding="{Binding anten}"/>
+                                    <DataGridComboBoxColumn x:Name="cbbat2channelfreq" Header="ChannelFreq" Width="*" SelectedItemBinding="{Binding channelfreq}"/>
+                                </DataGrid.Columns>
+
+                            </DataGrid>
+                        </TabItem>
+                    </TabControl>
+                </TabItem>
+
+            </TabControl>
+
+            <WrapPanel Grid.Row="2" HorizontalAlignment="Right">
+                <Button Content="Save" Click="Button_Click" Height="40" Width="120" FontSize="17" FontWeight="SemiBold" Margin="0,5,10,0"/>
+                <Button Content="Exit" Click="Button_Click" Height="40" Width="120" FontSize="17" FontWeight="SemiBold" Margin="0,5,10,0"/>
+            </WrapPanel>
+
+            <Grid Grid.Row="3" Margin="10,30,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<StackPanel Grid.Column="0">
+                    <Label FontSize="13" FontWeight="Bold" Content="*** Giải thích Wifi Standard"></Label>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="0 = 802.11b"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="1 = 802.11g"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="2 = 802.11a"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="3 = 802.11n"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="4 = 802.11ac"/>
+                </StackPanel>-->
+
+                <StackPanel Grid.Column="0">
+                    <Label FontSize="13" FontWeight="Bold" Content="*** Giải thích Rate - 802.11b"></Label>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="MCS0 = 1MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="MCS1 = 2MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="MCS2 = 5.5MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="MCS3 = 11MHz"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <Label FontSize="13" FontWeight="Bold" Content="*** Giải thích BandWidth"></Label>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="20 = 20MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="40 = 40MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="80 = 80MHz"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="160 = 160MHz"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2">
+                    <Label FontSize="13" FontWeight="Bold" Content="*** Giải thích Anten"></Label>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="1 = Anten1"/>
+                    <Label Margin="20,0,0,0" FontSize="13" Content="2 = Anten2"/>
+                </StackPanel>
+            </Grid>
+            
+        </Grid>
+    </Border>
+
+</Window>

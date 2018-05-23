@@ -116,8 +116,6 @@ namespace ToolCalibWifiForGW040H {
 
         #region MAIN_FUNCTION 
 
-        ModemTelnet _modem = null;
-        Instrument _instrument = null;
 
         private bool Read_All_Config_File() {
             try {
@@ -132,47 +130,6 @@ namespace ToolCalibWifiForGW040H {
             }
         }
 
-        //Kết nối tới ONT
-        private bool TelnetConnect_ONT(string ip, string user, string pass) {
-            try {
-                _modem = new ModemTelnet(ip, 23);
-                if (!_modem.Login(user, pass, 400)) {
-                    return false;
-                }
-                else {
-                    GlobalData.testingData.MACADDRESS = _modem.getMAC();
-                    return true;
-                }
-            }
-            catch (Exception Ex) {
-                Ex.ToString();
-                return false;
-            }
-        }
-
-        //Ket noi toi thiet bi do
-        private bool Connect_Function() {
-            int counter = 0;
-            while (true) {
-                if (!TelnetConnect_ONT(GlobalData.initSetting.ONTIP, GlobalData.initSetting.ONTUSER, GlobalData.initSetting.ONTPASS)) {
-                    counter++;
-                    GlobalData.testingData.LOGSYSTEM = string.Format("[FAIL] Telnet to ONT FAIL => Retry {0}\r\n", counter);
-                    Thread.Sleep(500);
-                    if (counter >= 20) return false;
-                }
-                else {
-                    GlobalData.testingData.LOGSYSTEM = "[OK] Telnet to ONT Successful.\r\n";
-
-                    if (GlobalData.initSetting.INSTRUMENT == "E6640A") {
-                        _instrument = new E6640A_VISA(GlobalData.initSetting.VISAADDRESS);
-                    }
-                    else if (GlobalData.initSetting.INSTRUMENT == "MT8870A") {
-                        _instrument = new MT8870A_VISA(GlobalData.initSetting.VISAADDRESS);
-                    }
-                    return true;
-                }
-            }
-        }
 
         private void RUNALL() {
             _isScroll = true;
@@ -191,7 +148,7 @@ namespace ToolCalibWifiForGW040H {
             }
 
             //Kết nối telnet tới ONT và máy đo
-            if (!Connect_Function()) {
+            if (!baseFunction.Connect_Function()) {
                 GlobalData.testingData.ERRORCODE = "{ ErrorCode: 0x002 }";
                 _flag = false;
                 goto Finished;
@@ -201,14 +158,14 @@ namespace ToolCalibWifiForGW040H {
             GlobalData.logManager.mac = GlobalData.testingData.MACADDRESS;
 
             if (GlobalData.initSetting.STATION == "Trước đóng vỏ") {
-                Calibration calib = new Calibration(_modem, _instrument);
+                Calibration calib = new Calibration(GlobalData.MODEM, GlobalData.INSTRUMENT);
                 if (!calib.Excute()) {
                     _flag = false;
                     goto Finished;
                 }
             }
             else {
-                TestAnten testat = new TestAnten(_modem, _instrument);
+                TestAnten testat = new TestAnten(GlobalData.MODEM, GlobalData.INSTRUMENT);
                 if (!testat.Excute()) {
                     _flag = false;
                     goto Finished;

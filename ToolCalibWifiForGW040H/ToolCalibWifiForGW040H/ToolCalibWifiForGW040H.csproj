@@ -76,10 +76,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Function\Base\baseFunction.cs" />
     <Compile Include="Function\Base\FunctionSupport.cs" />
     <Compile Include="Function\Base\GlobalData.cs" />
     <Compile Include="Function\Base\InitParameters.cs" />
     <Compile Include="Function\Custom\Custom.cs" />
+    <Compile Include="Function\Excute\CalculateAttenuator.cs" />
     <Compile Include="Function\Excute\Calibration.cs" />
     <Compile Include="Function\Excute\TestAnten.cs" />
     <Compile Include="Function\Instrument\E6640A.cs" />

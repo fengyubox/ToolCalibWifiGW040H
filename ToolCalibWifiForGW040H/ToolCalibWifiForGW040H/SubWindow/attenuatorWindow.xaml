@@ -19,6 +19,71 @@
                 <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
             </Grid>
 
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Margin="5,5,5,5" Click="Button_Click" Content="Auto Calculate Attenuator" FontSize="35" FontWeight="SemiBold"/>
+
+                <DataGrid Grid.Row="1" Margin="5,0,5,5" x:Name="dgAttenuator" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Extended"
+                                              >
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                            <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="Height" Value="25"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="13"/>
+                            <Setter Property="Height" Value="40"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="Padding" Value="3,0,0,0"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Channel" Width="*" Binding="{Binding Channel}"/>
+                        <DataGridTextColumn Header="Frequency" Width="*" Binding="{Binding Frequency}"/>
+                        <DataGridTextColumn Header="ant1PowerMaster" Width="*" Binding="{Binding ant1PowerMaster}"/>
+                        <DataGridTextColumn Header="ant2PowerMaster" Width="*" Binding="{Binding ant2PowerMaster}"/>
+                        <DataGridTextColumn Header="measuredPower" Width="*" Binding="{Binding measuredPower}"/>
+                        <DataGridTextColumn Header="Attenuator" Width="*" Binding="{Binding Attenuator}"/>
+                       
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+                <ScrollViewer Grid.Row="2" Margin="5,0,5,5">
+                    <RichTextBox  Background="{StaticResource colorBackground}" IsReadOnly="True" BorderThickness="1" Block.LineHeight="1" Padding="0,5,0,0">
+                        <FlowDocument PageHeight="180">
+                            <Paragraph>
+                                <Run Foreground="#050928" FontWeight="Normal" Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </ScrollViewer>
+
+            </Grid>
+
         </Grid>
     </Border>
 

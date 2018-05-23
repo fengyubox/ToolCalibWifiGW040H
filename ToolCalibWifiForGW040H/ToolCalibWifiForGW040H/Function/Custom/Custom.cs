@@ -494,4 +494,54 @@ namespace ToolCalibWifiForGW040H.Function {
                                  );
         }
     }
+
+    public class logreviewregister {
+
+        public string rangeFreq { get; set; }
+        public string Anten { get; set; }
+        public string groupChannel { get; set; }
+        public string Register { get; set; }
+        public string registerValue { get; set; }
+        public string diffPower { get; set; }
+        public string currentPower { get; set; }
+    }
+
+    public class logreviewtx {
+
+        public string rangeFreq { get; set; }
+        public string Anten { get; set; }
+        public string wifiStandard { get; set; }
+        public string Rate { get; set; }
+        public string Bandwidth { get; set; }
+        public string Channel { get; set; }
+        public string averagePower { get; set; }
+        public string Evm { get; set; }
+        public string centerFreqError { get; set; }
+        public string Result { get; set; }
+    }
+
+    public class logreviewrx {
+
+        public string rangeFreq { get; set; }
+        public string wifiStandard { get; set; }
+        public string Rate { get; set; }
+        public string Bandwidth { get; set; }
+        public string Anten { get; set; }
+        public string Channel { get; set; }
+        public string transmitPower { get; set; }
+        public string Per { get; set; }
+        public string Result { get; set; }
+    }
+
+    public class autoattenuator {
+
+        public string Channel { get; set; }
+        public string Frequency { get; set; }
+        public string ant1PowerMaster { get; set; }
+        public string ant2PowerMaster { get; set; }
+        public string measuredPower { get; set; } 
+        public string Attenuator { get; set; }
+    }
+
+
 }

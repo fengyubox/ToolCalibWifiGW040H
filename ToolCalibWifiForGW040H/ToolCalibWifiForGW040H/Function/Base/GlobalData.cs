@@ -25,6 +25,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static List<limittx> listLimitWifiTX = null;
         public static List<limitrx> listLimitWifiRX = null;
         public static List<channelmanagement> listChannel = null;
+        public static List<masterinformation> listMasterData = null;
 
         public static logdata logManager = null;
         public static logregister logRegister = null;
@@ -43,6 +44,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static List<sensivitity> tmplistrxWifi5G = null;
         public static List<verifysignal> tmplisttestAnten1 = null;
         public static List<verifysignal> tmplisttestAnten2 = null;
+        public static List<verifysignal> tmplistCalAttenuator = null;
 
         public static List<verifysignal> listTestAnten1 = null;
         public static List<verifysignal> listTestAnten2 = null;
@@ -50,8 +52,8 @@ namespace ToolCalibWifiForGW040H.Function {
         public static List<verifysignal> listVerifySignal5G = null;
         public static List<sensivitity> listSensivitity2G = null;
         public static List<sensivitity> listSensivitity5G = null;
+        public static List<verifysignal> listCalAttenuator = null;
 
-      
         //Cau hinh bai test Calib Power TX - 2G
         public static List<calibpower> listCalibPower2G = new List<calibpower>() {
             //ANTEN1

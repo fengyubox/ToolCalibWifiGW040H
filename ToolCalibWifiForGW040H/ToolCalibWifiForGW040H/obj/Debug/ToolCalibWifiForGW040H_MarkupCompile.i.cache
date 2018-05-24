@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\App.xaml
 201148876088
 
-37-817371044
+38-821893485
 19-188125770
 Asset\Resources\Button.xaml;Asset\Resources\CheckBox.xaml;Asset\Resources\Combobox.xaml;Asset\Resources\customWindow.xaml;Asset\Resources\DataGrid.xaml;Asset\Resources\Label.xaml;Asset\Resources\Listbox.xaml;Asset\Resources\RadioButton.xaml;Asset\Resources\Slider.xaml;Asset\Resources\TabControl.xaml;Asset\Resources\Textbox.xaml;Asset\Resources\ToggleButton.xaml;MainWindow.xaml;SubWindow\analyzerWindow.xaml;SubWindow\attenuatorWindow.xaml;SubWindow\configWindow.xaml;SubWindow\instrumentWindow.xaml;SubWindow\limitWindow.xaml;SubWindow\stationWindow.xaml;SubWindow\testcaseWindow.xaml;
 
-False
+True
 

@@ -34,6 +34,27 @@ namespace ToolCalibWifiForGW040H.Function {
             }
         }
 
+        public static bool Save() {
+            try {
+                if (GlobalData.autoAttenuator == null || GlobalData.autoAttenuator.Count == 0) return true;
+                StreamWriter st = new StreamWriter(fileName);
+                string _title = "ChannelNumber,ChannelFreq (Hz),Anten1-Attenuator (dBm),Anten2-Attenuator (dBm)";
+                st.WriteLine(_title);
+
+                //1,2412,1,9.45
+                //1.2412,2,8.54
+                foreach (var item in GlobalData.autoAttenuator) {
+                    string _content = "";
+                    st.WriteLine(_content);
+                }
+                
+                st.Dispose();
+                return true;
+            } catch {
+                return false;
+            }
+        }
+
 
         //Search ChannelNumber từ listAttenuator
         public static string getChannelNumber(string _channelFreq) {

@@ -93,6 +93,7 @@
     <Compile Include="Function\IO\LimitTx.cs" />
     <Compile Include="Function\IO\LogFile.cs" />
     <Compile Include="Function\IO\LogRegister.cs" />
+    <Compile Include="Function\IO\Master.cs" />
     <Compile Include="Function\IO\TestCase.cs" />
     <Compile Include="Function\IO\WaveForm.cs" />
     <Compile Include="Function\Protocol\Modem.cs" />

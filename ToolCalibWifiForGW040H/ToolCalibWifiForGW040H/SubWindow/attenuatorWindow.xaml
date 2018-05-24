@@ -24,14 +24,15 @@
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Margin="5">
-                    <Label FontSize="13" Content="Vui lòng chọn file công suất tiêu chuẩn của bản mạch master:"/>
+                    <Label FontSize="13" FontWeight="SemiBold" Content="Vui lòng chọn file công suất tiêu chuẩn của bản mạch master:"/>
                     <WrapPanel>
-                        <Button Content="Browser..." Width="80" Height="30" Margin="0,0,10,0"/>
-                        <TextBox FontSize="13" Width="798" Text="" IsReadOnly="True"></TextBox>
+                        <Button Content="Browser..." Click="Button_Click" Width="80" Height="30" Margin="0,0,10,0"/>
+                        <TextBox VerticalContentAlignment="Center" Height="30" FontSize="13" Width="798" Text="{Binding Path=FILENAME, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsReadOnly="True"></TextBox>
                     </WrapPanel> 
                    
                 </StackPanel>
@@ -73,20 +74,20 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Channel" Width="*" Binding="{Binding Channel}"/>
                         <DataGridTextColumn Header="Frequency" Width="*" Binding="{Binding Frequency}"/>
-                        <DataGridTextColumn Header="ant1PowerMaster" Width="*" Binding="{Binding ant1PowerMaster}"/>
-                        <DataGridTextColumn Header="ant2PowerMaster" Width="*" Binding="{Binding ant2PowerMaster}"/>
+                        <DataGridTextColumn Header="Anten" Width="*" Binding="{Binding Anten}"/>
+                        <DataGridTextColumn Header="PowerMaster" Width="*" Binding="{Binding PowerMaster}"/>
                         <DataGridTextColumn Header="measuredPower" Width="*" Binding="{Binding measuredPower}"/>
                         <DataGridTextColumn Header="Attenuator" Width="*" Binding="{Binding Attenuator}"/>
-                       
+
                     </DataGrid.Columns>
 
                 </DataGrid>
-
-                <ScrollViewer Grid.Row="3" Margin="5,0,5,5">
+                <GridSplitter Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <ScrollViewer Grid.Row="4" Margin="5,0,5,5" x:Name="_scrollViewer">
                     <RichTextBox  Background="{StaticResource colorBackground}" IsReadOnly="True" BorderThickness="1" Block.LineHeight="1" Padding="0,5,0,0">
                         <FlowDocument PageHeight="180">
                             <Paragraph>
-                                <Run Foreground="#050928" FontWeight="Normal" Text=""/>
+                                <Run Foreground="#050928" FontWeight="Normal" Text="{Binding Path=LOGDATA, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
                             </Paragraph>
                         </FlowDocument>
                     </RichTextBox>

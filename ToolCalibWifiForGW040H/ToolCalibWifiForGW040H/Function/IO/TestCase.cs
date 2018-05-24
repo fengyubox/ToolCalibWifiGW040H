@@ -17,16 +17,16 @@ namespace ToolCalibWifiForGW040H.Function {
         };
 
         static Dictionary<string, string> dictRate = new Dictionary<string, string>() {
-            { "MSC0", "0" },
-            { "MSC1", "1" },
-            { "MSC2", "2" },
-            { "MSC3", "3" },
-            { "MSC4", "4" },
-            { "MSC5", "5" },
-            { "MSC6", "6" },
-            { "MSC7", "7" },
-            { "MSC8", "8" },
-            { "MSC9", "9" }
+            { "MCS0", "0" },
+            { "MCS1", "1" },
+            { "MCS2", "2" },
+            { "MCS3", "3" },
+            { "MCS4", "4" },
+            { "MCS5", "5" },
+            { "MCS6", "6" },
+            { "MCS7", "7" },
+            { "MCS8", "8" },
+            { "MCS9", "9" }
         };
 
         static Dictionary<string, string> dictBandwidth = new Dictionary<string, string>() {
@@ -44,6 +44,7 @@ namespace ToolCalibWifiForGW040H.Function {
         static string _filename_rxwifi5 = string.Format("{0}TestCase\\rxWifi-5G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
         static string _filename_at1wifi2 = string.Format("{0}TestCase\\at1Wifi-2G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
         static string _filename_at2wifi2 = string.Format("{0}TestCase\\at2Wifi-2G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
+        static string _filename_att = string.Format("{0}TestCase\\Att-TestCase.csv", System.AppDomain.CurrentDomain.BaseDirectory);
 
         static TestCase() {
             if (Directory.Exists(_dirName) == false) Directory.CreateDirectory(_dirName);
@@ -59,6 +60,8 @@ namespace ToolCalibWifiForGW040H.Function {
                 _load_File_To_tmpList(_filename_rxwifi5, out GlobalData.tmplistrxWifi5G);
                 _load_File_To_tmpList(_filename_at1wifi2, out GlobalData.tmplisttestAnten1);
                 _load_File_To_tmpList(_filename_at2wifi2, out GlobalData.tmplisttestAnten2);
+                _load_File_To_tmpList(_filename_att, out GlobalData.tmplistCalAttenuator);
+
 
                 //Chuyển dữ liệu từ tmpList sang List test
                 _convert_tmpList_To_testList(GlobalData.tmplisttxWifi2G, out GlobalData.listVerifySignal2G);
@@ -67,6 +70,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 _convert_tmpList_To_testList(GlobalData.tmplistrxWifi5G, out GlobalData.listSensivitity5G);
                 _convert_tmpList_To_testList(GlobalData.tmplisttestAnten1, out GlobalData.listTestAnten1);
                 _convert_tmpList_To_testList(GlobalData.tmplisttestAnten2, out GlobalData.listTestAnten2);
+                _convert_tmpList_To_testList(GlobalData.tmplistCalAttenuator, out GlobalData.listCalAttenuator);
 
                 return true;
             }
@@ -203,7 +207,7 @@ namespace ToolCalibWifiForGW040H.Function {
                         List<string> _lisch = new List<string>();
                         if (item.channelfreq.Contains(",")) {
                             string[] buffer = item.channelfreq.Split(',');
-                            for (int i = 0; i < buffer.Length - 1; i++) { _lisch.Add(buffer[i]); }
+                            for (int i = 0; i < buffer.Length; i++) { _lisch.Add(buffer[i]); }
                         }
                         else _lisch.Add(item.channelfreq);
 
@@ -211,7 +215,7 @@ namespace ToolCalibWifiForGW040H.Function {
                         List<string> _lisat = new List<string>();
                         if (item.anten.Contains(",")) {
                             string[] buffer = item.anten.Split(',');
-                            for (int i = 0; i < buffer.Length - 1; i++) { _lisat.Add(buffer[i]); }
+                            for (int i = 0; i < buffer.Length; i++) { _lisat.Add(buffer[i]); }
                         }
                         else _lisat.Add(item.anten);
 
@@ -256,7 +260,7 @@ namespace ToolCalibWifiForGW040H.Function {
                         List<string> _lisch = new List<string>();
                         if (item.channelfreq.Contains(",")) {
                             string[] buffer = item.channelfreq.Split(',');
-                            for (int i = 0; i < buffer.Length - 1; i++) { _lisch.Add(buffer[i]); }
+                            for (int i = 0; i < buffer.Length; i++) { _lisch.Add(buffer[i]); }
                         }
                         else _lisch.Add(item.channelfreq);
 
@@ -264,7 +268,7 @@ namespace ToolCalibWifiForGW040H.Function {
                         List<string> _lisat = new List<string>();
                         if (item.anten.Contains(",")) {
                             string[] buffer = item.anten.Split(',');
-                            for (int i = 0; i < buffer.Length - 1; i++) { _lisat.Add(buffer[i]); }
+                            for (int i = 0; i < buffer.Length; i++) { _lisat.Add(buffer[i]); }
                         }
                         else _lisat.Add(item.anten);
 

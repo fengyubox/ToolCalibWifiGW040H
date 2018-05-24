@@ -537,11 +537,48 @@ namespace ToolCalibWifiForGW040H.Function {
 
         public string Channel { get; set; }
         public string Frequency { get; set; }
-        public string ant1PowerMaster { get; set; }
-        public string ant2PowerMaster { get; set; }
+        public string Anten { get; set; }
+        public string PowerMaster { get; set; }
         public string measuredPower { get; set; } 
         public string Attenuator { get; set; }
     }
 
+    public class formattinfo : INotifyPropertyChanged {
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName = null) {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null) {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        string _filename = string.Format("{0}MasterData\\Master.csv", System.AppDomain.CurrentDomain.BaseDirectory);
+        public string FILENAME {
+            get { return _filename; }
+            set {
+                _filename = value;
+                OnPropertyChanged(nameof(FILENAME));
+            }
+        }
+
+        string _logdata;
+        public string LOGDATA {
+            get { return _logdata; }
+            set {
+                _logdata = value;
+                OnPropertyChanged(nameof(LOGDATA));
+            }
+        }
+
+    }
+
+
+    public class masterinformation {
+        
+        public string Channel { get; set; }
+        public string Frequency { get; set; }
+        public string pwAnten1 { get; set; }
+        public string pwAnten2 { get; set; }
+    }
 }

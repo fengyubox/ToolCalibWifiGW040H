@@ -25,6 +25,7 @@ namespace ToolCalibWifiForGW040H.Function {
             try {
                 //Do suy hao
                 if (!Verify_Attenuator(_formi, _modem, _instrument)) return false;
+                Attenuator.Save();
                 return true;
             } catch (Exception ex) {
                 error = ex.ToString();

@@ -67,6 +67,7 @@ namespace ToolCalibWifiForGW040H
                 case "Auto Calculate Attenuator": {
                         if (fInfo.FILENAME.Trim() == "") return;
                         GlobalData.autoAttenuator.Clear();
+                        fInfo.LOGDATA = "";
                         Thread t = new Thread(new ThreadStart(() => {
                             App.Current.Dispatcher.BeginInvoke(new Action(() => { b.IsEnabled = false; }));
                             Master _mt = new Master(fInfo.FILENAME);

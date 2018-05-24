@@ -43,9 +43,24 @@ namespace ToolCalibWifiForGW040H.Function {
 
                 //1,2412,1,9.45
                 //1.2412,2,8.54
+                //tach list ban dau ra lam 2 list at1 va list at2
+                List<autoattenuator> _li1 = new List<autoattenuator>();
+                List<autoattenuator> _li2 = new List<autoattenuator>();
                 foreach (var item in GlobalData.autoAttenuator) {
-                    string _content = "";
-                    st.WriteLine(_content);
+                    if (item.Anten == "1") _li1.Add(item);
+                    else _li2.Add(item);
+                }
+
+                //add du lieu vao list attenuator
+                List<masterinformation> _liAttenuator = new List<masterinformation>();
+                for (int i = 0; i < _li1.Count; i++) {
+                    masterinformation mf = new masterinformation() { Channel = _li1[i].Channel, Frequency = _li1[i].Frequency, pwAnten1 = _li1[i].Attenuator, pwAnten2 = _li2[i].Attenuator };
+                    _liAttenuator.Add(mf);
+                }
+
+                //ghi du lieu vao file
+                foreach(var item in _liAttenuator) {
+                    st.WriteLine(item.ToString());
                 }
                 
                 st.Dispose();

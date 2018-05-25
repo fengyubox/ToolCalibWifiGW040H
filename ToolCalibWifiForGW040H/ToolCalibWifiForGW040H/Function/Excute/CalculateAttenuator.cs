@@ -57,21 +57,23 @@ namespace ToolCalibWifiForGW040H.Function {
                         }
                 }
 
+                RE:
                 //Thiết lập tần số máy đo
                 instrument.config_Instrument_Channel(Channel_Freq);
 
+                
                 //Gửi lệnh yêu cầu ONT phát WIFI TX
                 string _message = "";
                 ModemTelnet.Verify_Signal_SendCommand(standard_2G_5G, Mode, MCS, BW, Channel_Freq, Anten, ref _message);
 
                 //Đọc kết quả từ máy đo
-                RE:
                 Result_Measure_temp = instrument.config_Instrument_get_TotalResult("RFB", _wifi);
                 //Hien_Thi.Hienthi.SetText(rtbAll, Result_Measure_temp);
 
                 //Lấy dữ liệu Power
                 try {
                     Pwr_measure_temp = Decimal.Parse(Result_Measure_temp.Split(',')[19], System.Globalization.NumberStyles.Float);
+                    if (standard_2G_5G == "2G" && Pwr_measure_temp < 8) goto RE;
                 } catch {
                     goto RE;
                 }

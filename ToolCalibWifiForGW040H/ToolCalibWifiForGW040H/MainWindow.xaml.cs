@@ -65,24 +65,24 @@ namespace ToolCalibWifiForGW040H {
                         string _Str = string.Format("{0}Logdetail", AppDomain.CurrentDomain.BaseDirectory);
                         Process.Start(_Str);
                         break; }
-                case "Setting cấu hình": {
+                case "Thiết lập cấu hình": {
                         configWindow cfg = new configWindow();
                         cfg.ShowDialog();
                         break; }
-                case "Setting máy đo": {
+                case "Thiết lập máy đo": {
                         instrumentWindow inst = new instrumentWindow();
                         inst.ShowDialog();
                         break; }
-                case "Setting limit": {
+                case "Thiết lập tiêu chuẩn": {
                         limitWindow lim = new limitWindow();
                         lim.ShowDialog();
                         break; }
-                case "Setting test case": {
+                case "Thiết lập bài test": {
                         testcaseWindow tcw = new testcaseWindow();
                         tcw.ShowDialog();
                         break;
                     }
-                case "Setting suy hao": {
+                case "Thiết lập suy hao": {
                         attenuatorWindow att = new attenuatorWindow();
                         att.ShowDialog();
                         break;

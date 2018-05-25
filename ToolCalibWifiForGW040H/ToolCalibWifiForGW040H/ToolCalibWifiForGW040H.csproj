@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Asset\Icons\wifi.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
@@ -236,7 +239,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Asset\Icons\" />
     <Folder Include="Function\ONT\" />
   </ItemGroup>
   <ItemGroup>
@@ -266,6 +268,9 @@
     <Resource Include="Asset\Images\SQL.png" />
     <Resource Include="Asset\Images\usbDebug.PNG" />
     <Resource Include="Asset\Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\Icons\wifi.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

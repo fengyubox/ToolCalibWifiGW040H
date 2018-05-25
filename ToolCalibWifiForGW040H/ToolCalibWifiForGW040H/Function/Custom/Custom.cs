@@ -573,7 +573,6 @@ namespace ToolCalibWifiForGW040H.Function {
 
     }
 
-
     public class masterinformation {
         
         public string Channel { get; set; }

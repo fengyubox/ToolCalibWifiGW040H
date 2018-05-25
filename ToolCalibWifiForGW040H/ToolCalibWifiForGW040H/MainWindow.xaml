@@ -31,12 +31,12 @@
                         <MenuItem Header="Exit" Click="MenuItem_Click"></MenuItem>
                     </MenuItem>
                     <MenuItem FontSize="13" Height="24" Header="Setting" FontWeight="SemiBold">
-                        <MenuItem Header="Setting cấu hình" Click="MenuItem_Click"/>
-                        <MenuItem Header="Setting máy đo" Click="MenuItem_Click"/>
-                        <MenuItem Header="Setting limit" Click="MenuItem_Click"/>
-                        <MenuItem Header="Setting test case" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập cấu hình" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập máy đo" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập tiêu chuẩn" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập bài test" Click="MenuItem_Click"/>
                         <Separator/>
-                        <MenuItem Header="Setting suy hao" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập suy hao" Click="MenuItem_Click"/>
                         <Separator/>
                         <MenuItem Header="Phân tích kết quả test" Click="MenuItem_Click"/>
                     </MenuItem>
@@ -56,6 +56,7 @@
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="3"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
@@ -75,7 +76,9 @@
                         </ScrollViewer>
                     </Grid>
 
-                    <StackPanel Grid.Column="1" Margin="20,35,20,0">
+                    <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent"/>
+
+                    <StackPanel Grid.Column="2" Margin="20,35,20,0">
                         <Button Click="Button_Click" Content="{Binding Path=BUTTONCONTENT, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="90" FontSize="35" FontWeight="SemiBold" Background="#F4A460">
                             <Button.Style>
                                 <Style TargetType="Button">

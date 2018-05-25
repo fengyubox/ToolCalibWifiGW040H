@@ -45,7 +45,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static bool Savedetaillog(string _data) {
             try {
                 string _logfile = string.Format("{0}\\{1}.txt", _logDetail, DateTime.Now.ToString("yyyyMMdd"));
-                StreamWriter st = new StreamWriter(_logDetail, true);
+                StreamWriter st = new StreamWriter(_logfile, true);
                 st.WriteLine(_data);
                 st.Dispose();
                 return true;

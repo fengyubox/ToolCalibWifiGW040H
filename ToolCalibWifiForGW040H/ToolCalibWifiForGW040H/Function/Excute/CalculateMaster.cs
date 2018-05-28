@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ToolCalibWifiForGW040H.Function {
-    public class CalculateAttenuator {
+    public class CalculateMaster {
 
         ModemTelnet _modem = null;
         Instrument _instrument = null;
@@ -14,7 +14,7 @@ namespace ToolCalibWifiForGW040H.Function {
         string Name_measurement = GlobalData.initSetting.INSTRUMENT;
         string RF_Port = GlobalData.initSetting.RFPORT;
 
-        public CalculateAttenuator(ModemTelnet _mt, Instrument _it, formattinfo _fi) {
+        public CalculateMaster(ModemTelnet _mt, Instrument _it, formattinfo _fi) {
             this._modem = _mt;
             this._instrument = _it;
             this._formi = _fi;
@@ -24,10 +24,13 @@ namespace ToolCalibWifiForGW040H.Function {
             error = "";
             try {
                 //Do suy hao
-                if (!Verify_Attenuator(_formi, _modem, _instrument)) return false;
-                Attenuator.Save();
+                GlobalData.mtIndex = 0;
+                GlobalData.mtIsOk = true;
+                if (!Verify_Master(_formi, _modem, _instrument)) return false;
+                //Attenuator.Save();
                 return true;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 error = ex.ToString();
                 return false;
             }
@@ -35,12 +38,10 @@ namespace ToolCalibWifiForGW040H.Function {
 
         private bool Verify_Signal(formattinfo _fi, ModemTelnet ModemTelnet, Instrument instrument, string Mode, string MCS, string BW, string Channel_Freq, string Anten) {
             try {
-                autoattenuator _at = new autoattenuator() { Anten = Anten, Frequency = Channel_Freq.Substring(0,4), Channel = Master.getChannel(Channel_Freq.Substring(0,4)), PowerMaster = Master.getPower(Channel_Freq.Substring(0,4), Anten) };
-
                 string Result_Measure_temp = "";
                 decimal Pwr_measure_temp = 0;
                 string _wifi = "";
-                string standard_2G_5G = int.Parse(Channel_Freq.Substring(0,4)) < 3000 ? "2G" : "5G";
+                string standard_2G_5G = int.Parse(Channel_Freq.Substring(0, 4)) < 3000 ? "2G" : "5G";
 
                 switch (Mode) {
                     case "0": { _wifi = "b"; break; }
@@ -57,34 +58,65 @@ namespace ToolCalibWifiForGW040H.Function {
                         }
                 }
 
-                RE:
-                //Thiết lập tần số máy đo
-                instrument.config_Instrument_Channel(Channel_Freq);
-
+                string[] values = new string[5];
                 
-                //Gửi lệnh yêu cầu ONT phát WIFI TX
-                string _message = "";
-                ModemTelnet.Verify_Signal_SendCommand(standard_2G_5G, Mode, MCS, BW, Channel_Freq, Anten, ref _message);
+                for (int i = 0; i < 5; i++) {
 
-                //Đọc kết quả từ máy đo
-                Result_Measure_temp = instrument.config_Instrument_get_TotalResult("RFB", _wifi);
-                //Hien_Thi.Hienthi.SetText(rtbAll, Result_Measure_temp);
+                    RE:
+                    //Thiết lập tần số máy đo
+                    instrument.config_Instrument_Channel(Channel_Freq);
 
-                //Lấy dữ liệu Power
-                try {
-                    Pwr_measure_temp = Decimal.Parse(Result_Measure_temp.Split(',')[19], System.Globalization.NumberStyles.Float);
-                    if (standard_2G_5G == "2G" && Pwr_measure_temp < 8) goto RE;
-                } catch {
-                    goto RE;
+
+                    //Gửi lệnh yêu cầu ONT phát WIFI TX
+                    string _message = "";
+                    ModemTelnet.Verify_Signal_SendCommand(standard_2G_5G, Mode, MCS, BW, Channel_Freq, Anten, ref _message);
+
+                    //Đọc kết quả từ máy đo
+                    Result_Measure_temp = instrument.config_Instrument_get_TotalResult("RFB", _wifi);
+                    //Hien_Thi.Hienthi.SetText(rtbAll, Result_Measure_temp);
+
+                    //Lấy dữ liệu Power
+                    try {
+                        Pwr_measure_temp = Decimal.Parse(Result_Measure_temp.Split(',')[19], System.Globalization.NumberStyles.Float);
+                        if (standard_2G_5G == "2G" && Pwr_measure_temp < 8) goto RE;
+                    }
+                    catch {
+                        goto RE;
+                    }
+
+                    values[i] = Pwr_measure_temp.ToString();
+
+                    //Hiển thị kết quả đo lên giao diện phần mềm (RichTextBox)
+                    _fi.LOGDATA += "Average Power = " + Pwr_measure_temp.ToString("0.##") + " dBm\r\n";
                 }
-                
-                _at.measuredPower = Pwr_measure_temp.ToString();
-                _at.Attenuator = (double.Parse(_at.PowerMaster) - double.Parse(_at.measuredPower)).ToString();
 
-                //Hiển thị kết quả đo lên giao diện phần mềm (RichTextBox)
-                _fi.LOGDATA += "Average Power = " + Pwr_measure_temp.ToString("0.##") + " dBm\r\n";
+                App.Current.Dispatcher.BeginInvoke(new Action(() => {
+                    foreach (var item in GlobalData.autoCalculateMaster) {
+                        if (item.Anten == Anten && item.Frequency == Channel_Freq.Substring(0, 4)) {
+                            item.Value1 = values[0];
+                            item.Value2 = values[1];
+                            item.Value3 = values[2];
+                            item.Value4 = values[3];
+                            item.Value5 = values[4];
 
-                App.Current.Dispatcher.BeginInvoke(new Action(() => { GlobalData.autoAttenuator.Add(_at); }));
+                            double _diff1 = Math.Abs(double.Parse(item.Value1) - double.Parse(item.Value2));
+                            double _diff2 = Math.Abs(double.Parse(item.Value1) - double.Parse(item.Value3));
+                            double _diff3 = Math.Abs(double.Parse(item.Value1) - double.Parse(item.Value4));
+                            double _diff4 = Math.Abs(double.Parse(item.Value1) - double.Parse(item.Value5));
+
+                            if (_diff1 > 0.5 || _diff2 > 0.5 || _diff3 > 0.5 || _diff4 > 0.5) {
+                                item.masterPower = "FAIL";
+                                GlobalData.mtIsOk = false;
+                            }
+                            else {
+                                double _avr = Math.Round((double.Parse(item.Value1) + double.Parse(item.Value2) + double.Parse(item.Value3) + double.Parse(item.Value4) + double.Parse(item.Value5)) / 5, 2);
+                                item.masterPower = (_avr + double.Parse(item.wirePower)).ToString();
+                            }
+                            GlobalData.mtIndex++;
+                            break;
+                        }
+                    }
+                }));
                 return true;
             }
             catch (Exception ex) {
@@ -96,8 +128,8 @@ namespace ToolCalibWifiForGW040H.Function {
         private bool AutoVerifySignal(formattinfo _fi, ModemTelnet ModemTelnet, Instrument instrument) {
             List<verifysignal> list = null;
             _fi.LOGDATA += "------------------------------------------------------------\r\n";
-            _fi.LOGDATA += string.Format("Bắt đầu thực hiện quá trình đo suy hao.\r\n");
-            list = GlobalData.listCalAttenuator;
+            _fi.LOGDATA += string.Format("Bắt đầu thực hiện quá trình đo master power.\r\n");
+            list = GlobalData.listCalMaster;
 
             if (list.Count == 0) return false;
             bool result = true;
@@ -147,15 +179,24 @@ namespace ToolCalibWifiForGW040H.Function {
                 }
                 else _fi.LOGDATA += string.Format("Phán định = {0}\r\n", "PASS");
                 st.Stop();
-                _fi.LOGDATA += string.Format("Thời gian đo suy hao : {0} ms\r\n", st.ElapsedMilliseconds);
+                _fi.LOGDATA += string.Format("Thời gian đo : {0} ms\r\n", st.ElapsedMilliseconds);
                 _fi.LOGDATA += "\r\n";
+
+                if (GlobalData.mtIsOk == false) {
+                    result = false;
+                    break;
+                }
             }
+
+            //Save master data
+            if (result == true) Master.Save();
+            else
+                System.Windows.MessageBox.Show("Mạch không đủ tiêu chuẩn làm Master.","Master", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
             return result;
         }
 
 
-        //OK
-        private bool Verify_Attenuator(formattinfo _fi, ModemTelnet _mt, Instrument _it) {
+        private bool Verify_Master(formattinfo _fi, ModemTelnet _mt, Instrument _it) {
             return AutoVerifySignal(_fi, _mt, _it);
         }
 

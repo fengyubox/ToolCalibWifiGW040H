@@ -17,6 +17,9 @@ namespace ToolCalibWifiForGW040H.Function {
             TestCase.Load();
         }
 
+        public static int mtIndex = 0;
+        public static bool mtIsOk = true;
+
         public static ModemTelnet MODEM = null;
         public static Instrument INSTRUMENT = null;
 
@@ -37,6 +40,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static ObservableCollection<logreviewrx> reviewRX = new ObservableCollection<logreviewrx>();
 
         public static ObservableCollection<autoattenuator> autoAttenuator = new ObservableCollection<autoattenuator>();
+        public static ObservableCollection<calmaster> autoCalculateMaster = new ObservableCollection<calmaster>();
 
         public static List<verifysignal> tmplisttxWifi2G = null;
         public static List<verifysignal> tmplisttxWifi5G = null;
@@ -53,6 +57,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static List<sensivitity> listSensivitity2G = null;
         public static List<sensivitity> listSensivitity5G = null;
         public static List<verifysignal> listCalAttenuator = null;
+        public static List<verifysignal> listCalMaster = null;
 
         //Cau hinh bai test Calib Power TX - 2G
         public static List<calibpower> listCalibPower2G = new List<calibpower>() {

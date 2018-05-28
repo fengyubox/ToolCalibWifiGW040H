@@ -584,4 +584,23 @@ namespace ToolCalibWifiForGW040H.Function {
             return string.Format("{0},{1},{2},{3}", Channel, Frequency, pwAnten1, pwAnten2);
         }
     }
+
+    public class calmaster {
+        
+        public string Channel { get; set; }
+        public string Frequency { get; set; }
+        public string Anten { get; set; }
+        public string wirePower { get; set; }
+        public string Value1 { get; set; }
+        public string Value2 { get; set; }
+        public string Value3 { get; set; }
+        public string Value4 { get; set; }
+        public string Value5 { get; set; }
+        public string masterPower { get; set; }
+
+        public override string ToString() {
+            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}", Channel, Frequency, Anten, Value1, Value2, Value3, Value4, Value5, masterPower);
+        }
+    }
+
 }

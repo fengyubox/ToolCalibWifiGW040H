@@ -37,6 +37,7 @@
                         <MenuItem Header="Thiết lập bài test" Click="MenuItem_Click"/>
                         <Separator/>
                         <MenuItem Header="Thiết lập suy hao" Click="MenuItem_Click"/>
+                        <MenuItem Header="Thiết lập master" Click="MenuItem_Click"/>
                         <Separator/>
                         <MenuItem Header="Phân tích kết quả test" Click="MenuItem_Click"/>
                     </MenuItem>

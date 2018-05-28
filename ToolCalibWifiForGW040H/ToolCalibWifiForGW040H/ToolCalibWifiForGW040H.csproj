@@ -85,6 +85,7 @@
     <Compile Include="Function\Base\InitParameters.cs" />
     <Compile Include="Function\Custom\Custom.cs" />
     <Compile Include="Function\Excute\CalculateAttenuator.cs" />
+    <Compile Include="Function\Excute\CalculateMaster.cs" />
     <Compile Include="Function\Excute\Calibration.cs" />
     <Compile Include="Function\Excute\TestAnten.cs" />
     <Compile Include="Function\Instrument\E6640A.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Function\IO\Master.cs" />
     <Compile Include="Function\IO\TestCase.cs" />
     <Compile Include="Function\IO\WaveForm.cs" />
+    <Compile Include="Function\IO\Wire.cs" />
     <Compile Include="Function\Protocol\Modem.cs" />
     <Compile Include="Function\Protocol\TelnetInterface.cs" />
     <Compile Include="SubWindow\analyzerWindow.xaml.cs">
@@ -115,6 +117,9 @@
     </Compile>
     <Compile Include="SubWindow\limitWindow.xaml.cs">
       <DependentUpon>limitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubWindow\masterWindow.xaml.cs">
+      <DependentUpon>masterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SubWindow\stationWindow.xaml.cs">
       <DependentUpon>stationWindow.xaml</DependentUpon>
@@ -199,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubWindow\limitWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubWindow\masterWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

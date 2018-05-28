@@ -1,0 +1,105 @@
+﻿<Window x:Class="ToolCalibWifiForGW040H.masterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
+        mc:Ignorable="d"
+        Title="masterWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+
+    <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#FFFFFF">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Thiết lập mạch master"/>
+                <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="5">
+                    <Label FontSize="13" FontWeight="SemiBold" Content="Vui lòng chọn file suy hao của dây đo:"/>
+                    <WrapPanel>
+                        <Button Content="Browser..." Click="Button_Click" Width="80" Height="30" Margin="0,0,10,0"/>
+                        <TextBox VerticalContentAlignment="Center" Height="30" FontSize="13" Width="798" Text="{Binding Path=FILENAME, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" IsReadOnly="True"></TextBox>
+                    </WrapPanel>
+                </StackPanel>
+
+                <Button Background="#F4A460" Grid.Row="1" Margin="5,0,5,15" Click="Button_Click" Content="Calculate Master" FontSize="35" FontWeight="SemiBold"/>
+
+                <DataGrid Grid.Row="2" Margin="5,0,5,5" x:Name="dgCalMaster" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Extended"
+                                              >
+
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                            <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="Height" Value="25"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                    <DataGrid.ColumnHeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="13"/>
+                            <Setter Property="Height" Value="40"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="Padding" Value="3,0,0,0"/>
+                        </Style>
+                    </DataGrid.ColumnHeaderStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Channel" Width="*" Binding="{Binding Channel}"/>
+                        <DataGridTextColumn Header="Frequency" Width="*" Binding="{Binding Frequency}"/>
+                        <DataGridTextColumn Header="Anten" Width="*" Binding="{Binding Anten}"/>
+                        <DataGridTextColumn Header="WirePower" Width="*" Binding="{Binding wirePower}"/>
+                        <DataGridTextColumn Header="Value1" Width="0.7*" Binding="{Binding Value1}"/>
+                        <DataGridTextColumn Header="Value2" Width="0.7*" Binding="{Binding Value2}"/>
+                        <DataGridTextColumn Header="Value3" Width="0.7*" Binding="{Binding Value3}"/>
+                        <DataGridTextColumn Header="Value4" Width="0.7*" Binding="{Binding Value4}"/>
+                        <DataGridTextColumn Header="Value5" Width="0.7*" Binding="{Binding Value5}"/>
+
+                        <DataGridTextColumn FontWeight="Bold" Header="MasterPw(dBm)" Width="1.5*" Binding="{Binding masterPower}"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+                <GridSplitter Grid.Row="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <ScrollViewer Grid.Row="4" Margin="5,0,5,5" x:Name="_scrollViewer">
+                    <RichTextBox  Background="{StaticResource colorBackground}" IsReadOnly="True" BorderThickness="1" Block.LineHeight="1" Padding="0,5,0,0">
+                        <FlowDocument PageHeight="180">
+                            <Paragraph>
+                                <Run Foreground="#050928" FontWeight="Normal" Text="{Binding Path=LOGDATA, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </ScrollViewer>
+                
+            </Grid>
+
+        </Grid>
+    </Border>
+    
+</Window>

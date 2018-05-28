@@ -143,3 +143,5 @@ C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\To
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.csproj.CopyComplete
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.exe
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.pdb
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\masterWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\masterWindow.baml

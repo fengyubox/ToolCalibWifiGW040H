@@ -87,6 +87,11 @@ namespace ToolCalibWifiForGW040H {
                         att.ShowDialog();
                         break;
                     }
+                case "Thiết lập master": {
+                        masterWindow mw = new masterWindow();
+                        mw.ShowDialog();
+                        break;
+                    }
                 case "Phân tích kết quả test": {
                         analyzerWindow anal = new analyzerWindow();
                         anal.ShowDialog();

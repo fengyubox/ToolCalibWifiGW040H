@@ -145,3 +145,7 @@ C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\To
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.pdb
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\masterWindow.g.cs
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\masterWindow.baml
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\About.g.cs
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\About.baml
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\limitAntenWindow.g.cs
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\limitAntenWindow.baml

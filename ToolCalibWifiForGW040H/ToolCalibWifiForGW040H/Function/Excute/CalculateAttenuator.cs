@@ -57,27 +57,29 @@ namespace ToolCalibWifiForGW040H.Function {
                         }
                 }
 
-                RE:
                 //Thiết lập tần số máy đo
                 instrument.config_Instrument_Channel(Channel_Freq);
+                decimal value = 0;
 
-                
-                //Gửi lệnh yêu cầu ONT phát WIFI TX
-                string _message = "";
-                ModemTelnet.Verify_Signal_SendCommand(standard_2G_5G, Mode, MCS, BW, Channel_Freq, Anten, ref _message);
+                for (int i = 0; i < 2; i++) {
+                    RE:
+                    //Gửi lệnh yêu cầu ONT phát WIFI TX
+                    string _message = "";
+                    ModemTelnet.Verify_Signal_SendCommand(standard_2G_5G, Mode, MCS, BW, Channel_Freq, Anten, ref _message);
 
-                //Đọc kết quả từ máy đo
-                Result_Measure_temp = instrument.config_Instrument_get_TotalResult("RFB", _wifi);
-                //Hien_Thi.Hienthi.SetText(rtbAll, Result_Measure_temp);
+                    //Đọc kết quả từ máy đo
+                    Result_Measure_temp = instrument.config_Instrument_get_TotalResult("RFB", _wifi);
 
-                //Lấy dữ liệu Power
-                try {
-                    Pwr_measure_temp = Decimal.Parse(Result_Measure_temp.Split(',')[19], System.Globalization.NumberStyles.Float);
-                    if (standard_2G_5G == "2G" && Pwr_measure_temp < 8) goto RE;
-                } catch {
-                    goto RE;
+                    //Lấy dữ liệu Power
+                    try {
+                        value = Decimal.Parse(Result_Measure_temp.Split(',')[19], System.Globalization.NumberStyles.Float);
+                        if (Pwr_measure_temp < value) Pwr_measure_temp = value;
+                    }
+                    catch {
+                        goto RE;
+                    }
                 }
-                
+               
                 _at.measuredPower = Pwr_measure_temp.ToString();
                 _at.Attenuator = (double.Parse(_at.PowerMaster) - double.Parse(_at.measuredPower)).ToString();
 
@@ -149,6 +151,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 st.Stop();
                 _fi.LOGDATA += string.Format("Thời gian đo suy hao : {0} ms\r\n", st.ElapsedMilliseconds);
                 _fi.LOGDATA += "\r\n";
+                System.Threading.Thread.Sleep(1000);
             }
             return result;
         }

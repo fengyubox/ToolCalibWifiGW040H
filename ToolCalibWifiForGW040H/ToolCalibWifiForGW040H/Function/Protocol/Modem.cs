@@ -109,20 +109,24 @@ namespace ToolCalibWifiForGW040H.Function {
 
         public void CalibPower_SendCommand(string Standard_2G_or_5G, string Anten, string Channel) {
             string ChannelNumber = Attenuator.getChannelNumber(Channel.Replace("000000", ""));
-            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATECHANNEL={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", ChannelNumber),
-                                                            string.Format("iwpriv {0} set ATETXMODE=1\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATETXMCS=7\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATETXBW=0\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATETXANT={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",Anten),
-                                                            string.Format("iwpriv {0} set ATETXCNT=0\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATE=TXFRAME\n", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
+            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATECHANNEL={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", ChannelNumber),
+                                                            string.Format("iwpriv {0} set ATETXMODE=1\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATETXMCS=7\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATETXBW=0\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATETXANT={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",Anten),
+                                                            string.Format("iwpriv {0} set ATETXCNT=0\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATE=TXFRAME\r\n", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
 
             try {
                 if (telnet2modem.IsConnected) {
+                    string _tmpStr = "";
                     foreach (var item in ATEcommands) {
-                        telnet2modem.WriteLine(item);
+                        //telnet2modem.WriteLine(item);
+                        //telnet2modem.WriteLineAndWaitComplete(item);
+                        _tmpStr += item;
                     }
+                    telnet2modem.WriteLineAndWaitComplete(_tmpStr);
                     Thread.Sleep(50);
                 }
             }
@@ -135,21 +139,25 @@ namespace ToolCalibWifiForGW040H.Function {
         //Hàm gửi lệnh phát tín hiệu ở cả 2G và 5G
         public void Verify_Signal_SendCommand(string Standard_2G_or_5G, string Mode, string MCS, string BW, string Channel, string Anten, ref string message) {
             string ChannelNumber = Attenuator.getChannelNumber(Channel.Replace("000000", ""));
-            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATECHANNEL={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", ChannelNumber),
-                                                            string.Format("iwpriv {0} set ATETXMODE={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", Mode),
-                                                            string.Format("iwpriv {0} set ATETXMCS={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", MCS),
-                                                            string.Format("iwpriv {0} set ATETXBW={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", BW),
-                                                            string.Format("iwpriv {0} set ATETXANT={1}\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",Anten),
-                                                            string.Format("iwpriv {0} set ATETXCNT=0\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATE=TXFRAME\n", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
+            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATECHANNEL={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", ChannelNumber),
+                                                            string.Format("iwpriv {0} set ATETXMODE={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", Mode),
+                                                            string.Format("iwpriv {0} set ATETXMCS={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", MCS),
+                                                            string.Format("iwpriv {0} set ATETXBW={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0", BW),
+                                                            string.Format("iwpriv {0} set ATETXANT={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",Anten),
+                                                            string.Format("iwpriv {0} set ATETXCNT=0\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATE=TXFRAME\r\n", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
 
             try {
                 if (telnet2modem.IsConnected) {
+                    string _tmpStr = "";
                     foreach (var item in ATEcommands) {
-                        telnet2modem.WriteLine(item);
-                        message += item + "\n";
+                        //telnet2modem.WriteLine(item);
+                        //telnet2modem.WriteLineAndWaitComplete(item);
+                        _tmpStr += item;
+                        message += item;
                     }
+                    telnet2modem.WriteLineAndWaitComplete(_tmpStr);
                     Thread.Sleep(1000);
                 }
             }
@@ -161,23 +169,27 @@ namespace ToolCalibWifiForGW040H.Function {
         //Hàm gửi lệnh Calib tần số.
         public bool CalibFrequency_SendCommand(string mode, string rate, string bw, string channel, string annten, string FreOffset) {
             bool boolResult = false;
-            string[] ATEcommand = { "iwpriv ra0 set ATE=ATESTART",
-                                    "iwpriv ra0 set ATETXMODE=" + mode,       //mode=2 (HT_Mix)
-                                    "iwpriv ra0 set ATETXMCS=" + rate,         //MCS
-                                    "iwpriv ra0 set ATETXBW=" + bw,           // Bandwith
-                                    "iwpriv ra0 set ATECHANNEL=" + channel,    // Channel
-                                    "iwpriv ra0 set ATETXGI=0",
-                                    "iwpriv ra0 set ATETXANT=" + annten,      // Annten
-                                    "iwpriv ra0 set ATETXFREQOFFSET=" + FreOffset,
-                                    "iwpriv ra0 set ATETXCNT=0",
-                                    "iwpriv ra0 set ATE=TXFRAME"
-                                                                };
+            string[] ATEcommand = { "iwpriv ra0 set ATE=ATESTART\r\n",
+                                    "iwpriv ra0 set ATETXMODE=" + mode + "\r\n",       //mode=2 (HT_Mix)
+                                    "iwpriv ra0 set ATETXMCS=" + rate + "\r\n",         //MCS
+                                    "iwpriv ra0 set ATETXBW=" + bw + "\r\n",           // Bandwith
+                                    "iwpriv ra0 set ATECHANNEL=" + channel + "\r\n",    // Channel
+                                    "iwpriv ra0 set ATETXGI=0\r\n",
+                                    "iwpriv ra0 set ATETXANT=" + annten + "\r\n",      // Annten
+                                    "iwpriv ra0 set ATETXFREQOFFSET=" + FreOffset + "\r\n",
+                                    "iwpriv ra0 set ATETXCNT=0\r\n",
+                                    "iwpriv ra0 set ATE=TXFRAME\r\n"
+                                  };
             try {
 
                 if (telnet2modem.IsConnected) {
+                    string _tmpStr = "";
                     for (int i = 0; i < 10; i++) {
-                        telnet2modem.WriteLine(ATEcommand[i]);
+                        //telnet2modem.WriteLine(ATEcommand[i]);
+                        //telnet2modem.WriteLineAndWaitComplete(ATEcommand[i]);
+                        _tmpStr += ATEcommand[i];
                     }
+                    telnet2modem.WriteLineAndWaitComplete(_tmpStr);
                     Thread.Sleep(1000);
                     boolResult = true;
                 }
@@ -193,21 +205,26 @@ namespace ToolCalibWifiForGW040H.Function {
         //Hàm gửi lệnh Test Sensitivity.
         public bool TestSensitivity_SendCommand(string Standard_2G_or_5G, string mode, string rate, string bw, string channel, string annten, ref string message) {
             bool boolResult = false;
-            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ResetCounter=0",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
-                                                            string.Format("iwpriv {0} set ATETXMODE={1}",Standard_2G_or_5G == "2G" ? "ra0":"rai0",mode),
-                                                            string.Format("iwpriv {0} set ATETXMCS={1}",Standard_2G_or_5G == "2G" ? "ra0":"rai0",rate),
-                                                            string.Format("iwpriv {0} set ATETXBW={1}",Standard_2G_or_5G == "2G" ? "ra0":"rai0",bw),
-                                                            string.Format("iwpriv {0} set ATECHANNEL={1}",Standard_2G_or_5G == "2G" ? "ra0":"rai0",channel),
-                                                            string.Format("iwpriv {0} set ATETXANT={1}",Standard_2G_or_5G == "2G" ? "ra0":"rai0",annten),
-                                                            string.Format("iwpriv {0} set ATE=RXFRAME", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
+            List<string> ATEcommands = new List<string>() { string.Format("iwpriv {0} set ATE=ATESTART\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ResetCounter=0\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0"),
+                                                            string.Format("iwpriv {0} set ATETXMODE={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",mode),
+                                                            string.Format("iwpriv {0} set ATETXMCS={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",rate),
+                                                            string.Format("iwpriv {0} set ATETXBW={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",bw),
+                                                            string.Format("iwpriv {0} set ATECHANNEL={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",channel),
+                                                            string.Format("iwpriv {0} set ATETXANT={1}\r\n",Standard_2G_or_5G == "2G" ? "ra0":"rai0",annten),
+                                                            string.Format("iwpriv {0} set ATE=RXFRAME\r\n", Standard_2G_or_5G == "2G" ? "ra0":"rai0") };
 
             try {
                 if (telnet2modem.IsConnected) {
+                    string _tmpStr = "";
                     foreach (var item in ATEcommands) {
-                        telnet2modem.WriteLine(item);
-                        message += item + "\n";
+                        //telnet2modem.WriteLine(item);
+                        //telnet2modem.WriteLineAndWaitComplete(item);
+                        //message += item + "\n";
+                        _tmpStr += item;
+                        message += item;
                     }
+                    telnet2modem.WriteLineAndWaitComplete(_tmpStr);
                     Thread.Sleep(1000);
                     boolResult = true;
                 }
@@ -273,23 +290,28 @@ namespace ToolCalibWifiForGW040H.Function {
             telnet2modem.WriteLine("tcapi set WLan11ac_Common WriteBinToFlash 1");
             Thread.Sleep(200);
             telnet2modem.WriteLineAndWaitComplete("tcapi commit WLan11ac");
-            telnet2modem.WriteLine("ifconfig ra0 down");
-            Thread.Sleep(1000);
-            telnet2modem.WriteLine("ifconfig rai0 down");
-            Thread.Sleep(1000);
+            //telnet2modem.WriteLine("ifconfig ra0 down");
+            //Thread.Sleep(1000);
+            telnet2modem.WriteLineAndWaitComplete("ifconfig ra0 down");
+            //telnet2modem.WriteLine("ifconfig rai0 down");
+            //Thread.Sleep(1000);
+            telnet2modem.WriteLineAndWaitComplete("ifconfig rai0 down");
             telnet2modem.WriteLineAndWaitComplete("rmmod mt7615_ap");
             telnet2modem.WriteLineAndWaitComplete("insmod lib/modules/mt7615_ap.ko");
             telnet2modem.WriteLineAndWaitComplete("ifconfig rai0 up");
-            telnet2modem.WriteLine("ifconfig ra0 up");
-            Thread.Sleep(1000);
+            telnet2modem.WriteLineAndWaitComplete("ifconfig ra0 up");
+            //telnet2modem.WriteLine("ifconfig ra0 up");
+            //Thread.Sleep(1000);
         }
 
         //Hàm kiểm tra dữ liệu được lưu thành công chưa.
         public void Wl_Down_Up() {
-            telnet2modem.WriteLine("ifconfig rai0 down");
-            Thread.Sleep(1000);
-            telnet2modem.WriteLine("ifconfig rai0 up");
-            Thread.Sleep(1000);
+            //telnet2modem.WriteLine("ifconfig rai0 down");
+            //Thread.Sleep(1000);
+            telnet2modem.WriteLineAndWaitComplete("ifconfig rai0 down");
+            //telnet2modem.WriteLine("ifconfig rai0 up");
+            //Thread.Sleep(1000);
+            telnet2modem.WriteLineAndWaitComplete("ifconfig rai0 up");
         }
 
         //Hàm đọc địa chỉ MAC

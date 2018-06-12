@@ -33,7 +33,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.CALIBFREQRESULT = GlobalData.logManager.calibFreqResult;
                 if (ret == false) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -45,7 +45,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.CALIBPW2GRESULT = GlobalData.logManager.calibPower2GResult;
                 if (ret == false) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -57,7 +57,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.CALIBPW5GRESULT = GlobalData.logManager.calibPower5GResult;
                 if (ret == false) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -72,7 +72,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.TESTRX2GRESULT = GlobalData.logManager.testSens2GResult;
                 if (ret == false) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -84,7 +84,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.TESTRX5GRESULT = GlobalData.logManager.testSens5GResult;
                 if (!ret) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -96,7 +96,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.TESTTX2GRESULT = GlobalData.logManager.verify2GResult;
                 if (!ret) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -108,7 +108,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.testingData.TESTTX5GRESULT = GlobalData.logManager.verify5GResult;
                 if (!ret) {
                     _flag = false;
-                    goto Finished;
+                    //goto Finished;
                 }
             }
 
@@ -256,7 +256,14 @@ namespace ToolCalibWifiForGW040H.Function {
                             Decimal F6_5_0_old_toDEC = Convert.ToInt32(F6_5_0_old, 2);
                             _ti.LOGSYSTEM += "F6[5,0] cũ ở dạng DEC = " + F6_5_0_old_toDEC + "\r\n";
 
-                            F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
+                            //F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
+                            if (FreOffset_new > F4_6_0_DEC) {
+                                F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
+                            }
+                            else {
+                                F6_5_0_new_DEC = F4_6_0_DEC - FreOffset_new;
+                            }
+
                             //F6_5_0_new_DEC = Math.Round(F6_5_0_old_toDEC - (Decimal.Parse(Freq_Err) / 1500)); //2350
                             _ti.LOGSYSTEM += "F6[5,0] mới ở dạng DEC = " + F6_5_0_new_DEC + "\r\n";
                             string F6_full_new_BIN = "";
@@ -424,6 +431,7 @@ namespace ToolCalibWifiForGW040H.Function {
 
         private bool Calibrate_Pwr_Detail(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument, string Standard_2G_or_5G, string RFinput, string Anten, string Channel_Freq, string Register, double Attenuator) {
             string Register_Old_Value_Pwr = "", Register_New_Value_Pwr = "";
+            bool _flag = true;
             try {
                 Register_Old_Value_Pwr = ModemTelnet.Read_Register(Register.Split('x')[1]);
                 if (Register_Old_Value_Pwr.Contains(Register.Split('x')[1])) {
@@ -489,16 +497,19 @@ namespace ToolCalibWifiForGW040H.Function {
 
                             if (Register_New_Value_Pwr.Contains("ERROR")) {
                                 _ti.LOGSYSTEM += "[FAIL] Bắt đầu thực hiện lại.\r\n";
+                                _flag = false;
                                 continue;
                             }
                             else {
                                 _ti.LOGSYSTEM += "Giá trị cần truyền: " + Register_New_Value_Pwr + "\r\n";
                                 ModemTelnet.Write_Register(Register.Split('x')[1], Register_New_Value_Pwr);
+                                _flag = true;
                                 break;
                             }
                         }
                         else {
                             //MessageBox.Show("Lỗi đọc Power.");
+                            _flag = false;
                         }
                     }
                 }
@@ -507,7 +518,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 if (propInfo != null) {
                     propInfo.SetValue(GlobalData.logRegister, Register_New_Value_Pwr == "" ? Register_Old_Value_Pwr.Substring(2, 2) : Register_New_Value_Pwr.Substring(2, 2), null);
                 }
-                return true;
+                return _flag;
             }
             catch {
                 return false;

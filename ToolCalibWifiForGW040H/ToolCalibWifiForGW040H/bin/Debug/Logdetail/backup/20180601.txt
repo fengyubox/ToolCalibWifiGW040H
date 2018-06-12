@@ -1,0 +1,1507 @@
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = -0.63 dBm
+EVM All Carriers = -27.4  dB
+Center Frequency Error = 1203 Hz
+FAIL: Power
+RETRY = 1
+Average Power = -0.63 dBm
+EVM All Carriers = -27.5  dB
+Center Frequency Error = 1139 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 3269 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 7 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = -0.62 dBm
+EVM All Carriers = -27.3  dB
+Center Frequency Error = 1217 Hz
+FAIL: Power
+RETRY = 1
+Average Power = -0.42 dBm
+EVM All Carriers = -27.4  dB
+Center Frequency Error = 1036 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 3290 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 7 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 18.95 dBm
+EVM All Carriers = -33.5  dB
+Center Frequency Error = 166 Hz
+Phán định = PASS
+Thời gian verify : 1227 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 18.98 dBm
+EVM All Carriers = -34.9  dB
+Center Frequency Error = 429 Hz
+Phán định = PASS
+Thời gian verify : 1260 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 6 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 20.15 dBm
+EVM All Carriers = -31.7  dB
+Center Frequency Error = -271 Hz
+Phán định = PASS
+Thời gian verify : 1316 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 20.19 dBm
+EVM All Carriers = -32.1  dB
+Center Frequency Error = 151 Hz
+Phán định = PASS
+Thời gian verify : 1289 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 6 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu quá trình Calib tần số.
+Đang đọc thanh ghi F4,F6...
+0x00F4 = 0x00C1; 0x00F6 = 0x88D0
+F4[6:0] = 1000001; F6[5:0] = 010000
+F4[6:0]_DEC = 65; F6[5:0]_DEC = 16
+Giá trị Frequency Offset hiện tại = F4[6,0] +/- F6[5,0] = 49
+Gửi lệnh phát tín hiệu kèm Current_Freq_Offset: 49
+Đang cấu hình lần đầu cho máy đo MT8870A...
+Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo MT8870A - Offset = 49
+...
+Lấy kết quả đo lần thứ: 1
+Frequency Err = -181
+Frequency Error đã đạt Target.
+---------------------------------
+Thời gian calib Freq : 2271 ms
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3 - 0x59
+Giá trị thanh ghi 0x59 hiện tại: 8182
+Công suất đo được: 20.5 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 8184
+Thời gian calib : 3221 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8 - 0x5A
+Giá trị thanh ghi 0x5A hiện tại: 8181
+Công suất đo được: 20.5 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 8183
+Thời gian calib : 3135 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13 - 0x5B
+Giá trị thanh ghi 0x5B hiện tại: C081
+Công suất đo được: 20.5 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C083
+Thời gian calib : 3190 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3 - 0x5F
+Giá trị thanh ghi 0x5F hiện tại: C2C2
+Công suất đo được: 20.5 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C280
+Thời gian calib : 3173 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8 - 0x60
+Giá trị thanh ghi 0x60 hiện tại: C1C2
+Công suất đo được: 21 (dBm)
+Độ lệch công suất: 1.5 (dBm)
+Giá trị cần truyền: C181
+Thời gian calib : 3214 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13 - 0x61
+Giá trị thanh ghi 0x61 hiện tại: C0C1
+Công suất đo được: 20.5 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C081
+Thời gian calib : 3182 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184 - 0x143
+Giá trị thanh ghi 0x143 hiện tại: C9CE
+Công suất đo được: 20 (dBm)
+Độ lệch công suất: 2 (dBm)
+Giá trị cần truyền: C9CA
+Thời gian calib : 3121 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16 - 0x144
+Giá trị thanh ghi 0x144 hiện tại: C0C9
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2363 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36 - 0x148
+Giá trị thanh ghi 0x148 hiện tại: 80C2
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 80C1
+Thời gian calib : 3309 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48 - 0x149
+Giá trị thanh ghi 0x149 hiện tại: 4080
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 4082
+Thời gian calib : 3378 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52 - 0x14D
+Giá trị thanh ghi 0x14D hiện tại: 81C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 8181
+Thời gian calib : 3503 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64 - 0x14E
+Giá trị thanh ghi 0x14E hiện tại: 0081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 1.5 (dBm)
+Giá trị cần truyền: 0084
+Thời gian calib : 3051 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100 - 0x157
+Giá trị thanh ghi 0x157 hiện tại: C285
+Công suất đo được: 17 (dBm)
+Độ lệch công suất: -1 (dBm)
+Giá trị cần truyền: C283
+Thời gian calib : 3127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116 - 0x158
+Giá trị thanh ghi 0x158 hiện tại: C0C2
+Giá trị thanh ghi 0x158 hiện tại: C0C2
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 1.5 (dBm)
+Giá trị cần truyền: C081
+Thời gian calib : 6066 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120 - 0x15C
+Giá trị thanh ghi 0x15C hiện tại: C3C3
+Giá trị thanh ghi 0x15C hiện tại: C3C3
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C3C1
+Thời gian calib : 5805 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136 - 0x15D
+Giá trị thanh ghi 0x15D hiện tại: C0C3
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C0C1
+Thời gian calib : 3163 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140 - 0x161
+Giá trị thanh ghi 0x161 hiện tại: C5C6
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C5C5
+Thời gian calib : 3207 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157 - 0x162
+Giá trị thanh ghi 0x162 hiện tại: C0C5
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C4
+Thời gian calib : 3127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161 - 0x166
+Giá trị thanh ghi 0x166 hiện tại: C5C6
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C5C5
+Thời gian calib : 3142 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165 - 0x167
+Giá trị thanh ghi 0x167 hiện tại: C0C5
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C4
+Thời gian calib : 3256 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184 - 0x16B
+Giá trị thanh ghi 0x16B hiện tại: C3C6
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C3C4
+Thời gian calib : 3150 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16 - 0x16C
+Giá trị thanh ghi 0x16C hiện tại: 40C3
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 40C1
+Thời gian calib : 3306 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36 - 0x170
+Giá trị thanh ghi 0x170 hiện tại: C1C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C181
+Thời gian calib : 3112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48 - 0x171
+Giá trị thanh ghi 0x171 hiện tại: 40C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 4081
+Thời gian calib : 3170 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52 - 0x175
+Giá trị thanh ghi 0x175 hiện tại: C2C2
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C280
+Thời gian calib : 3594 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64 - 0x176
+Giá trị thanh ghi 0x176 hiện tại: 00C2
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 0080
+Thời gian calib : 3553 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100 - 0x17F
+Giá trị thanh ghi 0x17F hiện tại: C2C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C281
+Thời gian calib : 3228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116 - 0x180
+Giá trị thanh ghi 0x180 hiện tại: C0C2
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 1.5 (dBm)
+Giá trị cần truyền: C081
+Thời gian calib : 3530 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120 - 0x184
+Giá trị thanh ghi 0x184 hiện tại: 81C3
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: 81C1
+Thời gian calib : 3507 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136 - 0x185
+Giá trị thanh ghi 0x185 hiện tại: C081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 1.5 (dBm)
+Giá trị cần truyền: C084
+Thời gian calib : 3139 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140 - 0x189
+Giá trị thanh ghi 0x189 hiện tại: C1C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C181
+Thời gian calib : 3114 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157 - 0x18A
+Giá trị thanh ghi 0x18A hiện tại: C0C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C081
+Thời gian calib : 3118 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161 - 0x18E
+Giá trị thanh ghi 0x18E hiện tại: C1C1
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: 1 (dBm)
+Giá trị cần truyền: C181
+Thời gian calib : 3095 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165 - 0x18F
+Giá trị thanh ghi 0x18F hiện tại: 00C1
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 0080
+Thời gian calib : 3150 ms
+
+------------------------------------------------------------
+Thực hiện lưu vào FLASH.
+Thời gian lưu vào FLASH : 27356 ms
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 86.6%, Sent=1000, Received=134
+RETRY = 1
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 88.9%, Sent=1000, Received=111
+RETRY = 2
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -1.9%, Sent=1000, Received=1019
+Phán định = PASS
+Thời gian test độ nhạy thu : 8080 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -4.5%, Sent=1000, Received=1045
+Phán định = PASS
+Thời gian test độ nhạy thu : 2092 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 5G.
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = 95.5%, Sent=1000, Received=45
+RETRY = 1
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = -4.3%, Sent=1000, Received=1043
+Phán định = PASS
+Thời gian test độ nhạy thu : 3980 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = -4.9%, Sent=1000, Received=1049
+Phán định = PASS
+Thời gian test độ nhạy thu : 2016 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Average Power = 19.34 dBm
+EVM All Carriers = -33.5  dB
+Center Frequency Error = -476 Hz
+Phán định = PASS
+Thời gian verify : 1327 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.16 dBm
+EVM All Carriers = -33.8  dB
+Center Frequency Error = -580 Hz
+Phán định = PASS
+Thời gian verify : 1463 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Average Power = 19.47 dBm
+EVM All Carriers = -33.7  dB
+Center Frequency Error = -492 Hz
+Phán định = PASS
+Thời gian verify : 1385 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Average Power = 18.86 dBm
+EVM All Carriers = -32.5  dB
+Center Frequency Error = -219 Hz
+Phán định = PASS
+Thời gian verify : 1200 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.11 dBm
+EVM All Carriers = -32.8  dB
+Center Frequency Error = -223 Hz
+Phán định = PASS
+Thời gian verify : 1463 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Average Power = 18.91 dBm
+EVM All Carriers = -34.2  dB
+Center Frequency Error = -239 Hz
+Phán định = PASS
+Thời gian verify : 1251 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 5G.
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 36
+Average Power = 22.54 dBm
+EVM All Carriers = -26.9  dB
+Center Frequency Error = -213 Hz
+FAIL: Power
+RETRY = 1
+Average Power = 22.76 dBm
+EVM All Carriers = -26.4  dB
+Center Frequency Error = -610 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 2926 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 100
+Average Power = 22.62 dBm
+EVM All Carriers = -26.3  dB
+Center Frequency Error = -606 Hz
+FAIL: Power
+RETRY = 1
+Average Power = 22.64 dBm
+EVM All Carriers = -26.2  dB
+Center Frequency Error = -541 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 3123 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 165
+Average Power = 22.72 dBm
+EVM All Carriers = -20.5  dB
+Center Frequency Error = -948 Hz
+FAIL: Power
+RETRY = 1
+Average Power = 22.67 dBm
+EVM All Carriers = -20.5  dB
+Center Frequency Error = -862 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 2995 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 36
+Average Power = 22.41 dBm
+EVM All Carriers = -29  dB
+Center Frequency Error = -709 Hz
+Phán định = PASS
+Thời gian verify : 1565 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 100
+Average Power = 22.43 dBm
+EVM All Carriers = -26.8  dB
+Center Frequency Error = -754 Hz
+Phán định = PASS
+Thời gian verify : 1425 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 165
+Average Power = 21.98 dBm
+EVM All Carriers = -20.4  dB
+Center Frequency Error = -917 Hz
+Phán định = PASS
+Thời gian verify : 1450 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 42
+Average Power = 17.49 dBm
+EVM All Carriers = -36.4  dB
+Center Frequency Error = -770 Hz
+Phán định = PASS
+Thời gian verify : 1464 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 106
+Average Power = 19.29 dBm
+EVM All Carriers = -31.9  dB
+Center Frequency Error = -553 Hz
+FAIL: Power
+RETRY = 1
+Average Power = 19.31 dBm
+EVM All Carriers = -31.9  dB
+Center Frequency Error = -827 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 2886 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 155
+Average Power = 18.35 dBm
+EVM All Carriers = -33.6  dB
+Center Frequency Error = -758 Hz
+Phán định = PASS
+Thời gian verify : 1204 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 42
+Average Power = 17.9 dBm
+EVM All Carriers = -35.8  dB
+Center Frequency Error = -216 Hz
+Phán định = PASS
+Thời gian verify : 1197 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 106
+Average Power = 18.25 dBm
+EVM All Carriers = -38.4  dB
+Center Frequency Error = -464 Hz
+Phán định = PASS
+Thời gian verify : 1467 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 155
+Average Power = 17.89 dBm
+EVM All Carriers = -35  dB
+Center Frequency Error = -688 Hz
+Phán định = PASS
+Thời gian verify : 1206 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 195 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu quá trình Calib tần số.
+Đang đọc thanh ghi F4,F6...
+0x00F4 = 0x00C1; 0x00F6 = 0x88D0
+F4[6:0] = 1000001; F6[5:0] = 010000
+F4[6:0]_DEC = 65; F6[5:0]_DEC = 16
+Giá trị Frequency Offset hiện tại = F4[6,0] +/- F6[5,0] = 49
+Gửi lệnh phát tín hiệu kèm Current_Freq_Offset: 49
+Đang cấu hình lần đầu cho máy đo MT8870A...
+Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo MT8870A - Offset = 49
+...
+Lấy kết quả đo lần thứ: 1
+Frequency Err = -731
+Frequency Error đã đạt Target.
+---------------------------------
+Thời gian calib Freq : 2274 ms
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3 - 0x59
+Giá trị thanh ghi 0x59 hiện tại: 8384
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2410 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8 - 0x5A
+Giá trị thanh ghi 0x5A hiện tại: 8383
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2541 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13 - 0x5B
+Giá trị thanh ghi 0x5B hiện tại: C083
+Giá trị thanh ghi 0x5B hiện tại: C083
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 4621 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3 - 0x5F
+Giá trị thanh ghi 0x5F hiện tại: 8180
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2315 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8 - 0x60
+Giá trị thanh ghi 0x60 hiện tại: 8181
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8180
+Thời gian calib : 3378 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13 - 0x61
+Giá trị thanh ghi 0x61 hiện tại: C081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2283 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184 - 0x143
+Giá trị thanh ghi 0x143 hiện tại: C9CA
+Giá trị thanh ghi 0x143 hiện tại: C9CA
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 4678 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16 - 0x144
+Giá trị thanh ghi 0x144 hiện tại: C0C9
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C8
+Thời gian calib : 3383 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36 - 0x148
+Giá trị thanh ghi 0x148 hiện tại: 82C1
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 8280
+Thời gian calib : 3153 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48 - 0x149
+Giá trị thanh ghi 0x149 hiện tại: 4082
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2337 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52 - 0x14D
+Giá trị thanh ghi 0x14D hiện tại: 8481
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2089 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64 - 0x14E
+Giá trị thanh ghi 0x14E hiện tại: 0084
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2842 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100 - 0x157
+Giá trị thanh ghi 0x157 hiện tại: 8183
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 8184
+Thời gian calib : 3122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116 - 0x158
+Giá trị thanh ghi 0x158 hiện tại: C081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2670 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120 - 0x15C
+Giá trị thanh ghi 0x15C hiện tại: C1C1
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C180
+Thời gian calib : 3486 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136 - 0x15D
+Giá trị thanh ghi 0x15D hiện tại: C0C1
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2321 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140 - 0x161
+Giá trị thanh ghi 0x161 hiện tại: C4C5
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C4C4
+Thời gian calib : 3210 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157 - 0x162
+Giá trị thanh ghi 0x162 hiện tại: C0C4
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C3
+Thời gian calib : 3192 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161 - 0x166
+Giá trị thanh ghi 0x166 hiện tại: C4C5
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C4C4
+Thời gian calib : 3244 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165 - 0x167
+Giá trị thanh ghi 0x167 hiện tại: C0C4
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C3
+Thời gian calib : 3375 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184 - 0x16B
+Giá trị thanh ghi 0x16B hiện tại: C1C4
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2397 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16 - 0x16C
+Giá trị thanh ghi 0x16C hiện tại: 40C1
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2364 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36 - 0x170
+Giá trị thanh ghi 0x170 hiện tại: 8181
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2541 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48 - 0x171
+Giá trị thanh ghi 0x171 hiện tại: 4081
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 4080
+Thời gian calib : 3164 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52 - 0x175
+Giá trị thanh ghi 0x175 hiện tại: 8080
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 80C1
+Thời gian calib : 3767 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64 - 0x176
+Giá trị thanh ghi 0x176 hiện tại: 0080
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2919 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100 - 0x17F
+Giá trị thanh ghi 0x17F hiện tại: 8181
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2691 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116 - 0x180
+Giá trị thanh ghi 0x180 hiện tại: C081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2743 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120 - 0x184
+Giá trị thanh ghi 0x184 hiện tại: 84C1
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2314 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136 - 0x185
+Giá trị thanh ghi 0x185 hiện tại: C084
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2528 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140 - 0x189
+Giá trị thanh ghi 0x189 hiện tại: 8181
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8180
+Thời gian calib : 3061 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157 - 0x18A
+Giá trị thanh ghi 0x18A hiện tại: C081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2286 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161 - 0x18E
+Giá trị thanh ghi 0x18E hiện tại: 8081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2315 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165 - 0x18F
+Giá trị thanh ghi 0x18F hiện tại: 0080
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 0081
+Thời gian calib : 3180 ms
+
+------------------------------------------------------------
+Thực hiện lưu vào FLASH.
+Thời gian lưu vào FLASH : 28173 ms
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 24.1%, Sent=1000, Received=759
+RETRY = 1
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 19.1%, Sent=1000, Received=809
+RETRY = 2
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 21.6%, Sent=1000, Received=784
+Phán định = FAIL
+Thời gian test độ nhạy thu : 6251 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 16.2%, Sent=1000, Received=838
+RETRY = 1
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 0.2%, Sent=1000, Received=998
+Phán định = PASS
+Thời gian test độ nhạy thu : 4182 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 143 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2089 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2086 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 5G.
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2011 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = 0.1%, Sent=1000, Received=999
+Phán định = PASS
+Thời gian test độ nhạy thu : 2112 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 12 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 18.89 dBm
+EVM All Carriers = -34  dB
+Center Frequency Error = -1364 Hz
+Phán định = PASS
+Thời gian verify : 1479 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 18.94 dBm
+EVM All Carriers = -32.7  dB
+Center Frequency Error = -1091 Hz
+Phán định = PASS
+Thời gian verify : 1438 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 6 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu quá trình Calib tần số.
+Đang đọc thanh ghi F4,F6...
+0x00F4 = 0x00C1; 0x00F6 = 0x88D0
+F4[6:0] = 1000001; F6[5:0] = 010000
+F4[6:0]_DEC = 65; F6[5:0]_DEC = 16
+Giá trị Frequency Offset hiện tại = F4[6,0] +/- F6[5,0] = 49
+Gửi lệnh phát tín hiệu kèm Current_Freq_Offset: 49
+Đang cấu hình lần đầu cho máy đo MT8870A...
+Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo MT8870A - Offset = 49
+...
+Lấy kết quả đo lần thứ: 1
+Frequency Err = -1284
+Frequency Error đã đạt Target.
+---------------------------------
+Thời gian calib Freq : 2362 ms
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3 - 0x59
+Giá trị thanh ghi 0x59 hiện tại: 8384
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8383
+Thời gian calib : 3181 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8 - 0x5A
+Giá trị thanh ghi 0x5A hiện tại: 8383
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2567 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13 - 0x5B
+Giá trị thanh ghi 0x5B hiện tại: C083
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C082
+Thời gian calib : 3165 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3 - 0x5F
+Giá trị thanh ghi 0x5F hiện tại: 8080
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 80C1
+Thời gian calib : 3146 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8 - 0x60
+Giá trị thanh ghi 0x60 hiện tại: 8180
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2337 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13 - 0x61
+Giá trị thanh ghi 0x61 hiện tại: C081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2447 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184 - 0x143
+Giá trị thanh ghi 0x143 hiện tại: C8CA
+Giá trị thanh ghi 0x143 hiện tại: C8CA
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C8CB
+Thời gian calib : 5474 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16 - 0x144
+Giá trị thanh ghi 0x144 hiện tại: C0C8
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C9
+Thời gian calib : 3147 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36 - 0x148
+Giá trị thanh ghi 0x148 hiện tại: 8280
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 82C1
+Thời gian calib : 3203 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48 - 0x149
+Giá trị thanh ghi 0x149 hiện tại: 4082
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 4081
+Thời gian calib : 3377 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52 - 0x14D
+Giá trị thanh ghi 0x14D hiện tại: 8481
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8480
+Thời gian calib : 3145 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64 - 0x14E
+Giá trị thanh ghi 0x14E hiện tại: 0084
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 0083
+Thời gian calib : 3573 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100 - 0x157
+Giá trị thanh ghi 0x157 hiện tại: 8184
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8183
+Thời gian calib : 3143 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116 - 0x158
+Giá trị thanh ghi 0x158 hiện tại: C081
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C080
+Thời gian calib : 3635 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120 - 0x15C
+Giá trị thanh ghi 0x15C hiện tại: C180
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C1C1
+Thời gian calib : 3808 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136 - 0x15D
+Giá trị thanh ghi 0x15D hiện tại: C0C1
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C2
+Thời gian calib : 3579 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140 - 0x161
+Giá trị thanh ghi 0x161 hiện tại: C3C4
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C3C5
+Thời gian calib : 3371 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157 - 0x162
+Giá trị thanh ghi 0x162 hiện tại: C0C3
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C4
+Thời gian calib : 3175 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161 - 0x166
+Giá trị thanh ghi 0x166 hiện tại: C3C4
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C3C5
+Thời gian calib : 3143 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165 - 0x167
+Giá trị thanh ghi 0x167 hiện tại: C0C3
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C4
+Thời gian calib : 3141 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184 - 0x16B
+Giá trị thanh ghi 0x16B hiện tại: C1C4
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2309 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16 - 0x16C
+Giá trị thanh ghi 0x16C hiện tại: 40C1
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 40C2
+Thời gian calib : 3178 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36 - 0x170
+Giá trị thanh ghi 0x170 hiện tại: 8081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2290 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48 - 0x171
+Giá trị thanh ghi 0x171 hiện tại: 4080
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2282 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52 - 0x175
+Giá trị thanh ghi 0x175 hiện tại: 80C1
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2647 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64 - 0x176
+Giá trị thanh ghi 0x176 hiện tại: 0080
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2323 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100 - 0x17F
+Giá trị thanh ghi 0x17F hiện tại: 8181
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2571 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116 - 0x180
+Giá trị thanh ghi 0x180 hiện tại: C081
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C080
+Thời gian calib : 3785 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120 - 0x184
+Giá trị thanh ghi 0x184 hiện tại: 84C1
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2752 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136 - 0x185
+Giá trị thanh ghi 0x185 hiện tại: C084
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C083
+Thời gian calib : 3547 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140 - 0x189
+Giá trị thanh ghi 0x189 hiện tại: 8180
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2418 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157 - 0x18A
+Giá trị thanh ghi 0x18A hiện tại: C081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2347 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161 - 0x18E
+Giá trị thanh ghi 0x18E hiện tại: 8181
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8180
+Thời gian calib : 3077 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165 - 0x18F
+Giá trị thanh ghi 0x18F hiện tại: 0081
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 2476 ms
+
+------------------------------------------------------------
+Thực hiện lưu vào FLASH.
+Thời gian lưu vào FLASH : 29596 ms
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2089 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 5G.
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2126 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-60.5 dBm, waveform=MV887031A_ac_MCS9_80_1024L
+PER = 0%, Sent=1000, Received=1000
+Phán định = PASS
+Thời gian test độ nhạy thu : 2010 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Average Power = 19.85 dBm
+EVM All Carriers = -33  dB
+Center Frequency Error = -1081 Hz
+Phán định = PASS
+Thời gian verify : 1380 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.53 dBm
+EVM All Carriers = -33.1  dB
+Center Frequency Error = -1095 Hz
+Phán định = PASS
+Thời gian verify : 1435 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Average Power = 19.84 dBm
+EVM All Carriers = -33  dB
+Center Frequency Error = -1045 Hz
+Phán định = PASS
+Thời gian verify : 1341 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Average Power = 19.33 dBm
+EVM All Carriers = -32.4  dB
+Center Frequency Error = -725 Hz
+Phán định = PASS
+Thời gian verify : 1229 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.53 dBm
+EVM All Carriers = -32.7  dB
+Center Frequency Error = -687 Hz
+Phán định = PASS
+Thời gian verify : 1281 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Average Power = 18.91 dBm
+EVM All Carriers = -34.6  dB
+Center Frequency Error = -758 Hz
+Phán định = PASS
+Thời gian verify : 1416 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 5G.
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 36
+Average Power = 22.74 dBm
+EVM All Carriers = -26.4  dB
+Center Frequency Error = -1698 Hz
+Phán định = PASS
+Thời gian verify : 1575 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 100
+Average Power = 22.51 dBm
+EVM All Carriers = -27.1  dB
+Center Frequency Error = -1568 Hz
+Phán định = PASS
+Thời gian verify : 1314 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 165
+Average Power = 22.7 dBm
+EVM All Carriers = -20.8  dB
+Center Frequency Error = -1961 Hz
+Phán định = PASS
+Thời gian verify : 1550 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 36
+Average Power = 22.28 dBm
+EVM All Carriers = -29.5  dB
+Center Frequency Error = -1662 Hz
+Phán định = PASS
+Thời gian verify : 1510 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 100
+Average Power = 22.3 dBm
+EVM All Carriers = -27.1  dB
+Center Frequency Error = -1351 Hz
+Phán định = PASS
+Thời gian verify : 1363 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 165
+Average Power = 21.46 dBm
+EVM All Carriers = -21.9  dB
+Center Frequency Error = -1960 Hz
+Phán định = PASS
+Thời gian verify : 1370 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 42
+Average Power = 17.98 dBm
+EVM All Carriers = -36.4  dB
+Center Frequency Error = -1519 Hz
+Phán định = PASS
+Thời gian verify : 1201 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 106
+Average Power = 19.78 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = -1797 Hz
+FAIL: Power
+RETRY = 1
+Average Power = 19.78 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = -1786 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 2753 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 155
+Average Power = 18.34 dBm
+EVM All Carriers = -33.5  dB
+Center Frequency Error = -2173 Hz
+Phán định = PASS
+Thời gian verify : 1374 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 42
+Average Power = 18.36 dBm
+EVM All Carriers = -35.5  dB
+Center Frequency Error = -1434 Hz
+Phán định = PASS
+Thời gian verify : 1405 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 106
+Average Power = 18.67 dBm
+EVM All Carriers = -38.1  dB
+Center Frequency Error = -1633 Hz
+Phán định = PASS
+Thời gian verify : 1458 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 155
+Average Power = 17.8 dBm
+EVM All Carriers = -35.1  dB
+Center Frequency Error = -1965 Hz
+Phán định = PASS
+Thời gian verify : 1449 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 174 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.63 dBm
+EVM All Carriers = -33  dB
+Center Frequency Error = -1152 Hz
+Phán định = PASS
+Thời gian verify : 1475 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.73 dBm
+EVM All Carriers = -32.6  dB
+Center Frequency Error = -653 Hz
+Phán định = PASS
+Thời gian verify : 1474 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 6 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.51 dBm
+EVM All Carriers = -32.9  dB
+Center Frequency Error = -901 Hz
+Phán định = PASS
+Thời gian verify : 1224 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.69 dBm
+EVM All Carriers = -32.6  dB
+Center Frequency Error = -729 Hz
+Phán định = PASS
+Thời gian verify : 1376 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 6 sec.
+

@@ -44,7 +44,7 @@ namespace ToolCalibWifiForGW040H.Function {
         static string _filename_rxwifi5 = string.Format("{0}TestCase\\rxWifi-5G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
         static string _filename_at1wifi2 = string.Format("{0}TestCase\\at1Wifi-2G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
         static string _filename_at2wifi2 = string.Format("{0}TestCase\\at2Wifi-2G.csv", System.AppDomain.CurrentDomain.BaseDirectory);
-        static string _filename_att = string.Format("{0}TestCase\\Att-TestCase.csv", System.AppDomain.CurrentDomain.BaseDirectory);
+        static string _filename_att = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? string.Format("{0}TestCase\\Att-TestCase.csv", System.AppDomain.CurrentDomain.BaseDirectory) : string.Format("{0}TestCase\\Att-TestCase-Anten.csv", System.AppDomain.CurrentDomain.BaseDirectory);
 
         static TestCase() {
             if (Directory.Exists(_dirName) == false) Directory.CreateDirectory(_dirName);

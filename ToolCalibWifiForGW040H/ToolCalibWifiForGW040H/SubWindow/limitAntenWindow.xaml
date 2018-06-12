@@ -1,0 +1,49 @@
+﻿<Window x:Class="ToolCalibWifiForGW040H.limitAntenWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
+        mc:Ignorable="d"
+        Title="limitAntenWindow" Height="200" Width="450" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+
+    <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#FFFFFF">
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Thiết lập tiêu chuẩn"/>
+                <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
+            </Grid>
+
+            <StackPanel Margin="0,0,0,0" Grid.Row="1">
+                <GroupBox Margin="5,10,0,0" BorderBrush="Black" BorderThickness="0.5" Header="Thiết lập tiêu chuẩn test anten" Width="435" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <StackPanel>
+                        <WrapPanel x:Name="wpPwAnten1" Margin="0,5,0,0">
+                            <Label HorizontalAlignment="Left" Content="Target Lower Power Anten1"/>
+                            <TextBox VerticalContentAlignment="Center" Width="70" FontSize="17" Text="{Binding Path=STDPWANTEN1, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            <Label HorizontalAlignment="Left" Content="dBm"/>
+                        </WrapPanel>
+                        <WrapPanel x:Name="wpPwAnten2" Margin="0,5,0,0">
+                            <Label HorizontalAlignment="Left" Content="Target Lower Power Anten2"/>
+                            <TextBox VerticalContentAlignment="Center" Width="70" FontSize="17" Text="{Binding Path=STDPWANTEN2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            <Label HorizontalAlignment="Left" Content="dBm"/>
+                        </WrapPanel>
+                    </StackPanel>
+                </GroupBox>
+
+                <WrapPanel HorizontalAlignment="Left" Margin="5,10,0,0">
+                    <Button Click="Button_Click" Height="30" Width="90" Content="OK" Margin="0,0,0,0"></Button>
+                    <Button Click="Button_Click" Height="30" Width="90" Content="Default" Margin="20,0,0,0"></Button>
+                    <Button Click="Button_Click" Height="30" Width="90" Content="Cancel" Margin="20,0,0,0"></Button>
+                </WrapPanel>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+    
+</Window>

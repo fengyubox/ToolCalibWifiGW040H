@@ -32,6 +32,7 @@ namespace ToolCalibWifiForGW040H {
             this.spBefore.Visibility = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? Visibility.Visible : Visibility.Collapsed;
             this.spAfter.Visibility = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? Visibility.Collapsed : Visibility.Visible;
             this.lblTitle.Content = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? "PHẦN MỀM CALIBRATION + TEST WIFI ONT GW040H" : "PHẦN MỀM TEST ANTEN WIFI ONT GW040H";
+            this.miMaster.IsEnabled = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? true : false;
 
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
@@ -74,8 +75,14 @@ namespace ToolCalibWifiForGW040H {
                         inst.ShowDialog();
                         break; }
                 case "Thiết lập tiêu chuẩn": {
-                        limitWindow lim = new limitWindow();
-                        lim.ShowDialog();
+                        if (GlobalData.initSetting.STATION == "Trước đóng vỏ") {
+                            limitWindow lim = new limitWindow();
+                            lim.ShowDialog();
+                        }
+                        else {
+                            limitAntenWindow lim = new limitAntenWindow();
+                            lim.ShowDialog();
+                        }
                         break; }
                 case "Thiết lập bài test": {
                         testcaseWindow tcw = new testcaseWindow();
@@ -96,6 +103,11 @@ namespace ToolCalibWifiForGW040H {
                         analyzerWindow anal = new analyzerWindow();
                         anal.ShowDialog();
                         break; }
+                case "About": {
+                        About ab = new About();
+                        ab.ShowDialog();
+                        break;
+                    }
                 default: break;
             }
         }

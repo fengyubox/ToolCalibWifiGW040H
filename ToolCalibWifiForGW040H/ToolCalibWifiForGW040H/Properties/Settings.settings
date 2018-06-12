@@ -56,5 +56,11 @@
     <Setting Name="enTestAnten2" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="stdPwAnten1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-7</Value>
+    </Setting>
+    <Setting Name="stdPwAnten2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">-15</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

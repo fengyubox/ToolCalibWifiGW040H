@@ -82,7 +82,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 int tout = 0;
                 REP:
                 try {
-                    Thread.Sleep(500);
+                    Thread.Sleep(100);
                     value = Read();
                     value = value.Replace("\r", "").Replace("\n", "").Trim();
                     if (value.Substring(value.Length - 1, 1) == "#") {
@@ -90,13 +90,13 @@ namespace ToolCalibWifiForGW040H.Function {
                     }
                     else {
                         tout++;
-                        if (tout < 60) goto REP;
+                        if (tout < 500) goto REP;
                         else return false;
                     }
                 }
                 catch {
                     tout++;
-                    if (tout < 60) goto REP;
+                    if (tout < 500) goto REP;
                     else return false;
                 }
             }

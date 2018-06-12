@@ -688,5 +688,14 @@ namespace ToolCalibWifiForGW040H.Function {
             else if (0.25 < extra && extra <= 0.75) return num + 0.5;
             else return num + 1;
         }
+
+        //public static double RoundDecimal(double value) {
+        //    double temp = Math.Round(value, 2);
+        //    double num = (int)temp;
+        //    double extra = (double)(temp - num);
+        //    if (extra == 0) return num;
+        //    else if (0 < extra && extra <= 0.5) return num + 0.5;
+        //    else return num + 1;
+        //}
     }
 }

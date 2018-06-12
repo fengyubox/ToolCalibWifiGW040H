@@ -56,6 +56,7 @@ namespace ToolCalibWifiForGW040H.Function
 
         private bool Verify_Signal(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument, string standard_2G_5G, string Mode, string MCS, string BW, string Channel_Freq, string Anten, double Attenuator) {
             try {
+                standard_2G_5G = int.Parse(Channel_Freq.Substring(0, 4)) > 3000 ? "5G" : "2G";
                 string Result_Measure_temp = "";
                 decimal Pwr_measure_temp, EVM_measure_temp, FreqErr_measure_temp;
                 string _wifi = "";
@@ -112,6 +113,8 @@ namespace ToolCalibWifiForGW040H.Function
 
                 //So sánh kết quả đo với giá trị tiêu chuẩn
                 bool _result = false, _powerOK = false, _evmOK = false, _freqerrOK = true;
+                _limit.power_MAX = "25";
+                _limit.power_MIN = Anten == "1" ? GlobalData.initSetting.STDPWANTEN1 : GlobalData.initSetting.STDPWANTEN2;
                 _powerOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.power_MAX, _limit.power_MIN, Pwr_measure_temp);
                 _evmOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.evm_MAX, _limit.evm_MIN, EVM_measure_temp);
                 _freqerrOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.freqError_MAX, _limit.freqError_MIN, FreqErr_measure_temp);

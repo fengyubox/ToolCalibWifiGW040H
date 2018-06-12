@@ -1,0 +1,1995 @@
+﻿[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu quá trình Calib tần số.
+Đang đọc thanh ghi F4,F6...
+0x00F4 = 0x00C4; 0x00F6 = 0x85CF
+F4[6:0] = 1000100; F6[5:0] = 001111
+F4[6:0]_DEC = 68; F6[5:0]_DEC = 15
+Giá trị Frequency Offset hiện tại = F4[6,0] +/- F6[5,0] = 53
+Gửi lệnh phát tín hiệu kèm Current_Freq_Offset: 53
+Đang cấu hình lần đầu cho máy đo MT8870A...
+Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo MT8870A - Offset = 53
+...
+Lấy kết quả đo lần thứ: 1
+Frequency Err = -185
+Frequency Error đã đạt Target.
+---------------------------------
+Thời gian calib Freq : 3536 ms
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3 - 0x59
+Giá trị thanh ghi 0x59 hiện tại: 8282
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8281
+Thời gian calib : 4244 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8 - 0x5A
+Giá trị thanh ghi 0x5A hiện tại: 8082
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8081
+Thời gian calib : 4216 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13 - 0x5B
+Giá trị thanh ghi 0x5B hiện tại: C080
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3426 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3 - 0x5F
+Giá trị thanh ghi 0x5F hiện tại: 8180
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3429 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8 - 0x60
+Giá trị thanh ghi 0x60 hiện tại: 8281
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 8280
+Thời gian calib : 4225 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13 - 0x61
+Giá trị thanh ghi 0x61 hiện tại: C082
+Công suất đo được: 19 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C081
+Thời gian calib : 4241 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184 - 0x143
+Giá trị thanh ghi 0x143 hiện tại: C9CD
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3418 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16 - 0x144
+Giá trị thanh ghi 0x144 hiện tại: C0C9
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0CA
+Thời gian calib : 4214 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36 - 0x148
+Giá trị thanh ghi 0x148 hiện tại: C7C6
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C7C7
+Thời gian calib : 4228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48 - 0x149
+Giá trị thanh ghi 0x149 hiện tại: 40C7
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 40C8
+Thời gian calib : 4226 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52 - 0x14D
+Giá trị thanh ghi 0x14D hiện tại: C6C6
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3412 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64 - 0x14E
+Giá trị thanh ghi 0x14E hiện tại: 00C6
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 00C7
+Thời gian calib : 4215 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100 - 0x157
+Giá trị thanh ghi 0x157 hiện tại: C8C8
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C8C9
+Thời gian calib : 4218 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116 - 0x158
+Giá trị thanh ghi 0x158 hiện tại: C0C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3420 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120 - 0x15C
+Giá trị thanh ghi 0x15C hiện tại: C4C5
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C4C6
+Thời gian calib : 4245 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136 - 0x15D
+Giá trị thanh ghi 0x15D hiện tại: C0C4
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C5
+Thời gian calib : 4222 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140 - 0x161
+Giá trị thanh ghi 0x161 hiện tại: C6C6
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3425 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157 - 0x162
+Giá trị thanh ghi 0x162 hiện tại: C0C6
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3418 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161 - 0x166
+Giá trị thanh ghi 0x166 hiện tại: C4C4
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3642 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165 - 0x167
+Giá trị thanh ghi 0x167 hiện tại: C0C4
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C5
+Thời gian calib : 4234 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184 - 0x16B
+Giá trị thanh ghi 0x16B hiện tại: C8CA
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C8CB
+Thời gian calib : 4239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16 - 0x16C
+Giá trị thanh ghi 0x16C hiện tại: 40C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3421 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36 - 0x170
+Giá trị thanh ghi 0x170 hiện tại: C6C5
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C6C6
+Thời gian calib : 4343 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48 - 0x171
+Giá trị thanh ghi 0x171 hiện tại: 40C6
+Công suất đo được: 17 (dBm)
+Độ lệch công suất: -1 (dBm)
+Giá trị cần truyền: 40C8
+Thời gian calib : 4226 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52 - 0x175
+Giá trị thanh ghi 0x175 hiện tại: C7C5
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C7C6
+Thời gian calib : 4231 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64 - 0x176
+Giá trị thanh ghi 0x176 hiện tại: 00C7
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 00C8
+Thời gian calib : 4220 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100 - 0x17F
+Giá trị thanh ghi 0x17F hiện tại: C9C9
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3426 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116 - 0x180
+Giá trị thanh ghi 0x180 hiện tại: C0C9
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0CA
+Thời gian calib : 4234 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120 - 0x184
+Giá trị thanh ghi 0x184 hiện tại: C7C7
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3420 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136 - 0x185
+Giá trị thanh ghi 0x185 hiện tại: C0C7
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3415 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140 - 0x189
+Giá trị thanh ghi 0x189 hiện tại: C9C8
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C9C9
+Thời gian calib : 4227 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157 - 0x18A
+Giá trị thanh ghi 0x18A hiện tại: C0C9
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3641 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161 - 0x18E
+Giá trị thanh ghi 0x18E hiện tại: C8C9
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C8CA
+Thời gian calib : 4224 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165 - 0x18F
+Giá trị thanh ghi 0x18F hiện tại: 00C8
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: 00C9
+Thời gian calib : 4241 ms
+
+------------------------------------------------------------
+Thực hiện lưu vào FLASH.
+Thời gian lưu vào FLASH : 26970 ms
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-76.5 dBm, waveform=MV887030A_ag_54_1000
+PER = -11.5%, Sent=1000, Received=1115
+Phán định = PASS
+Thời gian test độ nhạy thu : 3018 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-76.5 dBm, waveform=MV887030A_ag_54_1000
+PER = -1.5%, Sent=1000, Received=1015
+Phán định = PASS
+Thời gian test độ nhạy thu : 3011 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -1.8%, Sent=1000, Received=1018
+Phán định = PASS
+Thời gian test độ nhạy thu : 3016 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -2.2%, Sent=1000, Received=1022
+Phán định = PASS
+Thời gian test độ nhạy thu : 3009 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-75 dBm, waveform=MV887030A_ag_54_1000
+PER = -1.2%, Sent=1000, Received=1012
+Phán định = PASS
+Thời gian test độ nhạy thu : 3014 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-75 dBm, waveform=MV887030A_ag_54_1000
+PER = -18.2%, Sent=1000, Received=1182
+Phán định = PASS
+Thời gian test độ nhạy thu : 3015 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-73 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 2.5%, Sent=1000, Received=975
+Phán định = PASS
+Thời gian test độ nhạy thu : 3019 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 155
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-73 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 9.7%, Sent=1000, Received=903
+Phán định = PASS
+Thời gian test độ nhạy thu : 3015 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 1
+Average Power = 19.8 dBm
+EVM All Carriers = -26.8  dB
+Center Frequency Error = 257 Hz
+Phán định = PASS
+Thời gian verify : 2185 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 2
+Average Power = 19.74 dBm
+EVM All Carriers = -26.8  dB
+Center Frequency Error = 340 Hz
+Phán định = PASS
+Thời gian verify : 2120 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3
+Average Power = 19.69 dBm
+EVM All Carriers = -26.9  dB
+Center Frequency Error = 251 Hz
+Phán định = PASS
+Thời gian verify : 2185 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 4
+Average Power = 19.55 dBm
+EVM All Carriers = -27  dB
+Center Frequency Error = 257 Hz
+Phán định = PASS
+Thời gian verify : 2118 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 5
+Average Power = 19.75 dBm
+EVM All Carriers = -27.3  dB
+Center Frequency Error = 238 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.45 dBm
+EVM All Carriers = -27.3  dB
+Center Frequency Error = 278 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 7
+Average Power = 19.3 dBm
+EVM All Carriers = -27.6  dB
+Center Frequency Error = 157 Hz
+Phán định = PASS
+Thời gian verify : 2147 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8
+Average Power = 19.41 dBm
+EVM All Carriers = -28  dB
+Center Frequency Error = 244 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 9
+Average Power = 19.25 dBm
+EVM All Carriers = -28.2  dB
+Center Frequency Error = 302 Hz
+Phán định = PASS
+Thời gian verify : 2585 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 10
+Average Power = 19.16 dBm
+EVM All Carriers = -29  dB
+Center Frequency Error = 311 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Average Power = 19.51 dBm
+EVM All Carriers = -28.5  dB
+Center Frequency Error = 302 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 12
+Average Power = 19.48 dBm
+EVM All Carriers = -29.1  dB
+Center Frequency Error = 311 Hz
+Phán định = PASS
+Thời gian verify : 2201 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13
+Average Power = 19.27 dBm
+EVM All Carriers = -29.5  dB
+Center Frequency Error = 268 Hz
+Phán định = PASS
+Thời gian verify : 2132 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 1
+Average Power = 19.04 dBm
+EVM All Carriers = -31.3  dB
+Center Frequency Error = 9 Hz
+Phán định = PASS
+Thời gian verify : 2132 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 2
+Average Power = 19.12 dBm
+EVM All Carriers = -30.7  dB
+Center Frequency Error = 183 Hz
+Phán định = PASS
+Thời gian verify : 2159 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3
+Average Power = 19.33 dBm
+EVM All Carriers = -30.5  dB
+Center Frequency Error = 19 Hz
+Phán định = PASS
+Thời gian verify : 2129 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 4
+Average Power = 19.59 dBm
+EVM All Carriers = -29.9  dB
+Center Frequency Error = 121 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 5
+Average Power = 19.47 dBm
+EVM All Carriers = -30.1  dB
+Center Frequency Error = 109 Hz
+Phán định = PASS
+Thời gian verify : 2118 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.56 dBm
+EVM All Carriers = -30.1  dB
+Center Frequency Error = 53 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 7
+Average Power = 19.64 dBm
+EVM All Carriers = -30.1  dB
+Center Frequency Error = 1 Hz
+Phán định = PASS
+Thời gian verify : 2153 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8
+Average Power = 19.58 dBm
+EVM All Carriers = -29.8  dB
+Center Frequency Error = 124 Hz
+Phán định = PASS
+Thời gian verify : 2161 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 9
+Average Power = 19.47 dBm
+EVM All Carriers = -29.8  dB
+Center Frequency Error = 144 Hz
+Phán định = PASS
+Thời gian verify : 2115 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 10
+Average Power = 19.85 dBm
+EVM All Carriers = -29.9  dB
+Center Frequency Error = 99 Hz
+Phán định = PASS
+Thời gian verify : 2121 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Average Power = 19.28 dBm
+EVM All Carriers = -30.7  dB
+Center Frequency Error = 92 Hz
+Phán định = PASS
+Thời gian verify : 2130 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 12
+Average Power = 19.45 dBm
+EVM All Carriers = -31.1  dB
+Center Frequency Error = 104 Hz
+Phán định = PASS
+Thời gian verify : 2543 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13
+Average Power = 19.49 dBm
+EVM All Carriers = -31.5  dB
+Center Frequency Error = 24 Hz
+Phán định = PASS
+Thời gian verify : 2173 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Average Power = 19.79 dBm
+EVM All Carriers = -27  dB
+Center Frequency Error = 8 Hz
+Phán định = PASS
+Thời gian verify : 2128 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 2
+Average Power = 19.76 dBm
+EVM All Carriers = -27  dB
+Center Frequency Error = 61 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 3
+Average Power = 19.64 dBm
+EVM All Carriers = -27.4  dB
+Center Frequency Error = 89 Hz
+Phán định = PASS
+Thời gian verify : 2110 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 4
+Average Power = 19.55 dBm
+EVM All Carriers = -27.6  dB
+Center Frequency Error = -46 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 5
+Average Power = 19.71 dBm
+EVM All Carriers = -28  dB
+Center Frequency Error = 32 Hz
+Phán định = PASS
+Thời gian verify : 2169 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.45 dBm
+EVM All Carriers = -28  dB
+Center Frequency Error = -34 Hz
+Phán định = PASS
+Thời gian verify : 2138 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 7
+Average Power = 19.22 dBm
+EVM All Carriers = -28.1  dB
+Center Frequency Error = -85 Hz
+Phán định = PASS
+Thời gian verify : 2150 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 8
+Average Power = 19.36 dBm
+EVM All Carriers = -28.5  dB
+Center Frequency Error = -4 Hz
+Phán định = PASS
+Thời gian verify : 2115 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 9
+Average Power = 19.13 dBm
+EVM All Carriers = -29.2  dB
+Center Frequency Error = 129 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 10
+Average Power = 19.03 dBm
+EVM All Carriers = -29.4  dB
+Center Frequency Error = 41 Hz
+Phán định = PASS
+Thời gian verify : 2338 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Average Power = 19.33 dBm
+EVM All Carriers = -29  dB
+Center Frequency Error = 77 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 12
+Average Power = 19.32 dBm
+EVM All Carriers = -30  dB
+Center Frequency Error = 67 Hz
+Phán định = PASS
+Thời gian verify : 2174 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 13
+Average Power = 19.14 dBm
+EVM All Carriers = -30  dB
+Center Frequency Error = 96 Hz
+Phán định = PASS
+Thời gian verify : 2201 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Average Power = 18.93 dBm
+EVM All Carriers = -32.7  dB
+Center Frequency Error = 314 Hz
+Phán định = PASS
+Thời gian verify : 2374 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 2
+Average Power = 19.06 dBm
+EVM All Carriers = -31.6  dB
+Center Frequency Error = 351 Hz
+Phán định = PASS
+Thời gian verify : 2139 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 3
+Average Power = 19.26 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 274 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 4
+Average Power = 19.56 dBm
+EVM All Carriers = -30.8  dB
+Center Frequency Error = 334 Hz
+Phán định = PASS
+Thời gian verify : 2138 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 5
+Average Power = 19.41 dBm
+EVM All Carriers = -30.9  dB
+Center Frequency Error = 288 Hz
+Phán định = PASS
+Thời gian verify : 2162 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.48 dBm
+EVM All Carriers = -30.4  dB
+Center Frequency Error = 289 Hz
+Phán định = PASS
+Thời gian verify : 2114 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 7
+Average Power = 19.54 dBm
+EVM All Carriers = -30.2  dB
+Center Frequency Error = 288 Hz
+Phán định = PASS
+Thời gian verify : 2168 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 8
+Average Power = 19.42 dBm
+EVM All Carriers = -30.5  dB
+Center Frequency Error = 363 Hz
+Phán định = PASS
+Thời gian verify : 2142 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 9
+Average Power = 19.28 dBm
+EVM All Carriers = -30.5  dB
+Center Frequency Error = 286 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 10
+Average Power = 19.65 dBm
+EVM All Carriers = -30.6  dB
+Center Frequency Error = 279 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Average Power = 19.08 dBm
+EVM All Carriers = -31.2  dB
+Center Frequency Error = 297 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 12
+Average Power = 19.21 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 333 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 13
+Average Power = 19.28 dBm
+EVM All Carriers = -31.7  dB
+Center Frequency Error = 302 Hz
+Phán định = PASS
+Thời gian verify : 2120 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184
+Average Power = 18.24 dBm
+EVM All Carriers = -30.1  dB
+Center Frequency Error = 489 Hz
+Phán định = PASS
+Thời gian verify : 2181 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16
+Average Power = 18.34 dBm
+EVM All Carriers = -28.2  dB
+Center Frequency Error = 611 Hz
+Phán định = PASS
+Thời gian verify : 2141 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36
+Average Power = 18.47 dBm
+EVM All Carriers = -29.4  dB
+Center Frequency Error = 500 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48
+Average Power = 18.32 dBm
+EVM All Carriers = -30  dB
+Center Frequency Error = 672 Hz
+Phán định = PASS
+Thời gian verify : 2117 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52
+Average Power = 18.08 dBm
+EVM All Carriers = -32.5  dB
+Center Frequency Error = 553 Hz
+Phán định = PASS
+Thời gian verify : 2114 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64
+Average Power = 17.58 dBm
+EVM All Carriers = -20.8  dB
+Center Frequency Error = 533 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.34 dBm
+EVM All Carriers = -28.7  dB
+Center Frequency Error = 492 Hz
+Phán định = PASS
+Thời gian verify : 4287 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100
+Average Power = 18.41 dBm
+EVM All Carriers = -23.1  dB
+Center Frequency Error = 623 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.41 dBm
+EVM All Carriers = -23.2  dB
+Center Frequency Error = 678 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4294 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116
+Average Power = 18.16 dBm
+EVM All Carriers = -26.5  dB
+Center Frequency Error = 608 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120
+Average Power = 18.59 dBm
+EVM All Carriers = -28.2  dB
+Center Frequency Error = 756 Hz
+Phán định = PASS
+Thời gian verify : 2136 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136
+Average Power = 18.29 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 639 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140
+Average Power = 18.15 dBm
+EVM All Carriers = -29.6  dB
+Center Frequency Error = 698 Hz
+Phán định = PASS
+Thời gian verify : 2156 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157
+Average Power = 18.21 dBm
+EVM All Carriers = -30.2  dB
+Center Frequency Error = 565 Hz
+Phán định = PASS
+Thời gian verify : 2115 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161
+Average Power = 18.21 dBm
+EVM All Carriers = -34.2  dB
+Center Frequency Error = 771 Hz
+Phán định = PASS
+Thời gian verify : 2124 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165
+Average Power = 18.51 dBm
+EVM All Carriers = -32.1  dB
+Center Frequency Error = 780 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184
+Average Power = 18.11 dBm
+EVM All Carriers = -33.2  dB
+Center Frequency Error = 429 Hz
+Phán định = PASS
+Thời gian verify : 2160 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16
+Average Power = 17.64 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = 611 Hz
+Phán định = PASS
+Thời gian verify : 2128 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36
+Average Power = 18.16 dBm
+EVM All Carriers = -31.6  dB
+Center Frequency Error = 613 Hz
+Phán định = PASS
+Thời gian verify : 2120 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48
+Average Power = 18.27 dBm
+EVM All Carriers = -29.1  dB
+Center Frequency Error = 739 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52
+Average Power = 17.94 dBm
+EVM All Carriers = -32.8  dB
+Center Frequency Error = 573 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64
+Average Power = 17.89 dBm
+EVM All Carriers = -27.8  dB
+Center Frequency Error = 519 Hz
+Phán định = PASS
+Thời gian verify : 2121 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100
+Average Power = 17.83 dBm
+EVM All Carriers = -24.9  dB
+Center Frequency Error = 704 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.74 dBm
+EVM All Carriers = -24.9  dB
+Center Frequency Error = 664 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4276 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116
+Average Power = 18.07 dBm
+EVM All Carriers = -27.2  dB
+Center Frequency Error = 883 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120
+Average Power = 17.78 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 765 Hz
+Phán định = PASS
+Thời gian verify : 2140 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136
+Average Power = 17.77 dBm
+EVM All Carriers = -33.2  dB
+Center Frequency Error = 769 Hz
+Phán định = PASS
+Thời gian verify : 2205 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140
+Average Power = 18.06 dBm
+EVM All Carriers = -30.2  dB
+Center Frequency Error = 774 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157
+Average Power = 17.81 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 622 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161
+Average Power = 18.18 dBm
+EVM All Carriers = -29.8  dB
+Center Frequency Error = 813 Hz
+Phán định = PASS
+Thời gian verify : 2346 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165
+Average Power = 17.96 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 798 Hz
+Phán định = PASS
+Thời gian verify : 2121 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 184
+Average Power = 20.9 dBm
+EVM All Carriers = -22.8  dB
+Center Frequency Error = 1107 Hz
+Phán định = PASS
+Thời gian verify : 2383 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 36
+Average Power = 21.01 dBm
+EVM All Carriers = -20.5  dB
+Center Frequency Error = 1095 Hz
+Phán định = PASS
+Thời gian verify : 2261 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 40
+Average Power = 20.93 dBm
+EVM All Carriers = -21  dB
+Center Frequency Error = 889 Hz
+Phán định = PASS
+Thời gian verify : 2227 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 44
+Average Power = 21 dBm
+EVM All Carriers = -20.4  dB
+Center Frequency Error = 928 Hz
+Phán định = PASS
+Thời gian verify : 2228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 48
+Average Power = 20.93 dBm
+EVM All Carriers = -20.6  dB
+Center Frequency Error = 860 Hz
+Phán định = PASS
+Thời gian verify : 2240 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 52
+Average Power = 20.9 dBm
+EVM All Carriers = -22.4  dB
+Center Frequency Error = 899 Hz
+Phán định = PASS
+Thời gian verify : 2228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 56
+Average Power = 20.99 dBm
+EVM All Carriers = -21.8  dB
+Center Frequency Error = 924 Hz
+Phán định = PASS
+Thời gian verify : 2318 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 60
+Average Power = 20.69 dBm
+EVM All Carriers = -20.6  dB
+Center Frequency Error = 886 Hz
+Phán định = PASS
+Thời gian verify : 2233 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 64
+Average Power = 20.98 dBm
+EVM All Carriers = -20.1  dB
+Center Frequency Error = 839 Hz
+Phán định = PASS
+Thời gian verify : 2242 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 100
+Average Power = 20.38 dBm
+EVM All Carriers = -16.6  dB
+Center Frequency Error = 782 Hz
+Phán định = PASS
+Thời gian verify : 2320 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 104
+Average Power = 20.05 dBm
+EVM All Carriers = -16.7  dB
+Center Frequency Error = 816 Hz
+Phán định = PASS
+Thời gian verify : 2235 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 108
+Average Power = 19.72 dBm
+EVM All Carriers = -17.9  dB
+Center Frequency Error = 920 Hz
+Phán định = PASS
+Thời gian verify : 2242 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 112
+Average Power = 20.42 dBm
+EVM All Carriers = -18.2  dB
+Center Frequency Error = 667 Hz
+Phán định = PASS
+Thời gian verify : 2234 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 116
+Average Power = 20.59 dBm
+EVM All Carriers = -18.9  dB
+Center Frequency Error = 871 Hz
+Phán định = PASS
+Thời gian verify : 2231 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 120
+Average Power = 21.24 dBm
+EVM All Carriers = -20  dB
+Center Frequency Error = 919 Hz
+Phán định = PASS
+Thời gian verify : 2279 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 124
+Average Power = 21.64 dBm
+EVM All Carriers = -20.6  dB
+Center Frequency Error = 769 Hz
+Phán định = PASS
+Thời gian verify : 2291 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 128
+Average Power = 21.34 dBm
+EVM All Carriers = -21.9  dB
+Center Frequency Error = 880 Hz
+Phán định = PASS
+Thời gian verify : 2239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 132
+Average Power = 20.69 dBm
+EVM All Carriers = -22.3  dB
+Center Frequency Error = 744 Hz
+Phán định = PASS
+Thời gian verify : 2221 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 136
+Average Power = 20.72 dBm
+EVM All Carriers = -22  dB
+Center Frequency Error = 771 Hz
+Phán định = PASS
+Thời gian verify : 2258 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 140
+Average Power = 20.66 dBm
+EVM All Carriers = -20.9  dB
+Center Frequency Error = 701 Hz
+Phán định = PASS
+Thời gian verify : 2226 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 144
+Average Power = 20.14 dBm
+EVM All Carriers = -20.8  dB
+Center Frequency Error = 849 Hz
+Phán định = PASS
+Thời gian verify : 2255 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 149
+Average Power = 20.75 dBm
+EVM All Carriers = -20.8  dB
+Center Frequency Error = 712 Hz
+Phán định = PASS
+Thời gian verify : 2364 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 153
+Average Power = 21.15 dBm
+EVM All Carriers = -21  dB
+Center Frequency Error = 710 Hz
+Phán định = PASS
+Thời gian verify : 2223 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 157
+Average Power = 21.32 dBm
+EVM All Carriers = -21.2  dB
+Center Frequency Error = 613 Hz
+Phán định = PASS
+Thời gian verify : 2265 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 161
+Average Power = 21.03 dBm
+EVM All Carriers = -23.5  dB
+Center Frequency Error = 633 Hz
+Phán định = PASS
+Thời gian verify : 2236 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 1 - Channel 165
+Average Power = 21 dBm
+EVM All Carriers = -22.4  dB
+Center Frequency Error = 696 Hz
+Phán định = PASS
+Thời gian verify : 2266 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 184
+Average Power = 21.05 dBm
+EVM All Carriers = -23.1  dB
+Center Frequency Error = 750 Hz
+Phán định = PASS
+Thời gian verify : 2230 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 36
+Average Power = 20.66 dBm
+EVM All Carriers = -21.6  dB
+Center Frequency Error = 695 Hz
+Phán định = PASS
+Thời gian verify : 2263 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 40
+Average Power = 20.43 dBm
+EVM All Carriers = -21.9  dB
+Center Frequency Error = 602 Hz
+Phán định = PASS
+Thời gian verify : 2234 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 44
+Average Power = 20.56 dBm
+EVM All Carriers = -20  dB
+Center Frequency Error = 675 Hz
+Phán định = PASS
+Thời gian verify : 2228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 48
+Average Power = 20.7 dBm
+EVM All Carriers = -20  dB
+Center Frequency Error = 758 Hz
+Phán định = PASS
+Thời gian verify : 2230 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 52
+Average Power = 20.6 dBm
+EVM All Carriers = -22.6  dB
+Center Frequency Error = 645 Hz
+Phán định = PASS
+Thời gian verify : 2227 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 56
+Average Power = 20.11 dBm
+EVM All Carriers = -22.1  dB
+Center Frequency Error = 819 Hz
+Phán định = PASS
+Thời gian verify : 2236 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 60
+Average Power = 20.19 dBm
+EVM All Carriers = -19.7  dB
+Center Frequency Error = 795 Hz
+Phán định = PASS
+Thời gian verify : 2228 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 64
+Average Power = 20.29 dBm
+EVM All Carriers = -19.4  dB
+Center Frequency Error = 640 Hz
+Phán định = PASS
+Thời gian verify : 2239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 100
+Average Power = 19.77 dBm
+EVM All Carriers = -17.9  dB
+Center Frequency Error = 780 Hz
+Phán định = PASS
+Thời gian verify : 2227 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 104
+Average Power = 19.86 dBm
+EVM All Carriers = -18  dB
+Center Frequency Error = 820 Hz
+Phán định = PASS
+Thời gian verify : 2263 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 108
+Average Power = 19.72 dBm
+EVM All Carriers = -17.8  dB
+Center Frequency Error = 828 Hz
+Phán định = PASS
+Thời gian verify : 2230 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 112
+Average Power = 20.55 dBm
+EVM All Carriers = -18.5  dB
+Center Frequency Error = 677 Hz
+Phán định = PASS
+Thời gian verify : 2248 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 116
+Average Power = 20.46 dBm
+EVM All Carriers = -19.2  dB
+Center Frequency Error = 720 Hz
+Phán định = PASS
+Thời gian verify : 2235 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 120
+Average Power = 20.56 dBm
+EVM All Carriers = -22.2  dB
+Center Frequency Error = 808 Hz
+Phán định = PASS
+Thời gian verify : 2222 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 124
+Average Power = 20.85 dBm
+EVM All Carriers = -22.8  dB
+Center Frequency Error = 960 Hz
+Phán định = PASS
+Thời gian verify : 2227 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 128
+Average Power = 20.8 dBm
+EVM All Carriers = -23.2  dB
+Center Frequency Error = 920 Hz
+Phán định = PASS
+Thời gian verify : 2238 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 132
+Average Power = 20.2 dBm
+EVM All Carriers = -23.5  dB
+Center Frequency Error = 883 Hz
+Phán định = PASS
+Thời gian verify : 2243 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 136
+Average Power = 20.15 dBm
+EVM All Carriers = -23.4  dB
+Center Frequency Error = 829 Hz
+Phán định = PASS
+Thời gian verify : 2244 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 140
+Average Power = 20.55 dBm
+EVM All Carriers = -21.2  dB
+Center Frequency Error = 760 Hz
+Phán định = PASS
+Thời gian verify : 2251 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 144
+Average Power = 20.39 dBm
+EVM All Carriers = -21.1  dB
+Center Frequency Error = 946 Hz
+Phán định = PASS
+Thời gian verify : 2296 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 149
+Average Power = 21.01 dBm
+EVM All Carriers = -21.4  dB
+Center Frequency Error = 937 Hz
+Phán định = PASS
+Thời gian verify : 2237 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 153
+Average Power = 21.06 dBm
+EVM All Carriers = -21.7  dB
+Center Frequency Error = 973 Hz
+Phán định = PASS
+Thời gian verify : 2221 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 157
+Average Power = 21.02 dBm
+EVM All Carriers = -21.6  dB
+Center Frequency Error = 730 Hz
+Phán định = PASS
+Thời gian verify : 2306 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 161
+Average Power = 20.38 dBm
+EVM All Carriers = -21.2  dB
+Center Frequency Error = 955 Hz
+Phán định = PASS
+Thời gian verify : 2262 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS0 - BW80 - Anten 2 - Channel 165
+Average Power = 20.22 dBm
+EVM All Carriers = -22.3  dB
+Center Frequency Error = 998 Hz
+Phán định = PASS
+Thời gian verify : 2259 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 184
+Average Power = 17.91 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = 802 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.9 dBm
+EVM All Carriers = -31.7  dB
+Center Frequency Error = 759 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4256 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 36
+Average Power = 18 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = 721 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.96 dBm
+EVM All Carriers = -31.9  dB
+Center Frequency Error = 872 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4242 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 40
+Average Power = 17.96 dBm
+EVM All Carriers = -32.3  dB
+Center Frequency Error = 643 Hz
+Phán định = PASS
+Thời gian verify : 2126 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 44
+Average Power = 18.17 dBm
+EVM All Carriers = -31.6  dB
+Center Frequency Error = 780 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.18 dBm
+EVM All Carriers = -31.1  dB
+Center Frequency Error = 740 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4317 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 48
+Average Power = 18 dBm
+EVM All Carriers = -31.9  dB
+Center Frequency Error = 669 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.02 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 767 Hz
+Phán định = PASS
+Thời gian verify : 4280 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 52
+Average Power = 17.75 dBm
+EVM All Carriers = -34.5  dB
+Center Frequency Error = 869 Hz
+Phán định = PASS
+Thời gian verify : 2152 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 56
+Average Power = 17.74 dBm
+EVM All Carriers = -34.7  dB
+Center Frequency Error = 875 Hz
+Phán định = PASS
+Thời gian verify : 2124 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 60
+Average Power = 17.83 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 749 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.82 dBm
+EVM All Carriers = -31.9  dB
+Center Frequency Error = 898 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4268 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 64
+Average Power = 18.06 dBm
+EVM All Carriers = -31  dB
+Center Frequency Error = 835 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.09 dBm
+EVM All Carriers = -31.5  dB
+Center Frequency Error = 789 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4358 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 100
+Average Power = 18.01 dBm
+EVM All Carriers = -27  dB
+Center Frequency Error = 858 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.06 dBm
+EVM All Carriers = -27  dB
+Center Frequency Error = 772 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 104
+Average Power = 17.71 dBm
+EVM All Carriers = -26.9  dB
+Center Frequency Error = 825 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.68 dBm
+EVM All Carriers = -26.9  dB
+Center Frequency Error = 1034 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4419 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 108
+Average Power = 17.28 dBm
+EVM All Carriers = -27.9  dB
+Center Frequency Error = 1094 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.3 dBm
+EVM All Carriers = -27.7  dB
+Center Frequency Error = 1034 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4247 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 112
+Average Power = 17.86 dBm
+EVM All Carriers = -28.2  dB
+Center Frequency Error = 904 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.89 dBm
+EVM All Carriers = -28.2  dB
+Center Frequency Error = 953 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4249 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 116
+Average Power = 18.06 dBm
+EVM All Carriers = -28.6  dB
+Center Frequency Error = 950 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.04 dBm
+EVM All Carriers = -29.1  dB
+Center Frequency Error = 1134 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4243 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 120
+Average Power = 18.34 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 1012 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.35 dBm
+EVM All Carriers = -30.9  dB
+Center Frequency Error = 1041 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4244 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 124
+Average Power = 18.89 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = 1066 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.89 dBm
+EVM All Carriers = -31  dB
+Center Frequency Error = 1217 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4269 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 128
+Average Power = 18.35 dBm
+EVM All Carriers = -33.5  dB
+Center Frequency Error = 1022 Hz
+Phán định = PASS
+Thời gian verify : 2125 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 132
+Average Power = 17.75 dBm
+EVM All Carriers = -34  dB
+Center Frequency Error = 1213 Hz
+Phán định = PASS
+Thời gian verify : 2119 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 136
+Average Power = 17.68 dBm
+EVM All Carriers = -33.4  dB
+Center Frequency Error = 964 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 140
+Average Power = 17.76 dBm
+EVM All Carriers = -31.8  dB
+Center Frequency Error = 986 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.77 dBm
+EVM All Carriers = -31.7  dB
+Center Frequency Error = 1139 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4291 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 144
+Average Power = 17.21 dBm
+EVM All Carriers = -31  dB
+Center Frequency Error = 1267 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.22 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 1164 Hz
+Phán định = PASS
+Thời gian verify : 4299 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 149
+Average Power = 17.63 dBm
+EVM All Carriers = -32  dB
+Center Frequency Error = 1209 Hz
+Phán định = PASS
+Thời gian verify : 2119 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 153
+Average Power = 18.02 dBm
+EVM All Carriers = -31.7  dB
+Center Frequency Error = 1282 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 18.06 dBm
+EVM All Carriers = -31.6  dB
+Center Frequency Error = 1411 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4250 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 157
+Average Power = 18.23 dBm
+EVM All Carriers = -32.6  dB
+Center Frequency Error = 1158 Hz
+Phán định = PASS
+Thời gian verify : 2149 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 161
+Average Power = 17.72 dBm
+EVM All Carriers = -34.3  dB
+Center Frequency Error = 1261 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 165
+Average Power = 17.99 dBm
+EVM All Carriers = -33.7  dB
+Center Frequency Error = 1473 Hz
+Phán định = PASS
+Thời gian verify : 2158 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 184
+Average Power = 17.67 dBm
+EVM All Carriers = -33.4  dB
+Center Frequency Error = 1248 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 36
+Average Power = 17.65 dBm
+EVM All Carriers = -33.7  dB
+Center Frequency Error = 1283 Hz
+Phán định = PASS
+Thời gian verify : 2126 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 40
+Average Power = 17.52 dBm
+EVM All Carriers = -33.9  dB
+Center Frequency Error = 1095 Hz
+Phán định = PASS
+Thời gian verify : 2180 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 44
+Average Power = 17.81 dBm
+EVM All Carriers = -30.9  dB
+Center Frequency Error = 1293 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.85 dBm
+EVM All Carriers = -31  dB
+Center Frequency Error = 1332 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4269 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 48
+Average Power = 17.94 dBm
+EVM All Carriers = -31.4  dB
+Center Frequency Error = 1321 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.9 dBm
+EVM All Carriers = -31  dB
+Center Frequency Error = 1401 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4255 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 52
+Average Power = 17.48 dBm
+EVM All Carriers = -34.4  dB
+Center Frequency Error = 1363 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 56
+Average Power = 16.96 dBm
+EVM All Carriers = -34.5  dB
+Center Frequency Error = 1391 Hz
+Phán định = PASS
+Thời gian verify : 2118 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 60
+Average Power = 17.42 dBm
+EVM All Carriers = -30.6  dB
+Center Frequency Error = 1396 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.41 dBm
+EVM All Carriers = -30.3  dB
+Center Frequency Error = 1385 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4287 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 64
+Average Power = 17.59 dBm
+EVM All Carriers = -30.4  dB
+Center Frequency Error = 1366 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.56 dBm
+EVM All Carriers = -30.1  dB
+Center Frequency Error = 1233 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4252 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 100
+Average Power = 17.42 dBm
+EVM All Carriers = -27.8  dB
+Center Frequency Error = 1356 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.42 dBm
+EVM All Carriers = -27.7  dB
+Center Frequency Error = 1436 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4319 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 104
+Average Power = 17.31 dBm
+EVM All Carriers = -28.4  dB
+Center Frequency Error = 1496 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.3 dBm
+EVM All Carriers = -28.4  dB
+Center Frequency Error = 1424 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4383 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 108
+Average Power = 17.27 dBm
+EVM All Carriers = -28  dB
+Center Frequency Error = 1463 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.25 dBm
+EVM All Carriers = -27.7  dB
+Center Frequency Error = 1512 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4252 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 112
+Average Power = 18.03 dBm
+EVM All Carriers = -29.1  dB
+Center Frequency Error = 1548 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.99 dBm
+EVM All Carriers = -28.8  dB
+Center Frequency Error = 1357 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4261 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 116
+Average Power = 17.78 dBm
+EVM All Carriers = -29.7  dB
+Center Frequency Error = 1614 Hz
+FAIL: EVM
+RETRY = 1
+Average Power = 17.83 dBm
+EVM All Carriers = -29.4  dB
+Center Frequency Error = 1557 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4242 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 120
+Average Power = 17.54 dBm
+EVM All Carriers = -33.4  dB
+Center Frequency Error = 1740 Hz
+Phán định = PASS
+Thời gian verify : 2124 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 124
+Average Power = 17.89 dBm
+EVM All Carriers = -34.1  dB
+Center Frequency Error = 1695 Hz
+Phán định = PASS
+Thời gian verify : 2118 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 128
+Average Power = 17.75 dBm
+EVM All Carriers = -34.6  dB
+Center Frequency Error = 1632 Hz
+Phán định = PASS
+Thời gian verify : 2130 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 132
+Average Power = 17.14 dBm
+EVM All Carriers = -34.3  dB
+Center Frequency Error = 1717 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 136
+Average Power = 17.07 dBm
+EVM All Carriers = -35.1  dB
+Center Frequency Error = 1632 Hz
+Phán định = PASS
+Thời gian verify : 2136 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 140
+Average Power = 17.56 dBm
+EVM All Carriers = -33  dB
+Center Frequency Error = 1621 Hz
+Phán định = PASS
+Thời gian verify : 2114 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 144
+Average Power = 17.31 dBm
+EVM All Carriers = -32.3  dB
+Center Frequency Error = 1704 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 149
+Average Power = 17.83 dBm
+EVM All Carriers = -32.5  dB
+Center Frequency Error = 1771 Hz
+Phán định = PASS
+Thời gian verify : 2121 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 153
+Average Power = 17.86 dBm
+EVM All Carriers = -32.1  dB
+Center Frequency Error = 1677 Hz
+Phán định = PASS
+Thời gian verify : 2118 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 157
+Average Power = 17.75 dBm
+EVM All Carriers = -33.1  dB
+Center Frequency Error = 1792 Hz
+Phán định = PASS
+Thời gian verify : 2157 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 161
+Average Power = 17.49 dBm
+EVM All Carriers = -32.1  dB
+Center Frequency Error = 1779 Hz
+Phán định = PASS
+Thời gian verify : 2142 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 165
+Average Power = 17.38 dBm
+EVM All Carriers = -33.6  dB
+Center Frequency Error = 1706 Hz
+Phán định = PASS
+Thời gian verify : 2126 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 653 sec.
+

@@ -28,6 +28,7 @@ namespace ToolCalibWifiForGW040H {
         ObservableCollection<string> listanten { get; set; } = new ObservableCollection<string>() { "1", "2" };
         ObservableCollection<string> listchannelfreq2G { get; set; } = new ObservableCollection<string>() { "2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462", "2467", "2472" };
         ObservableCollection<string> listchannelfreq5G { get; set; } = new ObservableCollection<string>() { "4920", "5080", "5180", "5190", "5210", "5240", "5260", "5320", "5500", "5510", "5530", "5580", "5600", "5680", "5700", "5775", "5785", "5795", "5805", "5825" };
+        ObservableCollection<string> listchannelfreqAnten { get; set; } = new ObservableCollection<string>() { "2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462", "2467", "2472", "4920", "5080", "5180", "5190", "5210", "5240", "5260", "5320", "5500", "5510", "5530", "5580", "5600", "5680", "5700", "5775", "5785", "5795", "5805", "5825" };
         ObservableCollection<int> listpacket { get; set; } = new ObservableCollection<int>() { 100, 500, 1000 };
 
         public testcaseWindow() {

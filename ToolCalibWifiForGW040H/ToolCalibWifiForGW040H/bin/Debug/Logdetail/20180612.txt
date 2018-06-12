@@ -1,0 +1,24 @@
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 1.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Average Power = 19.1 dBm
+EVM All Carriers = -33.8  dB
+Center Frequency Error = -536 Hz
+Phán định = PASS
+Thời gian verify : 2605 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình kiểm tra anten 2.
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Average Power = 19.25 dBm
+EVM All Carriers = -33  dB
+Center Frequency Error = -130 Hz
+Phán định = PASS
+Thời gian verify : 2230 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 8 sec.
+

@@ -156,6 +156,21 @@ namespace ToolCalibWifiForGW040H.Function {
             }
         }
 
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+        public string STDPWANTEN1 {
+            get { return Properties.Settings.Default.stdPwAnten1; }
+            set {
+                Properties.Settings.Default.stdPwAnten1 = value;
+                OnPropertyChanged(nameof(STDPWANTEN1));
+            }
+        }
+        public string STDPWANTEN2 {
+            get { return Properties.Settings.Default.stdPwAnten2; }
+            set {
+                Properties.Settings.Default.stdPwAnten2 = value;
+                OnPropertyChanged(nameof(STDPWANTEN2));
+            }
+        }
     }
 
     public class testinginfo : INotifyPropertyChanged {
@@ -597,6 +612,15 @@ namespace ToolCalibWifiForGW040H.Function {
         public string Value4 { get; set; }
         public string Value5 { get; set; }
         public string masterPower { get; set; }
+
+        public calmaster() {
+            Value1 = "";
+            Value2 = "";
+            Value3 = "";
+            Value4 = "";
+            Value5 = "";
+            masterPower = "";
+        }
 
         public override string ToString() {
             return string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8}", Channel, Frequency, Anten, Value1, Value2, Value3, Value4, Value5, masterPower);

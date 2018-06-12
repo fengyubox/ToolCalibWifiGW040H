@@ -127,11 +127,14 @@ namespace ToolCalibWifiForGW040H.Function {
         public override string config_Instrument_get_Power(string Trigger, string wifi) {
             try {
                 mbSession.Write(":INIT:SRW:ALEV\n");
-                mbSession.Write("*WAI\n");
+                //mbSession.Write("*OPC?\n");
+                //mbSession.Write("*WAI\n");
+                Thread.Sleep(200);
                 mbSession.Write(":CONF:SRW:POW?\n");
                 mbSession.ReadString();
                 mbSession.Write(":INIT:SRW\n");
-                mbSession.Write("*WAI\n");
+                //mbSession.Write("*WAI\n");
+                Thread.Sleep(200);
 
                 int counter = 0;
                 while (true) {

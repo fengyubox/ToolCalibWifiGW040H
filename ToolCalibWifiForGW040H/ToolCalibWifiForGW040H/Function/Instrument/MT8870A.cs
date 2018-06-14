@@ -25,7 +25,7 @@ namespace ToolCalibWifiForGW040H.Function {
 
 
         //------------------ Hàm thiết lập cấu hình cho máy đo lần đầu tiên ---------------------
-        public override bool config_Instrument_Total(string port, string Standard) {
+        public override bool config_Instrument_Total(string port, string Standard, ref string error) {
             try {
                 string _wifiStandard = "";
                 switch (Standard) {
@@ -57,19 +57,21 @@ namespace ToolCalibWifiForGW040H.Function {
                 mbSession.Write(":CONF:SRW:ALEV:TIME 0.01\n");
                 return true;
             }
-            catch {
+            catch (Exception ex) {
+                error = ex.ToString();
                 return false;
             }
         }
 
 
         //------------------ Hàm thiết lập tần số kênh ---------------------
-        public override bool config_Instrument_Channel(string channel_Freq) {
+        public override bool config_Instrument_Channel(string channel_Freq, ref string error) {
             try {
                 mbSession.Write(":CONF:SRW:FREQ " + channel_Freq + "\n"); //Thiết lập chế độ WLAN
                 return true;
             }
-            catch {
+            catch (Exception ex) {
+                error = ex.ToString();
                 return false;
             }
         }

@@ -530,9 +530,17 @@ namespace ToolCalibWifiForGW040H.Function {
         public string Bandwidth { get; set; }
         public string Channel { get; set; }
         public string averagePower { get; set; }
+        public string powerMAX { get; set; }
+        public string powerMIN { get; set; }
+        public string powerStd { get; set; }
         public string Evm { get; set; }
+        public string evmMAX { get; set; }
         public string centerFreqError { get; set; }
         public string Result { get; set; }
+
+        public override string ToString() {
+            return string.Format("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11}", rangeFreq, Anten, wifiStandard, Rate, Bandwidth, Channel, powerStd, averagePower, evmMAX, Evm, centerFreqError, Result);
+        }
     }
 
     public class logreviewrx {

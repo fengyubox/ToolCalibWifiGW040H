@@ -60,14 +60,14 @@ namespace ToolCalibWifiForGW040H.Function {
         /// <param name="RFIO">Cổng RF</param>
         /// <param name="Standard">Chuẩn WIFI a,b,g,n,ac</param>
         /// <returns>TRUE/FALSE</returns>
-        public abstract bool config_Instrument_Total(string port, string Standard);
+        public abstract bool config_Instrument_Total(string port, string Standard, ref string error);
 
         /// <summary>
         /// CẤU HÌNH TẦN SỐ WIFI CHO MÁY ĐO
         /// </summary>
         /// <param name="channel_Freq">Tần số</param>
         /// <returns>TRUE/FALSE</returns>
-        public abstract bool config_Instrument_Channel(string channel_Freq);
+        public abstract bool config_Instrument_Channel(string channel_Freq, ref string error);
 
         /// <summary>
         /// HÀM ĐỌC GIÁ TRỊ ĐỘ LỆCH TẦN WIFI

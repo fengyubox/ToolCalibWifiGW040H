@@ -38,6 +38,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static ObservableCollection<logreviewregister> reviewRegister = new ObservableCollection<logreviewregister>();
         public static ObservableCollection<logreviewtx> reviewTX = new ObservableCollection<logreviewtx>();
         public static ObservableCollection<logreviewrx> reviewRX = new ObservableCollection<logreviewrx>();
+        public static ObservableCollection<logreviewtx> datagridlogTX = new ObservableCollection<logreviewtx>();
 
         public static ObservableCollection<autoattenuator> autoAttenuator = new ObservableCollection<autoattenuator>();
         public static ObservableCollection<calmaster> autoCalculateMaster = new ObservableCollection<calmaster>();

@@ -28,6 +28,7 @@ namespace ToolCalibWifiForGW040H {
 
         public MainWindow() {
             InitializeComponent();
+            this.datagridTX.ItemsSource = GlobalData.datagridlogTX;
             this.DataContext = GlobalData.testingData;
             this.spBefore.Visibility = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? Visibility.Visible : Visibility.Collapsed;
             this.spAfter.Visibility = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? Visibility.Collapsed : Visibility.Visible;
@@ -37,13 +38,19 @@ namespace ToolCalibWifiForGW040H {
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
             timer.Tick += ((sender, e) => {
-                if (_isScroll == true) _scrollViewer.ScrollToEnd();
+                if (_isScroll == true) {
+                    _scrollViewer.ScrollToEnd();
+                    if (GlobalData.datagridlogTX.Count > 0) {
+                        this.datagridTX.ScrollIntoView(this.datagridTX.Items.GetItemAt(GlobalData.datagridlogTX.Count - 1));
+                    }
+                }
             });
             timer.Start();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) {
-            this.DragMove();
+            if (e.LeftButton == MouseButtonState.Pressed)
+                this.DragMove();
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e) {
@@ -117,6 +124,7 @@ namespace ToolCalibWifiForGW040H {
             switch (b.Content) {
                 case "START": {
                         GlobalData.testingData.Initialize();
+                        GlobalData.datagridlogTX.Clear();
                         Thread t = new Thread(new ThreadStart(() => {
                             GlobalData.testingData.BUTTONCONTENT = "STOP";
                             RUNALL();
@@ -201,6 +209,7 @@ namespace ToolCalibWifiForGW040H {
             if (GlobalData.logManager != null) {
                 LogFile.Savetestlog(GlobalData.logManager);
                 LogFile.Savedetaillog(GlobalData.testingData.LOGSYSTEM);
+                LogFile.Savereviewlog(GlobalData.logManager.mac);
             }
             if (GlobalData.logRegister != null) {
                 GlobalData.logRegister.macaddress = GlobalData.logManager.mac;

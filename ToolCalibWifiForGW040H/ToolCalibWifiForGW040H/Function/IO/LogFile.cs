@@ -10,10 +10,12 @@ namespace ToolCalibWifiForGW040H.Function {
 
         private static string _logTest = string.Format("{0}Logtest", AppDomain.CurrentDomain.BaseDirectory);
         private static string _logDetail = string.Format("{0}Logdetail", AppDomain.CurrentDomain.BaseDirectory);
+        private static string _logReview = string.Format("{0}Logreview", AppDomain.CurrentDomain.BaseDirectory);
 
         static LogFile() {
             if (Directory.Exists(_logTest) == false) Directory.CreateDirectory(_logTest);
             if (Directory.Exists(_logDetail) == false) Directory.CreateDirectory(_logDetail);
+            if (Directory.Exists(_logReview) == false) Directory.CreateDirectory(_logReview);
         }
 
         public static bool Savetestlog(logdata _log) {
@@ -51,6 +53,25 @@ namespace ToolCalibWifiForGW040H.Function {
                 return true;
             }
             catch {
+                return false;
+            }
+        }
+
+        public static bool Savereviewlog(string _mac) {
+            try {
+                if (GlobalData.initSetting.STATION == "Sau đóng vỏ") return false;
+                if (GlobalData.datagridlogTX.Count == 0) return false;
+                string _logfile = string.Format("{0}\\{1}_{2}.csv", _logReview, _mac, DateTime.Now.ToString("yyyyMMddHHmmss"));
+
+                string _title = "RANGEFREQ,ANTEN,WIFI,RATE,BANDWIDTH,CHANNEL,POWER-LIMIT,POWER-ACTUAL,EVM-MAX,EVM-ACTUAL,FREQ-ERROR,RESULT";
+                StreamWriter st = new StreamWriter(_logfile, true);
+                st.WriteLine(_title);
+                foreach (var item in GlobalData.datagridlogTX) {
+                    st.WriteLine(item.ToString());
+                }
+                st.Dispose();
+                return true;
+            } catch {
                 return false;
             }
         }

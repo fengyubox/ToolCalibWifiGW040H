@@ -80,7 +80,8 @@ namespace ToolCalibWifiForGW040H.Function
                 LimitTx.getData(standard_2G_5G, FunctionSupport.Get_WifiStandard_By_Mode(Mode, BW), MCS, out _limit);
 
                 //Thiết lập tần số máy đo
-                instrument.config_Instrument_Channel(Channel_Freq);
+                string _error = "";
+                instrument.config_Instrument_Channel(Channel_Freq, ref _error);
 
                 //Gửi lệnh yêu cầu ONT phát WIFI TX
                 string _message = "";
@@ -166,7 +167,8 @@ namespace ToolCalibWifiForGW040H.Function
                         }
                 }
                 if (_oldwifi != _wifi) {
-                    instrument.config_Instrument_Total(RF_Port, _wifi);
+                    string _error = "";
+                    instrument.config_Instrument_Total(RF_Port, _wifi, ref _error);
                     _oldwifi = _wifi;
                 }
 

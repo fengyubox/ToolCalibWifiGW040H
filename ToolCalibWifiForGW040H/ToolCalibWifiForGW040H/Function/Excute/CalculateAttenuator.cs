@@ -58,7 +58,8 @@ namespace ToolCalibWifiForGW040H.Function {
                 }
 
                 //Thiết lập tần số máy đo
-                instrument.config_Instrument_Channel(Channel_Freq);
+                string _error = "";
+                instrument.config_Instrument_Channel(Channel_Freq, ref _error);
                 decimal value = 0;
 
                 for (int i = 0; i < 2; i++) {
@@ -127,7 +128,8 @@ namespace ToolCalibWifiForGW040H.Function {
                         }
                 }
                 if (_oldwifi != _wifi) {
-                    instrument.config_Instrument_Total(RF_Port, _wifi);
+                    string _error = "";
+                    instrument.config_Instrument_Total(RF_Port, _wifi, ref _error);
                     _oldwifi = _wifi;
                 }
 

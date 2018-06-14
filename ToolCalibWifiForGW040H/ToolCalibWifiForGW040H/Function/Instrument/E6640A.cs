@@ -22,7 +22,7 @@ namespace ToolCalibWifiForGW040H.Function {
 
 
         //------------------ Hàm thiết lập cấu hình cho máy đo lần đầu tiên ---------------------
-        public override bool config_Instrument_Total(string port, string Standard) {
+        public override bool config_Instrument_Total(string port, string Standard, ref string error) {
             bool enable_nSISO_Testing = false;
             try {
                 string _wifiStandard = "";
@@ -58,7 +58,8 @@ namespace ToolCalibWifiForGW040H.Function {
 
                 enable_nSISO_Testing = true;
             }
-            catch {
+            catch (Exception ex) {
+                error = ex.ToString();
                 enable_nSISO_Testing = false;
                 config_done = true;
                 saveLogfile(g_logfilePath, "[E6640A]ERROR CODE: [Equip_Config] \n Error tai qua trinh cau hinh cho thiet bi do E6640A \n");
@@ -68,7 +69,7 @@ namespace ToolCalibWifiForGW040H.Function {
 
 
         //------------------ Hàm thiết lập tần số kênh ---------------------
-        public override bool config_Instrument_Channel(string channel_Freq) {
+        public override bool config_Instrument_Channel(string channel_Freq, ref string error) {
             bool enable_nSISO_Testing = false;
             try {
                 //checkBusyState(mbSession, "*ESR?");
@@ -77,7 +78,8 @@ namespace ToolCalibWifiForGW040H.Function {
                 enable_nSISO_Testing = true;
                 config_done = true;
             }
-            catch {
+            catch (Exception ex) {
+                error = ex.ToString();
                 enable_nSISO_Testing = false;
                 config_done = true;
             }

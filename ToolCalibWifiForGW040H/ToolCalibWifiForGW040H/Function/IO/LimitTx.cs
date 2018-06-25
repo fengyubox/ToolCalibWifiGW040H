@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 namespace ToolCalibWifiForGW040H.Function {
     public class LimitTx {
 
-        static string fileName = string.Format("{0}Config\\TxLimit-Config.csv", System.AppDomain.CurrentDomain.BaseDirectory);
+        static string filePath = string.Format("{0}Config\\", System.AppDomain.CurrentDomain.BaseDirectory);
+        static string fileName = "";
 
         //Load toàn bộ giá trị tên limit TX từ file vào listLimitWifiTX
         public static bool readFromFile() {
             try {
+                fileName = GlobalData.initSetting.ENWRITEBIN == false ? string.Format("{0}TxLimit-Config.csv", filePath) : string.Format("{0}TxLimit-Config-NewBIN.csv", filePath);
+                
                 GlobalData.listLimitWifiTX = new List<limittx>();
                 if (File.Exists(fileName) == false) return false;
                 var lines = File.ReadLines(fileName);

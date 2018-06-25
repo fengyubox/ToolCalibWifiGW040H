@@ -111,6 +111,13 @@ namespace ToolCalibWifiForGW040H.Function {
                 OnPropertyChanged(nameof(ENCALIBPW5G));
             }
         }
+        public bool ENWRITEBIN {
+            get { return Properties.Settings.Default.enWriteBIN; }
+            set {
+                Properties.Settings.Default.enWriteBIN = value;
+                OnPropertyChanged(nameof(ENWRITEBIN));
+            }
+        }
         public bool ENTESTRX2G {
             get { return Properties.Settings.Default.enTestRx2G; }
             set {
@@ -635,4 +642,9 @@ namespace ToolCalibWifiForGW040H.Function {
         }
     }
 
+    public class binregister {
+        public string Address { get; set; }
+        public string oldValue { get; set; }
+        public string newValue { get; set; }
+    }
 }

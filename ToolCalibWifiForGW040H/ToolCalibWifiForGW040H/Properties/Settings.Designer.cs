@@ -262,5 +262,17 @@ namespace ToolCalibWifiForGW040H.Properties {
                 this["stdPwAnten2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool enWriteBIN {
+            get {
+                return ((bool)(this["enWriteBIN"]));
+            }
+            set {
+                this["enWriteBIN"] = value;
+            }
+        }
     }
 }

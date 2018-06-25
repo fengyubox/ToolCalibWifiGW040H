@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
         mc:Ignorable="d"
-        Title="configWindow" Height="260" Width="450" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+        Title="configWindow" Height="280" Width="450" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
 
     <Border Background="#BFCDDB" CornerRadius="2" BorderBrush="{StaticResource colorBorder}" BorderThickness="1,1,1,1">
 
@@ -44,12 +44,13 @@
                     <Button Click="Button_Click" Height="30" Width="90" Content="Cancel" Margin="70,10,0,0"></Button>
                 </WrapPanel>
 
-                <GroupBox Margin="5,10,10,0" BorderBrush="Black" BorderThickness="0.5" Header="Select Items" Width="190" Height="210" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <GroupBox Margin="5,10,10,0" BorderBrush="Black" BorderThickness="0.5" Header="Select Items" Width="190" Height="230" VerticalAlignment="Top" HorizontalAlignment="Right">
                     <StackPanel>
                         <StackPanel x:Name="spBefore">
                             <CheckBox IsChecked="{Binding Path=ENCALIBFREQ, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Calibrate Tần Số"/>
                             <CheckBox IsChecked="{Binding Path=ENCALIBPW2G, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Calibrate Power 2G"/>
                             <CheckBox IsChecked="{Binding Path=ENCALIBPW5G, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Calibrate Power 5G"/>
+                            <CheckBox IsChecked="{Binding Path=ENWRITEBIN, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Write BIN registers"/>
                             <CheckBox IsChecked="{Binding Path=ENTESTRX2G, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Test Độ Nhạy Thu 2G"/>
                             <CheckBox IsChecked="{Binding Path=ENTESTRX5G, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Test Độ Nhạy Thu 5G"/>
                             <CheckBox IsChecked="{Binding Path=ENTESTTX2G, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="0,10,0,0" HorizontalAlignment="Left" Content="Test Signal 2G"/>

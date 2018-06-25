@@ -92,6 +92,7 @@
     <Compile Include="Function\Instrument\Instrument.cs" />
     <Compile Include="Function\Instrument\MT8870A.cs" />
     <Compile Include="Function\IO\Attenuator.cs" />
+    <Compile Include="Function\IO\BIN.cs" />
     <Compile Include="Function\IO\ChannelManagement.cs" />
     <Compile Include="Function\IO\LimitRx.cs" />
     <Compile Include="Function\IO\LimitTx.cs" />

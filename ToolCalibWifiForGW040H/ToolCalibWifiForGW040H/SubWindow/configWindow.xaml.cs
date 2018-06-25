@@ -34,6 +34,7 @@ namespace ToolCalibWifiForGW040H {
             switch (b.Content) {
                 case "OK": {
                         Properties.Settings.Default.Save();
+                        LimitTx.readFromFile();
                         MessageBox.Show("Success.","Save Setting", MessageBoxButton.OK, MessageBoxImage.Information);
                         this.Close();
                         break;
@@ -45,6 +46,7 @@ namespace ToolCalibWifiForGW040H {
                         GlobalData.initSetting.ENCALIBFREQ = true;
                         GlobalData.initSetting.ENCALIBPW2G = true;
                         GlobalData.initSetting.ENCALIBPW5G = true;
+                        GlobalData.initSetting.ENWRITEBIN = true;
                         GlobalData.initSetting.ENTESTRX2G = true;
                         GlobalData.initSetting.ENTESTRX5G = true;
                         GlobalData.initSetting.ENTESTTX2G = true;

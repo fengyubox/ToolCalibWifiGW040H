@@ -59,9 +59,10 @@ namespace ToolCalibWifiForGW040H.Function {
 
         public static bool Savereviewlog(string _mac) {
             try {
+                _mac = _mac.Replace(":", "");
                 if (GlobalData.initSetting.STATION == "Sau đóng vỏ") return false;
                 if (GlobalData.datagridlogTX.Count == 0) return false;
-                string _logfile = string.Format("{0}\\{1}_{2}.csv", _logReview, _mac, DateTime.Now.ToString("yyyyMMddHHmmss"));
+                string _logfile = string.Format("{0}\\{1}_{2}{3}.csv", _logReview, _mac, DateTime.Now.ToString("yyyyMMddHHmmss"), GlobalData.initSetting.ENWRITEBIN == true ? "_NewBIN" : "");
 
                 string _title = "RANGEFREQ,ANTEN,WIFI,RATE,BANDWIDTH,CHANNEL,POWER-LIMIT,POWER-ACTUAL,EVM-MAX,EVM-ACTUAL,FREQ-ERROR,RESULT";
                 StreamWriter st = new StreamWriter(_logfile, true);

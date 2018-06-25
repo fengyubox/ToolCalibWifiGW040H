@@ -65,14 +65,19 @@ namespace ToolCalibWifiForGW040H {
             string _text = menu.Header.ToString();
             switch (_text) {
                 case "Exit": { this.Close(); break; }
-                case "Result test": {
+                case "Log test": {
                         string _Str = string.Format("{0}Logtest", AppDomain.CurrentDomain.BaseDirectory);
                         Process.Start(_Str);
                         break; }
-                case "Details": {
+                case "Log detail": {
                         string _Str = string.Format("{0}Logdetail", AppDomain.CurrentDomain.BaseDirectory);
                         Process.Start(_Str);
                         break; }
+                case "Log review": {
+                        string _Str = string.Format("{0}Logreview", AppDomain.CurrentDomain.BaseDirectory);
+                        Process.Start(_Str);
+                        break;
+                    }
                 case "Thiết lập cấu hình": {
                         configWindow cfg = new configWindow();
                         cfg.ShowDialog();
@@ -148,6 +153,7 @@ namespace ToolCalibWifiForGW040H {
                 if (!Attenuator.readFromFile()) return false;
                 if (!LimitTx.readFromFile()) return false;
                 if (!LimitRx.readFromFile()) return false;
+                if (!BIN.readFromFile()) return false;
                 return true;
             }
             catch {
@@ -181,6 +187,7 @@ namespace ToolCalibWifiForGW040H {
 
             GlobalData.logManager = new logdata(); //luu log test
             GlobalData.logManager.mac = GlobalData.testingData.MACADDRESS;
+            
 
             if (GlobalData.initSetting.STATION == "Trước đóng vỏ") {
                 Calibration calib = new Calibration(GlobalData.MODEM, GlobalData.INSTRUMENT);

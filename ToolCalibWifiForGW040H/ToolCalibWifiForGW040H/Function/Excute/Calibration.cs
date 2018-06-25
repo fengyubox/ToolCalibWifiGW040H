@@ -25,6 +25,8 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.logRegister = new logregister();
             }
 
+            GlobalData.testingData.LOGSYSTEM += string.Format("ONT MAC Address: {0}\r\n", GlobalData.testingData.MACADDRESS);
+
             //1. Calib tần số
             if (GlobalData.initSetting.ENCALIBFREQ == true) {
                 GlobalData.testingData.CALIBFREQRESULT = InitParameters.Statuses.Wait;
@@ -137,6 +139,31 @@ namespace ToolCalibWifiForGW040H.Function {
             try {
                 Stopwatch st = new Stopwatch();
                 st.Start();
+                //write defaut bin
+                if (GlobalData.initSetting.ENWRITEBIN == true) {
+                    _ti.LOGSYSTEM += "------------------------------------------------------------\r\n";
+                    _ti.LOGSYSTEM += "Thực hiện write giá trị file BIN.\r\n";
+                    if (GlobalData.ListBinRegister.Count > 0) {
+                        foreach (var item in GlobalData.ListBinRegister) {
+                            ModemTelnet.Write_Register(item.Address, item.newValue);
+                            Thread.Sleep(100);
+                            _ti.LOGSYSTEM += string.Format("Write Register: {0} = {1}\r\n", item.Address, item.newValue);
+                        }
+                    }
+                }
+                //else {
+                //    _ti.LOGSYSTEM += "------------------------------------------------------------\r\n";
+                //    _ti.LOGSYSTEM += "Thực hiện reset giá trị file BIN.\r\n";
+                //    if (GlobalData.oldListBinRegister.Count > 0) {
+                //        foreach (var item in GlobalData.oldListBinRegister) {
+                //            ModemTelnet.Write_Register(item.Address, item.Value);
+                //            Thread.Sleep(100);
+                //            _ti.LOGSYSTEM += string.Format("Write Register Back Value: {0} = {1}\r\n", item.Address, item.Value);
+                //        }
+                //    }
+                //}
+
+                //save flash
                 _ti.LOGSYSTEM += "------------------------------------------------------------\r\n";
                 _ti.LOGSYSTEM += "Thực hiện lưu vào FLASH.\r\n";
                 ModemTelnet.Write_into_Flash();

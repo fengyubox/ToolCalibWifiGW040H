@@ -62,5 +62,8 @@
     <Setting Name="stdPwAnten2" Type="System.String" Scope="User">
       <Value Profile="(Default)">-15</Value>
     </Setting>
+    <Setting Name="enWriteBIN" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

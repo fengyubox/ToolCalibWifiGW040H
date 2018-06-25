@@ -25,6 +25,7 @@ namespace ToolCalibWifiForGW040H {
             this.dgattenuator.ItemsSource = GlobalData.listAttenuator;
             this.dgwaveform.ItemsSource = GlobalData.listWaveForm;
             this.dgchannelmanagement.ItemsSource = GlobalData.listChannel;
+            this.dgBIN.ItemsSource = GlobalData.ListBinRegister;
         }
 
         private void Label_MouseDown(object sender, MouseButtonEventArgs e) {

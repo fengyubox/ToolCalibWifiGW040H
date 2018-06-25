@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToolCalibWifiForGW040H"
         mc:Ignorable="d"
-        Title="limitWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
+        Title="limitWindow" Height="700" Width="1100" WindowStartupLocation="CenterScreen" Style="{StaticResource customWindow}">
 
     <Window.Resources>
         <Style TargetType="{x:Type TabItem}">
@@ -309,6 +309,56 @@
 
                     </DataGrid>
                     
+                </TabItem>
+
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid Height="30">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Text="BIN                     " FontWeight="SemiBold"/>
+                        </Grid>
+                    </TabItem.Header>
+
+                    <DataGrid Margin="5,0,5,5" x:Name="dgBIN" 
+                                              Background="White"
+                                              ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                              CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserReorderColumns="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"
+                                              GridLinesVisibility="None"
+                                              HeadersVisibility="Column"
+                                              BorderThickness="0,0,0,0"
+                                              SelectionUnit="FullRow" SelectionMode="Extended"
+                                              >
+
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="Height" Value="25"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="FontSize" Value="13"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderBrush" Value="#FFB3B3B3"/>
+                                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                                <Setter Property="Padding" Value="3,0,0,0"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Register" Width="*" Binding="{Binding Address}"/>
+                            <DataGridTextColumn Header="Old Value" Width="*" Binding="{Binding oldValue}"/>
+                            <DataGridTextColumn Header="New Value" Width="*" Binding="{Binding newValue}"/>
+
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+
                 </TabItem>
             </TabControl>
 

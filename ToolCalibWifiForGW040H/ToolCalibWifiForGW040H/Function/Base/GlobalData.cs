@@ -14,7 +14,9 @@ namespace ToolCalibWifiForGW040H.Function {
             Attenuator.readFromFile();
             WaveForm.readFromFile();
             ChannelManagement.readFromFile();
+            BIN.readFromFile();
             TestCase.Load();
+            
         }
 
         public static int mtIndex = 0;
@@ -29,6 +31,7 @@ namespace ToolCalibWifiForGW040H.Function {
         public static List<limitrx> listLimitWifiRX = null;
         public static List<channelmanagement> listChannel = null;
         public static List<masterinformation> listMasterData = null;
+        public static List<binregister> ListBinRegister = new List<binregister>();
 
         public static logdata logManager = null;
         public static logregister logRegister = null;

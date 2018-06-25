@@ -1,0 +1,3631 @@
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu quá trình Calib tần số.
+Đang đọc thanh ghi F4,F6...
+0x00F4 = 0x00C4; 0x00F6 = 0x85C9
+F4[6:0] = 1000100; F6[5:0] = 001001
+F4[6:0]_DEC = 68; F6[5:0]_DEC = 9
+Giá trị Frequency Offset hiện tại = F4[6,0] +/- F6[5,0] = 59
+Gửi lệnh phát tín hiệu kèm Current_Freq_Offset: 59
+Đang cấu hình lần đầu cho máy đo MT8870A...
+Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo MT8870A - Offset = 59
+...
+Lấy kết quả đo lần thứ: 1
+Giá trị Frequency Error = -7210
+Frequency Error < 0 -> Cần giảm Frequency Offset
+Mỗi 1500 Khz bị lệch tương ứng với 1 giá trị Decimal => Giá trị DEC mà Current_Freq_Offset và F6[5,0] cần thay đổi = Freq_Err / 1500 = -5
+Freq_Offset_new = Current_Freq_Offset + Freq_Err/1500 = 54
+F6[5,0] cũ ở dạng DEC = 9
+F6[5,0] mới ở dạng DEC = 14
+F6_Full_Bin_New = 11001110
+Giá trị F6 mới cần truyền: CE
+iwpriv ra0 e2p F6=85CE
+-------------------------------------------
+-------------------------------------------
+Bắt đầu thực hiện Verify Frequency Error.
+Đang phát tín hiệu ở Anten 1 - Channel 6
+Frequency Error = -86
+Thời gian calib Freq : 4769 ms
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3 - 0x59
+Giá trị thanh ghi 0x59 hiện tại: 8283
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3375 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8 - 0x5A
+Giá trị thanh ghi 0x5A hiện tại: 8182
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3376 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13 - 0x5B
+Giá trị thanh ghi 0x5B hiện tại: C081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3 - 0x5F
+Giá trị thanh ghi 0x5F hiện tại: 8081
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3363 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8 - 0x60
+Giá trị thanh ghi 0x60 hiện tại: 8280
+Công suất đo được: 20 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: 8281
+Thời gian calib : 4174 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13 - 0x61
+Giá trị thanh ghi 0x61 hiện tại: C082
+Công suất đo được: 19.5 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3371 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Calib Công Suất 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184 - 0x143
+Giá trị thanh ghi 0x143 hiện tại: CBCF
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: CBCE
+Thời gian calib : 4172 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 16 - 0x144
+Giá trị thanh ghi 0x144 hiện tại: C0CB
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3366 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36 - 0x148
+Giá trị thanh ghi 0x148 hiện tại: C9C6
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C9C5
+Thời gian calib : 4169 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48 - 0x149
+Giá trị thanh ghi 0x149 hiện tại: 40C9
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3370 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52 - 0x14D
+Giá trị thanh ghi 0x14D hiện tại: C8C9
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C8C8
+Thời gian calib : 4271 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64 - 0x14E
+Giá trị thanh ghi 0x14E hiện tại: 00C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100 - 0x157
+Giá trị thanh ghi 0x157 hiện tại: C4C7
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116 - 0x158
+Giá trị thanh ghi 0x158 hiện tại: C0C4
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3368 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120 - 0x15C
+Giá trị thanh ghi 0x15C hiện tại: C7C1
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C780
+Thời gian calib : 4171 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136 - 0x15D
+Giá trị thanh ghi 0x15D hiện tại: C0C7
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C6
+Thời gian calib : 4168 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140 - 0x161
+Giá trị thanh ghi 0x161 hiện tại: C3C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3367 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157 - 0x162
+Giá trị thanh ghi 0x162 hiện tại: C0C3
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3372 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161 - 0x166
+Giá trị thanh ghi 0x166 hiện tại: C6C3
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3368 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165 - 0x167
+Giá trị thanh ghi 0x167 hiện tại: C0C6
+Công suất đo được: 18.5 (dBm)
+Độ lệch công suất: 0.5 (dBm)
+Giá trị cần truyền: C0C5
+Thời gian calib : 4168 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184 - 0x16B
+Giá trị thanh ghi 0x16B hiện tại: CBCC
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3363 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 16 - 0x16C
+Giá trị thanh ghi 0x16C hiện tại: 40CB
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3366 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36 - 0x170
+Giá trị thanh ghi 0x170 hiện tại: CAC5
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48 - 0x171
+Giá trị thanh ghi 0x171 hiện tại: 40CA
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52 - 0x175
+Giá trị thanh ghi 0x175 hiện tại: C9CA
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3370 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64 - 0x176
+Giá trị thanh ghi 0x176 hiện tại: 00C9
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3366 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100 - 0x17F
+Giá trị thanh ghi 0x17F hiện tại: C5C6
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3364 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116 - 0x180
+Giá trị thanh ghi 0x180 hiện tại: C0C5
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C6
+Thời gian calib : 4170 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120 - 0x184
+Giá trị thanh ghi 0x184 hiện tại: C7C3
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C7C4
+Thời gian calib : 4170 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136 - 0x185
+Giá trị thanh ghi 0x185 hiện tại: C0C7
+Công suất đo được: 17.5 (dBm)
+Độ lệch công suất: -0.5 (dBm)
+Giá trị cần truyền: C0C8
+Thời gian calib : 4168 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140 - 0x189
+Giá trị thanh ghi 0x189 hiện tại: C7C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3371 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157 - 0x18A
+Giá trị thanh ghi 0x18A hiện tại: C0C7
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3365 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161 - 0x18E
+Giá trị thanh ghi 0x18E hiện tại: C8C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165 - 0x18F
+Giá trị thanh ghi 0x18F hiện tại: 00C8
+Công suất đo được: 18 (dBm)
+Độ lệch công suất: 0 (dBm)
+Thời gian calib : 3377 ms
+
+------------------------------------------------------------
+Thực hiện lưu vào FLASH.
+Thời gian lưu vào FLASH : 26190 ms
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-76.5 dBm, waveform=MV887030A_ag_54_1000
+PER = -24%, Sent=1000, Received=1240
+Phán định = PASS
+Thời gian test độ nhạy thu : 3511 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-76.5 dBm, waveform=MV887030A_ag_54_1000
+PER = -13.7%, Sent=1000, Received=1137
+Phán định = PASS
+Thời gian test độ nhạy thu : 3071 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -13.6%, Sent=1000, Received=1136
+Phán định = PASS
+Thời gian test độ nhạy thu : 3069 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-74 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -23.5%, Sent=1000, Received=1235
+Phán định = PASS
+Thời gian test độ nhạy thu : 3071 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện Test Sensitivity 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-75 dBm, waveform=MV887030A_ag_54_1000
+PER = -37.9%, Sent=1000, Received=1379
+Phán định = PASS
+Thời gian test độ nhạy thu : 3096 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-75 dBm, waveform=MV887030A_ag_54_1000
+PER = -25.3%, Sent=1000, Received=1253
+Phán định = PASS
+Thời gian test độ nhạy thu : 3074 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 100
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-73 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = 8.9%, Sent=1000, Received=911
+Phán định = PASS
+Thời gian test độ nhạy thu : 3077 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 100
+Cấu hình ONT...
+Cấu hình máy đo phát tín hiệu: Power=-73 dBm, waveform=MV887030A_n_MCS7_20_1024L
+PER = -23.8%, Sent=1000, Received=1238
+Phán định = PASS
+Thời gian test độ nhạy thu : 3067 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.54 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29  dB
+Center Frequency Error = -337 Hz
+Phán định = PASS
+Thời gian verify : 2177 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.42 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.3  dB
+Center Frequency Error = -277 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.25 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -254 Hz
+Phán định = PASS
+Thời gian verify : 2159 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.21 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.8  dB
+Center Frequency Error = -331 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.2 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -302 Hz
+Phán định = PASS
+Thời gian verify : 2095 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.02 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -322 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.31 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -310 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.42 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.4  dB
+Center Frequency Error = -270 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.15 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -397 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.17 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -349 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 19.51 dBm
+EVM MAX = -25  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -354 Hz
+Phán định = PASS
+Thời gian verify : 2124 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 19.42 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -353 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.31 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -320 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.14 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -515 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.33 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.8  dB
+Center Frequency Error = -509 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.37 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -492 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.53 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.4  dB
+Center Frequency Error = -535 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.54 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.2  dB
+Center Frequency Error = -472 Hz
+Phán định = PASS
+Thời gian verify : 2166 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.62 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -438 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.69 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -534 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.64 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -520 Hz
+Phán định = PASS
+Thời gian verify : 2174 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.4 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.7  dB
+Center Frequency Error = -441 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.73 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.4  dB
+Center Frequency Error = -434 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 19.06 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -452 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 19.19 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -494 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.18 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -545 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.87 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -574 Hz
+Phán định = PASS
+Thời gian verify : 2136 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.86 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.8  dB
+Center Frequency Error = -487 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.71 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -576 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.64 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -646 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.57 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.4  dB
+Center Frequency Error = -512 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.29 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -564 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.45 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.4  dB
+Center Frequency Error = -571 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.38 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.8  dB
+Center Frequency Error = -511 Hz
+Phán định = PASS
+Thời gian verify : 2113 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 18.9 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -587 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 18.75 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -630 Hz
+Phán định = PASS
+Thời gian verify : 2095 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.96 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -525 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.81 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -550 Hz
+Phán định = PASS
+Thời gian verify : 2171 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.67 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -591 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.42 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.7  dB
+Center Frequency Error = -308 Hz
+Phán định = PASS
+Thời gian verify : 2093 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.67 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -276 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.8 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.3  dB
+Center Frequency Error = -247 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.98 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.8  dB
+Center Frequency Error = -277 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.97 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32  dB
+Center Frequency Error = -187 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 20.01 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -295 Hz
+Phán định = PASS
+Thời gian verify : 2128 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.94 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -281 Hz
+Phán định = PASS
+Thời gian verify : 2138 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.69 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.4  dB
+Center Frequency Error = -299 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.22 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.3  dB
+Center Frequency Error = -243 Hz
+Phán định = PASS
+Thời gian verify : 2130 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.41 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.3  dB
+Center Frequency Error = -373 Hz
+Phán định = PASS
+Thời gian verify : 2116 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.55 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -239 Hz
+Phán định = PASS
+Thời gian verify : 2093 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.53 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.4  dB
+Center Frequency Error = -299 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.5 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -277 Hz
+Phán định = PASS
+Thời gian verify : 2200 ms
+
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 5G.
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 184
+Power Limit = 16~20 dBm, Average Power = 17.98 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.6  dB
+Center Frequency Error = -455 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 36
+Power Limit = 16~20 dBm, Average Power = 17.75 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -619 Hz
+Phán định = PASS
+Thời gian verify : 2128 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 40
+Power Limit = 16~20 dBm, Average Power = 17.61 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -670 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 44
+Power Limit = 16~20 dBm, Average Power = 18.73 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.5  dB
+Center Frequency Error = -592 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 48
+Power Limit = 16~20 dBm, Average Power = 18.18 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.1  dB
+Center Frequency Error = -488 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 52
+Power Limit = 16~20 dBm, Average Power = 17.93 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -455 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 56
+Power Limit = 16~20 dBm, Average Power = 17.81 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.1  dB
+Center Frequency Error = -582 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 60
+Power Limit = 16~20 dBm, Average Power = 17.54 dBm
+EVM MAX = -25  dB, EVM All Carriers = -24.8  dB
+Center Frequency Error = -545 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 17.5 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.1  dB
+Center Frequency Error = -463 Hz
+Phán định = PASS
+Thời gian verify : 4207 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 64
+Power Limit = 16~20 dBm, Average Power = 18.12 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.6  dB
+Center Frequency Error = -562 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 100
+Power Limit = 16~20 dBm, Average Power = 18.1 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.2  dB
+Center Frequency Error = -653 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 104
+Power Limit = 16~20 dBm, Average Power = 17.98 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -559 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 108
+Power Limit = 16~20 dBm, Average Power = 16.69 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -504 Hz
+Phán định = PASS
+Thời gian verify : 2115 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 112
+Power Limit = 16~20 dBm, Average Power = 17.46 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -674 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 116
+Power Limit = 16~20 dBm, Average Power = 18.14 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -593 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 120
+Power Limit = 16~20 dBm, Average Power = 17.69 dBm
+EVM MAX = -25  dB, EVM All Carriers = -36.6  dB
+Center Frequency Error = -681 Hz
+Phán định = PASS
+Thời gian verify : 2133 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 124
+Power Limit = 16~20 dBm, Average Power = 17.72 dBm
+EVM MAX = -25  dB, EVM All Carriers = -35.8  dB
+Center Frequency Error = -706 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 128
+Power Limit = 16~20 dBm, Average Power = 19.88 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.9  dB
+Center Frequency Error = -516 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 132
+Power Limit = 16~20 dBm, Average Power = 18.68 dBm
+EVM MAX = -25  dB, EVM All Carriers = -26.1  dB
+Center Frequency Error = -584 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 136
+Power Limit = 16~20 dBm, Average Power = 17.85 dBm
+EVM MAX = -25  dB, EVM All Carriers = -27.1  dB
+Center Frequency Error = -522 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 140
+Power Limit = 16~20 dBm, Average Power = 18.22 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.1  dB
+Center Frequency Error = -674 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 144
+Power Limit = 16~20 dBm, Average Power = 18.86 dBm
+EVM MAX = -25  dB, EVM All Carriers = -25.4  dB
+Center Frequency Error = -562 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 149
+Power Limit = 16~20 dBm, Average Power = 17.81 dBm
+EVM MAX = -25  dB, EVM All Carriers = -33.4  dB
+Center Frequency Error = -691 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 153
+Power Limit = 16~20 dBm, Average Power = 18.51 dBm
+EVM MAX = -25  dB, EVM All Carriers = -33.1  dB
+Center Frequency Error = -451 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 157
+Power Limit = 16~20 dBm, Average Power = 18.12 dBm
+EVM MAX = -25  dB, EVM All Carriers = -33  dB
+Center Frequency Error = -600 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 161
+Power Limit = 16~20 dBm, Average Power = 18.05 dBm
+EVM MAX = -25  dB, EVM All Carriers = -33.8  dB
+Center Frequency Error = -725 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 165
+Power Limit = 16~20 dBm, Average Power = 17.97 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -586 Hz
+Phán định = PASS
+Thời gian verify : 2217 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 184
+Power Limit = 16~20 dBm, Average Power = 17.91 dBm
+EVM MAX = -25  dB, EVM All Carriers = -27  dB
+Center Frequency Error = -488 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 36
+Power Limit = 16~20 dBm, Average Power = 17.97 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -375 Hz
+Phán định = PASS
+Thời gian verify : 2329 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 40
+Power Limit = 16~20 dBm, Average Power = 17.52 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -598 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 44
+Power Limit = 16~20 dBm, Average Power = 18.6 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.8  dB
+Center Frequency Error = -405 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 18.53 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.8  dB
+Center Frequency Error = -493 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4209 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 48
+Power Limit = 16~20 dBm, Average Power = 18.07 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.6  dB
+Center Frequency Error = -354 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 17.99 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.8  dB
+Center Frequency Error = -322 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4208 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 52
+Power Limit = 16~20 dBm, Average Power = 18.2 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.7  dB
+Center Frequency Error = -606 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 18.18 dBm
+EVM MAX = -25  dB, EVM All Carriers = -23  dB
+Center Frequency Error = -418 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4221 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 56
+Power Limit = 16~20 dBm, Average Power = 17.87 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.5  dB
+Center Frequency Error = -372 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 17.86 dBm
+EVM MAX = -25  dB, EVM All Carriers = -22.4  dB
+Center Frequency Error = -452 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4203 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 60
+Power Limit = 16~20 dBm, Average Power = 17.39 dBm
+EVM MAX = -25  dB, EVM All Carriers = -24  dB
+Center Frequency Error = -332 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 17.16 dBm
+EVM MAX = -25  dB, EVM All Carriers = -21.9  dB
+Center Frequency Error = -355 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4201 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 64
+Power Limit = 16~20 dBm, Average Power = 18.13 dBm
+EVM MAX = -25  dB, EVM All Carriers = -24.2  dB
+Center Frequency Error = -587 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 16~20 dBm, Average Power = 18.17 dBm
+EVM MAX = -25  dB, EVM All Carriers = -24  dB
+Center Frequency Error = -606 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 100
+Power Limit = 16~20 dBm, Average Power = 17.84 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.4  dB
+Center Frequency Error = -522 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 104
+Power Limit = 16~20 dBm, Average Power = 17.94 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.2  dB
+Center Frequency Error = -417 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 108
+Power Limit = 16~20 dBm, Average Power = 17.68 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -370 Hz
+Phán định = PASS
+Thời gian verify : 2188 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 112
+Power Limit = 16~20 dBm, Average Power = 18.28 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -405 Hz
+Phán định = PASS
+Thời gian verify : 2120 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 116
+Power Limit = 16~20 dBm, Average Power = 18.28 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -477 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 120
+Power Limit = 16~20 dBm, Average Power = 18.17 dBm
+EVM MAX = -25  dB, EVM All Carriers = -35  dB
+Center Frequency Error = -289 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 124
+Power Limit = 16~20 dBm, Average Power = 18.08 dBm
+EVM MAX = -25  dB, EVM All Carriers = -35  dB
+Center Frequency Error = -490 Hz
+Phán định = PASS
+Thời gian verify : 2110 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 128
+Power Limit = 16~20 dBm, Average Power = 19.37 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29  dB
+Center Frequency Error = -423 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 132
+Power Limit = 16~20 dBm, Average Power = 18.76 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -539 Hz
+Phán định = PASS
+Thời gian verify : 2244 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 136
+Power Limit = 16~20 dBm, Average Power = 18.15 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.6  dB
+Center Frequency Error = -590 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 140
+Power Limit = 16~20 dBm, Average Power = 17.97 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -461 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 144
+Power Limit = 16~20 dBm, Average Power = 18.41 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -509 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 149
+Power Limit = 16~20 dBm, Average Power = 18.91 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.4  dB
+Center Frequency Error = -484 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 153
+Power Limit = 16~20 dBm, Average Power = 18.73 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -422 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 157
+Power Limit = 16~20 dBm, Average Power = 18.06 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.8  dB
+Center Frequency Error = -552 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 161
+Power Limit = 16~20 dBm, Average Power = 17.78 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -438 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 165
+Power Limit = 16~20 dBm, Average Power = 17.92 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32  dB
+Center Frequency Error = -597 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 184
+Power Limit = 19.5~23.5 dBm, Average Power = 20.55 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.5  dB
+Center Frequency Error = 39 Hz
+Phán định = PASS
+Thời gian verify : 2514 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 36
+Power Limit = 19.5~23.5 dBm, Average Power = 20.02 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.6  dB
+Center Frequency Error = 100 Hz
+Phán định = PASS
+Thời gian verify : 2377 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 40
+Power Limit = 19.5~23.5 dBm, Average Power = 19.95 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.9  dB
+Center Frequency Error = -187 Hz
+Phán định = PASS
+Thời gian verify : 2371 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 44
+Power Limit = 19.5~23.5 dBm, Average Power = 19.75 dBm
+EVM MAX = -5  dB, EVM All Carriers = -16.1  dB
+Center Frequency Error = -249 Hz
+Phán định = PASS
+Thời gian verify : 2354 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 48
+Power Limit = 19.5~23.5 dBm, Average Power = 20.31 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.5  dB
+Center Frequency Error = -132 Hz
+Phán định = PASS
+Thời gian verify : 2365 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 52
+Power Limit = 19.5~23.5 dBm, Average Power = 20.1 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.7  dB
+Center Frequency Error = -368 Hz
+Phán định = PASS
+Thời gian verify : 2397 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 56
+Power Limit = 19.5~23.5 dBm, Average Power = 20.02 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.4  dB
+Center Frequency Error = -462 Hz
+Phán định = PASS
+Thời gian verify : 2345 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 60
+Power Limit = 19.5~23.5 dBm, Average Power = 19.69 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.6  dB
+Center Frequency Error = -333 Hz
+Phán định = PASS
+Thời gian verify : 2324 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 64
+Power Limit = 19.5~23.5 dBm, Average Power = 20.08 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.8  dB
+Center Frequency Error = -470 Hz
+Phán định = PASS
+Thời gian verify : 2347 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 100
+Power Limit = 19.5~23.5 dBm, Average Power = 19.76 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.6  dB
+Center Frequency Error = -638 Hz
+Phán định = PASS
+Thời gian verify : 2349 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 104
+Power Limit = 19.5~23.5 dBm, Average Power = 19.88 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19.8  dB
+Center Frequency Error = -813 Hz
+Phán định = PASS
+Thời gian verify : 2338 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 108
+Power Limit = 19.5~23.5 dBm, Average Power = 19.05 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.5  dB
+Center Frequency Error = -717 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 19.5~23.5 dBm, Average Power = 19.21 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.1  dB
+Center Frequency Error = -744 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 4663 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 112
+Power Limit = 19.5~23.5 dBm, Average Power = 20.33 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.4  dB
+Center Frequency Error = -816 Hz
+Phán định = PASS
+Thời gian verify : 2539 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 116
+Power Limit = 19.5~23.5 dBm, Average Power = 20.77 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.9  dB
+Center Frequency Error = -926 Hz
+Phán định = PASS
+Thời gian verify : 2370 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 120
+Power Limit = 19.5~23.5 dBm, Average Power = 20.46 dBm
+EVM MAX = -5  dB, EVM All Carriers = -28.7  dB
+Center Frequency Error = -921 Hz
+Phán định = PASS
+Thời gian verify : 2369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 124
+Power Limit = 19.5~23.5 dBm, Average Power = 20.29 dBm
+EVM MAX = -5  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1096 Hz
+Phán định = PASS
+Thời gian verify : 2324 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 128
+Power Limit = 19.5~23.5 dBm, Average Power = 21.47 dBm
+EVM MAX = -5  dB, EVM All Carriers = -20.4  dB
+Center Frequency Error = -1249 Hz
+Phán định = PASS
+Thời gian verify : 2321 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 132
+Power Limit = 19.5~23.5 dBm, Average Power = 20.49 dBm
+EVM MAX = -5  dB, EVM All Carriers = -20.2  dB
+Center Frequency Error = -1095 Hz
+Phán định = PASS
+Thời gian verify : 2368 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 136
+Power Limit = 19.5~23.5 dBm, Average Power = 19.61 dBm
+EVM MAX = -5  dB, EVM All Carriers = -21.5  dB
+Center Frequency Error = -1248 Hz
+Phán định = PASS
+Thời gian verify : 2320 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 140
+Power Limit = 19.5~23.5 dBm, Average Power = 20.18 dBm
+EVM MAX = -5  dB, EVM All Carriers = -20.1  dB
+Center Frequency Error = -1265 Hz
+Phán định = PASS
+Thời gian verify : 2376 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 144
+Power Limit = 19.5~23.5 dBm, Average Power = 21.11 dBm
+EVM MAX = -5  dB, EVM All Carriers = -20.4  dB
+Center Frequency Error = -1227 Hz
+Phán định = PASS
+Thời gian verify : 2357 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 149
+Power Limit = 19.5~23.5 dBm, Average Power = 20.46 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.9  dB
+Center Frequency Error = -1332 Hz
+Phán định = PASS
+Thời gian verify : 2318 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 153
+Power Limit = 19.5~23.5 dBm, Average Power = 20.96 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -1435 Hz
+Phán định = PASS
+Thời gian verify : 2444 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 157
+Power Limit = 19.5~23.5 dBm, Average Power = 20.48 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25  dB
+Center Frequency Error = -1545 Hz
+Phán định = PASS
+Thời gian verify : 2375 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 161
+Power Limit = 19.5~23.5 dBm, Average Power = 20.47 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.5  dB
+Center Frequency Error = -1494 Hz
+Phán định = PASS
+Thời gian verify : 2320 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 1 - Channel 165
+Power Limit = 19.5~23.5 dBm, Average Power = 20.29 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.1  dB
+Center Frequency Error = -1406 Hz
+Phán định = PASS
+Thời gian verify : 2389 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 184
+Power Limit = 19.5~23.5 dBm, Average Power = 20.12 dBm
+EVM MAX = -5  dB, EVM All Carriers = -21.1  dB
+Center Frequency Error = -1060 Hz
+Phán định = PASS
+Thời gian verify : 2316 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 36
+Power Limit = 19.5~23.5 dBm, Average Power = 20.06 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.1  dB
+Center Frequency Error = -1214 Hz
+Phán định = PASS
+Thời gian verify : 2335 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 40
+Power Limit = 19.5~23.5 dBm, Average Power = 19.79 dBm
+EVM MAX = -5  dB, EVM All Carriers = -22.9  dB
+Center Frequency Error = -1427 Hz
+Phán định = PASS
+Thời gian verify : 2551 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 44
+Power Limit = 19.5~23.5 dBm, Average Power = 20.21 dBm
+EVM MAX = -5  dB, EVM All Carriers = -18.2  dB
+Center Frequency Error = -1397 Hz
+Phán định = PASS
+Thời gian verify : 2318 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 48
+Power Limit = 19.5~23.5 dBm, Average Power = 19.69 dBm
+EVM MAX = -5  dB, EVM All Carriers = -17.8  dB
+Center Frequency Error = -1325 Hz
+Phán định = PASS
+Thời gian verify : 2466 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 52
+Power Limit = 19.5~23.5 dBm, Average Power = 19.86 dBm
+EVM MAX = -5  dB, EVM All Carriers = -18  dB
+Center Frequency Error = -1319 Hz
+Phán định = PASS
+Thời gian verify : 2320 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 56
+Power Limit = 19.5~23.5 dBm, Average Power = 19.56 dBm
+EVM MAX = -5  dB, EVM All Carriers = -17.9  dB
+Center Frequency Error = -1355 Hz
+Phán định = PASS
+Thời gian verify : 2333 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 60
+Power Limit = 19.5~23.5 dBm, Average Power = 19.5 dBm
+EVM MAX = -5  dB, EVM All Carriers = -18.7  dB
+Center Frequency Error = -1089 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 19.5~23.5 dBm, Average Power = 19.46 dBm
+EVM MAX = -5  dB, EVM All Carriers = -18.7  dB
+Center Frequency Error = -1258 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 4665 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 64
+Power Limit = 19.5~23.5 dBm, Average Power = 20.08 dBm
+EVM MAX = -5  dB, EVM All Carriers = -19  dB
+Center Frequency Error = -1329 Hz
+Phán định = PASS
+Thời gian verify : 2463 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 100
+Power Limit = 19.5~23.5 dBm, Average Power = 19.77 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.2  dB
+Center Frequency Error = -1294 Hz
+Phán định = PASS
+Thời gian verify : 2358 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 104
+Power Limit = 19.5~23.5 dBm, Average Power = 19.89 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.3  dB
+Center Frequency Error = -1506 Hz
+Phán định = PASS
+Thời gian verify : 2397 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 108
+Power Limit = 19.5~23.5 dBm, Average Power = 19.78 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -1420 Hz
+Phán định = PASS
+Thời gian verify : 2321 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 112
+Power Limit = 19.5~23.5 dBm, Average Power = 20.69 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -1301 Hz
+Phán định = PASS
+Thời gian verify : 2349 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 116
+Power Limit = 19.5~23.5 dBm, Average Power = 20.85 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.3  dB
+Center Frequency Error = -1247 Hz
+Phán định = PASS
+Thời gian verify : 2371 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 120
+Power Limit = 19.5~23.5 dBm, Average Power = 21.19 dBm
+EVM MAX = -5  dB, EVM All Carriers = -26.9  dB
+Center Frequency Error = -1176 Hz
+Phán định = PASS
+Thời gian verify : 2548 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 124
+Power Limit = 19.5~23.5 dBm, Average Power = 20.73 dBm
+EVM MAX = -5  dB, EVM All Carriers = -27.7  dB
+Center Frequency Error = -1387 Hz
+Phán định = PASS
+Thời gian verify : 2369 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 128
+Power Limit = 19.5~23.5 dBm, Average Power = 21.39 dBm
+EVM MAX = -5  dB, EVM All Carriers = -22.4  dB
+Center Frequency Error = -1409 Hz
+Phán định = PASS
+Thời gian verify : 2329 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 132
+Power Limit = 19.5~23.5 dBm, Average Power = 20.61 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.3  dB
+Center Frequency Error = -1396 Hz
+Phán định = PASS
+Thời gian verify : 2315 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 136
+Power Limit = 19.5~23.5 dBm, Average Power = 20.24 dBm
+EVM MAX = -5  dB, EVM All Carriers = -23.8  dB
+Center Frequency Error = -1282 Hz
+Phán định = PASS
+Thời gian verify : 2376 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 140
+Power Limit = 19.5~23.5 dBm, Average Power = 20.28 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.5  dB
+Center Frequency Error = -1263 Hz
+Phán định = PASS
+Thời gian verify : 2321 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 144
+Power Limit = 19.5~23.5 dBm, Average Power = 20.92 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24  dB
+Center Frequency Error = -1316 Hz
+Phán định = PASS
+Thời gian verify : 2359 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 149
+Power Limit = 19.5~23.5 dBm, Average Power = 21.59 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.6  dB
+Center Frequency Error = -1413 Hz
+Phán định = PASS
+Thời gian verify : 2320 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 153
+Power Limit = 19.5~23.5 dBm, Average Power = 21.28 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.5  dB
+Center Frequency Error = -1300 Hz
+Phán định = PASS
+Thời gian verify : 2319 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 157
+Power Limit = 19.5~23.5 dBm, Average Power = 20.39 dBm
+EVM MAX = -5  dB, EVM All Carriers = -25.1  dB
+Center Frequency Error = -1551 Hz
+Phán định = PASS
+Thời gian verify : 2323 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 161
+Power Limit = 19.5~23.5 dBm, Average Power = 20.07 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.6  dB
+Center Frequency Error = -1604 Hz
+Phán định = PASS
+Thời gian verify : 2316 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS0 - BW20 - Anten 2 - Channel 165
+Power Limit = 19.5~23.5 dBm, Average Power = 20.3 dBm
+EVM MAX = -5  dB, EVM All Carriers = -24.5  dB
+Center Frequency Error = -1418 Hz
+Phán định = PASS
+Thời gian verify : 2411 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 184
+Power Limit = 15.5~19.5 dBm, Average Power = 17.54 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.3  dB
+Center Frequency Error = -1230 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.59 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.8  dB
+Center Frequency Error = -1377 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4224 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 36
+Power Limit = 15.5~19.5 dBm, Average Power = 16.9 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.6  dB
+Center Frequency Error = -1348 Hz
+Phán định = PASS
+Thời gian verify : 2151 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 40
+Power Limit = 15.5~19.5 dBm, Average Power = 16.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.9  dB
+Center Frequency Error = -1374 Hz
+Phán định = PASS
+Thời gian verify : 2093 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 44
+Power Limit = 15.5~19.5 dBm, Average Power = 18.21 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1477 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 18.2 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.8  dB
+Center Frequency Error = -1335 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4182 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 48
+Power Limit = 15.5~19.5 dBm, Average Power = 17.65 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.4  dB
+Center Frequency Error = -1292 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.64 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.7  dB
+Center Frequency Error = -1320 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4186 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 52
+Power Limit = 15.5~19.5 dBm, Average Power = 17.47 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.6  dB
+Center Frequency Error = -1399 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.52 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.5  dB
+Center Frequency Error = -1555 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4195 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 56
+Power Limit = 15.5~19.5 dBm, Average Power = 17.51 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1372 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.58 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.1  dB
+Center Frequency Error = -1353 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4332 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 60
+Power Limit = 15.5~19.5 dBm, Average Power = 17.28 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1409 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.17 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.4  dB
+Center Frequency Error = -1472 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4282 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 64
+Power Limit = 15.5~19.5 dBm, Average Power = 17.59 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1421 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.54 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.6  dB
+Center Frequency Error = -1451 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4222 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 100
+Power Limit = 15.5~19.5 dBm, Average Power = 17.4 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1428 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.3 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -1398 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4411 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 104
+Power Limit = 15.5~19.5 dBm, Average Power = 17.31 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.7  dB
+Center Frequency Error = -1255 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.29 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -1278 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4189 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 108
+Power Limit = 15.5~19.5 dBm, Average Power = 16.16 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -1259 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 112
+Power Limit = 15.5~19.5 dBm, Average Power = 17.2 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.8  dB
+Center Frequency Error = -1425 Hz
+Phán định = PASS
+Thời gian verify : 2189 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 116
+Power Limit = 15.5~19.5 dBm, Average Power = 17.75 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.9  dB
+Center Frequency Error = -1280 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 120
+Power Limit = 15.5~19.5 dBm, Average Power = 17.16 dBm
+EVM MAX = -32  dB, EVM All Carriers = -37.1  dB
+Center Frequency Error = -1211 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 124
+Power Limit = 15.5~19.5 dBm, Average Power = 16.98 dBm
+EVM MAX = -32  dB, EVM All Carriers = -37  dB
+Center Frequency Error = -1327 Hz
+Phán định = PASS
+Thời gian verify : 2141 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 128
+Power Limit = 15.5~19.5 dBm, Average Power = 19.16 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.8  dB
+Center Frequency Error = -1191 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 19.14 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.3  dB
+Center Frequency Error = -1332 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4299 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 132
+Power Limit = 15.5~19.5 dBm, Average Power = 17.97 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.4  dB
+Center Frequency Error = -1098 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 18.04 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -1141 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4196 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 136
+Power Limit = 15.5~19.5 dBm, Average Power = 17.35 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -1379 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.26 dBm
+EVM MAX = -32  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -1331 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4365 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 140
+Power Limit = 15.5~19.5 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.4  dB
+Center Frequency Error = -1306 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.4  dB
+Center Frequency Error = -1225 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4186 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 144
+Power Limit = 15.5~19.5 dBm, Average Power = 18.61 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.6  dB
+Center Frequency Error = -1208 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 18.51 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -1221 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4415 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 149
+Power Limit = 15.5~19.5 dBm, Average Power = 17.28 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.8  dB
+Center Frequency Error = -1277 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 153
+Power Limit = 15.5~19.5 dBm, Average Power = 17.91 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.5  dB
+Center Frequency Error = -1180 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 157
+Power Limit = 15.5~19.5 dBm, Average Power = 17.39 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.6  dB
+Center Frequency Error = -1159 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 161
+Power Limit = 15.5~19.5 dBm, Average Power = 17.3 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.3  dB
+Center Frequency Error = -1186 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 1 - Channel 165
+Power Limit = 15.5~19.5 dBm, Average Power = 17.12 dBm
+EVM MAX = -32  dB, EVM All Carriers = -32.9  dB
+Center Frequency Error = -1323 Hz
+Phán định = PASS
+Thời gian verify : 2090 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 184
+Power Limit = 15.5~19.5 dBm, Average Power = 17.39 dBm
+EVM MAX = -32  dB, EVM All Carriers = -30.4  dB
+Center Frequency Error = -834 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.34 dBm
+EVM MAX = -32  dB, EVM All Carriers = -30.7  dB
+Center Frequency Error = -823 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4181 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 36
+Power Limit = 15.5~19.5 dBm, Average Power = 17.09 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.6  dB
+Center Frequency Error = -984 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 40
+Power Limit = 15.5~19.5 dBm, Average Power = 16.66 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.3  dB
+Center Frequency Error = -1024 Hz
+Phán định = PASS
+Thời gian verify : 2094 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 44
+Power Limit = 15.5~19.5 dBm, Average Power = 18.07 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.9  dB
+Center Frequency Error = -1014 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 18.01 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27  dB
+Center Frequency Error = -1037 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4206 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 48
+Power Limit = 15.5~19.5 dBm, Average Power = 17.55 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.7  dB
+Center Frequency Error = -902 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.5 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.8  dB
+Center Frequency Error = -885 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4196 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 52
+Power Limit = 15.5~19.5 dBm, Average Power = 17.67 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.8  dB
+Center Frequency Error = -1062 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.63 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.9  dB
+Center Frequency Error = -1045 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4195 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 56
+Power Limit = 15.5~19.5 dBm, Average Power = 17.46 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.7  dB
+Center Frequency Error = -1003 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.45 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.6  dB
+Center Frequency Error = -921 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4282 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 60
+Power Limit = 15.5~19.5 dBm, Average Power = 17.09 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.6  dB
+Center Frequency Error = -778 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.19 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.2  dB
+Center Frequency Error = -1026 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4296 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 64
+Power Limit = 15.5~19.5 dBm, Average Power = 17.78 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.9  dB
+Center Frequency Error = -948 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 17.74 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.7  dB
+Center Frequency Error = -866 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4235 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 100
+Power Limit = 15.5~19.5 dBm, Average Power = 16.85 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.2  dB
+Center Frequency Error = -982 Hz
+Phán định = PASS
+Thời gian verify : 2094 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 104
+Power Limit = 15.5~19.5 dBm, Average Power = 15.91 dBm
+EVM MAX = -32  dB, EVM All Carriers = -25.5  dB
+Center Frequency Error = -892 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 16.95 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.8  dB
+Center Frequency Error = -894 Hz
+Phán định = PASS
+Thời gian verify : 4280 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 108
+Power Limit = 15.5~19.5 dBm, Average Power = 16.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.8  dB
+Center Frequency Error = -775 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 112
+Power Limit = 15.5~19.5 dBm, Average Power = 17.62 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.1  dB
+Center Frequency Error = -778 Hz
+Phán định = PASS
+Thời gian verify : 2091 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 116
+Power Limit = 15.5~19.5 dBm, Average Power = 17.79 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.4  dB
+Center Frequency Error = -945 Hz
+Phán định = PASS
+Thời gian verify : 2152 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 120
+Power Limit = 15.5~19.5 dBm, Average Power = 17.81 dBm
+EVM MAX = -32  dB, EVM All Carriers = -36.4  dB
+Center Frequency Error = -974 Hz
+Phán định = PASS
+Thời gian verify : 2095 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 124
+Power Limit = 15.5~19.5 dBm, Average Power = 17.53 dBm
+EVM MAX = -32  dB, EVM All Carriers = -36.2  dB
+Center Frequency Error = -1045 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 128
+Power Limit = 15.5~19.5 dBm, Average Power = 18.75 dBm
+EVM MAX = -32  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -856 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 15.5~19.5 dBm, Average Power = 18.81 dBm
+EVM MAX = -32  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -859 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4222 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 132
+Power Limit = 15.5~19.5 dBm, Average Power = 17.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33  dB
+Center Frequency Error = -983 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 136
+Power Limit = 15.5~19.5 dBm, Average Power = 17.26 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.3  dB
+Center Frequency Error = -1035 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 140
+Power Limit = 15.5~19.5 dBm, Average Power = 17.27 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34  dB
+Center Frequency Error = -893 Hz
+Phán định = PASS
+Thời gian verify : 2122 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 144
+Power Limit = 15.5~19.5 dBm, Average Power = 17.96 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.8  dB
+Center Frequency Error = -889 Hz
+Phán định = PASS
+Thời gian verify : 2177 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 149
+Power Limit = 15.5~19.5 dBm, Average Power = 18.62 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -834 Hz
+Phán định = PASS
+Thời gian verify : 2152 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 153
+Power Limit = 15.5~19.5 dBm, Average Power = 18.27 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -843 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 157
+Power Limit = 15.5~19.5 dBm, Average Power = 17.42 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.5  dB
+Center Frequency Error = -921 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 161
+Power Limit = 15.5~19.5 dBm, Average Power = 17.02 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.3  dB
+Center Frequency Error = -973 Hz
+Phán định = PASS
+Thời gian verify : 2124 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT20 - MCS9 - BW20 - Anten 2 - Channel 165
+Power Limit = 15.5~19.5 dBm, Average Power = 17.07 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.9  dB
+Center Frequency Error = -899 Hz
+Phán định = PASS
+Thời gian verify : 2154 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 184
+Power Limit = 17~21 dBm, Average Power = 17.73 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.5  dB
+Center Frequency Error = -754 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.92 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.7  dB
+Center Frequency Error = -830 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4264 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 36
+Power Limit = 17~21 dBm, Average Power = 17.07 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.7  dB
+Center Frequency Error = -766 Hz
+Phán định = PASS
+Thời gian verify : 2112 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 40
+Power Limit = 17~21 dBm, Average Power = 16.7 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -824 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 16.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.1  dB
+Center Frequency Error = -909 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 4234 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 44
+Power Limit = 17~21 dBm, Average Power = 18.15 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -944 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 18.17 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -859 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4207 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 48
+Power Limit = 17~21 dBm, Average Power = 17.98 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.9  dB
+Center Frequency Error = -789 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.97 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -986 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4202 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 52
+Power Limit = 17~21 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.4  dB
+Center Frequency Error = -834 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28  dB
+Center Frequency Error = -945 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4239 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 56
+Power Limit = 17~21 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28  dB
+Center Frequency Error = -888 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28  dB
+Center Frequency Error = -766 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4343 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 60
+Power Limit = 17~21 dBm, Average Power = 17.53 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -682 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.53 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -902 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4262 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 64
+Power Limit = 17~21 dBm, Average Power = 17.64 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -777 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.61 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.5  dB
+Center Frequency Error = -790 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4208 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 100
+Power Limit = 17~21 dBm, Average Power = 17.39 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.5  dB
+Center Frequency Error = -980 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.41 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.2  dB
+Center Frequency Error = -1093 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4230 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 104
+Power Limit = 17~21 dBm, Average Power = 17.39 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.8  dB
+Center Frequency Error = -984 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.37 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.6  dB
+Center Frequency Error = -863 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4194 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 108
+Power Limit = 17~21 dBm, Average Power = 16.35 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.1  dB
+Center Frequency Error = -820 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 16.35 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.9  dB
+Center Frequency Error = -850 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 4254 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 112
+Power Limit = 17~21 dBm, Average Power = 17.33 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -1099 Hz
+Phán định = PASS
+Thời gian verify : 2175 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 116
+Power Limit = 17~21 dBm, Average Power = 17.95 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35  dB
+Center Frequency Error = -881 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 120
+Power Limit = 17~21 dBm, Average Power = 17.42 dBm
+EVM MAX = -32  dB, EVM All Carriers = -36.7  dB
+Center Frequency Error = -842 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 124
+Power Limit = 17~21 dBm, Average Power = 17.33 dBm
+EVM MAX = -32  dB, EVM All Carriers = -36.5  dB
+Center Frequency Error = -963 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 128
+Power Limit = 17~21 dBm, Average Power = 19.13 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -1016 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 19.16 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -1012 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4265 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 132
+Power Limit = 17~21 dBm, Average Power = 18.24 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -981 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 18.25 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.8  dB
+Center Frequency Error = -882 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4209 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 136
+Power Limit = 17~21 dBm, Average Power = 17.47 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1083 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.44 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1105 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4198 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 140
+Power Limit = 17~21 dBm, Average Power = 17.8 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.9  dB
+Center Frequency Error = -989 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.78 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.9  dB
+Center Frequency Error = -889 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4200 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 144
+Power Limit = 17~21 dBm, Average Power = 18.77 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.1  dB
+Center Frequency Error = -901 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 18.8 dBm
+EVM MAX = -32  dB, EVM All Carriers = -28.3  dB
+Center Frequency Error = -889 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4197 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 149
+Power Limit = 17~21 dBm, Average Power = 17.38 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.9  dB
+Center Frequency Error = -903 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 153
+Power Limit = 17~21 dBm, Average Power = 18 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.8  dB
+Center Frequency Error = -889 Hz
+Phán định = PASS
+Thời gian verify : 2095 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 157
+Power Limit = 17~21 dBm, Average Power = 17.85 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.1  dB
+Center Frequency Error = -1067 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 161
+Power Limit = 17~21 dBm, Average Power = 17.42 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.3  dB
+Center Frequency Error = -989 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 1 - Channel 165
+Power Limit = 17~21 dBm, Average Power = 17.33 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.1  dB
+Center Frequency Error = -935 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 184
+Power Limit = 17~21 dBm, Average Power = 17.8 dBm
+EVM MAX = -32  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -692 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.78 dBm
+EVM MAX = -32  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -700 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4230 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 36
+Power Limit = 17~21 dBm, Average Power = 17.25 dBm
+EVM MAX = -32  dB, EVM All Carriers = -32.9  dB
+Center Frequency Error = -652 Hz
+Phán định = PASS
+Thời gian verify : 2140 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 40
+Power Limit = 17~21 dBm, Average Power = 16.58 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.5  dB
+Center Frequency Error = -725 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 16.62 dBm
+EVM MAX = -32  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -844 Hz
+FAIL: Power
+Phán định = FAIL
+Thời gian verify : 4254 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 44
+Power Limit = 17~21 dBm, Average Power = 18 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.3  dB
+Center Frequency Error = -787 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.99 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.4  dB
+Center Frequency Error = -647 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4437 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 48
+Power Limit = 17~21 dBm, Average Power = 17.81 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.7  dB
+Center Frequency Error = -730 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.83 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.3  dB
+Center Frequency Error = -825 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4196 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 52
+Power Limit = 17~21 dBm, Average Power = 17.96 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.4  dB
+Center Frequency Error = -803 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.97 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.5  dB
+Center Frequency Error = -694 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4284 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 56
+Power Limit = 17~21 dBm, Average Power = 17.75 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.7  dB
+Center Frequency Error = -664 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.73 dBm
+EVM MAX = -32  dB, EVM All Carriers = -26.6  dB
+Center Frequency Error = -685 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4195 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 60
+Power Limit = 17~21 dBm, Average Power = 17.36 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.5  dB
+Center Frequency Error = -662 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.39 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.3  dB
+Center Frequency Error = -666 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4210 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 64
+Power Limit = 17~21 dBm, Average Power = 17.79 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.7  dB
+Center Frequency Error = -776 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17.8 dBm
+EVM MAX = -32  dB, EVM All Carriers = -27.5  dB
+Center Frequency Error = -740 Hz
+FAIL: EVM
+Phán định = FAIL
+Thời gian verify : 4299 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 100
+Power Limit = 17~21 dBm, Average Power = 17.05 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.2  dB
+Center Frequency Error = -667 Hz
+Phán định = PASS
+Thời gian verify : 2167 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 104
+Power Limit = 17~21 dBm, Average Power = 17.08 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.3  dB
+Center Frequency Error = -928 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 108
+Power Limit = 17~21 dBm, Average Power = 16.99 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -702 Hz
+FAIL: Power
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 17 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.9  dB
+Center Frequency Error = -830 Hz
+Phán định = PASS
+Thời gian verify : 4198 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 112
+Power Limit = 17~21 dBm, Average Power = 17.89 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34  dB
+Center Frequency Error = -797 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 116
+Power Limit = 17~21 dBm, Average Power = 18.02 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.2  dB
+Center Frequency Error = -820 Hz
+Phán định = PASS
+Thời gian verify : 2164 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 120
+Power Limit = 17~21 dBm, Average Power = 18.09 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.9  dB
+Center Frequency Error = -808 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 124
+Power Limit = 17~21 dBm, Average Power = 17.88 dBm
+EVM MAX = -32  dB, EVM All Carriers = -35.6  dB
+Center Frequency Error = -837 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 128
+Power Limit = 17~21 dBm, Average Power = 18.76 dBm
+EVM MAX = -32  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -972 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 18.74 dBm
+EVM MAX = -32  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -958 Hz
+Phán định = PASS
+Thời gian verify : 4279 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 132
+Power Limit = 17~21 dBm, Average Power = 18.09 dBm
+EVM MAX = -32  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -986 Hz
+FAIL: EVM
+RETRY = 1
+Power Limit = 17~21 dBm, Average Power = 18.05 dBm
+EVM MAX = -32  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -799 Hz
+Phán định = PASS
+Thời gian verify : 4219 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 136
+Power Limit = 17~21 dBm, Average Power = 17.52 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.2  dB
+Center Frequency Error = -811 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 140
+Power Limit = 17~21 dBm, Average Power = 17.22 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.7  dB
+Center Frequency Error = -955 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 144
+Power Limit = 17~21 dBm, Average Power = 18.19 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.2  dB
+Center Frequency Error = -721 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 149
+Power Limit = 17~21 dBm, Average Power = 18.69 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.4  dB
+Center Frequency Error = -787 Hz
+Phán định = PASS
+Thời gian verify : 2140 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 153
+Power Limit = 17~21 dBm, Average Power = 18.41 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.7  dB
+Center Frequency Error = -759 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 157
+Power Limit = 17~21 dBm, Average Power = 17.97 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34.3  dB
+Center Frequency Error = -941 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 161
+Power Limit = 17~21 dBm, Average Power = 17.11 dBm
+EVM MAX = -32  dB, EVM All Carriers = -33.4  dB
+Center Frequency Error = -802 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+5G - RFIO1 - 802.11acHT80 - MCS9 - BW80 - Anten 2 - Channel 165
+Power Limit = 17~21 dBm, Average Power = 17.25 dBm
+EVM MAX = -32  dB, EVM All Carriers = -34  dB
+Center Frequency Error = -823 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+[NG] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 871 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.35 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -1888 Hz
+Phán định = PASS
+Thời gian verify : 2541 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.28 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1864 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.1 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -1886 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.03 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -1876 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.03 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1865 Hz
+Phán định = PASS
+Thời gian verify : 2156 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 18.83 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -1806 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.12 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1823 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.2 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -1755 Hz
+Phán định = PASS
+Thời gian verify : 2148 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 18.89 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1726 Hz
+Phán định = PASS
+Thời gian verify : 2363 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 18.97 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -1767 Hz
+Phán định = PASS
+Thời gian verify : 2153 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 19.31 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -1705 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 19.23 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1786 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.17 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.8  dB
+Center Frequency Error = -1767 Hz
+Phán định = PASS
+Thời gian verify : 2137 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 18.96 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -1689 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.13 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -1682 Hz
+Phán định = PASS
+Thời gian verify : 2123 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.19 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.4  dB
+Center Frequency Error = -1711 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.36 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.1  dB
+Center Frequency Error = -1714 Hz
+Phán định = PASS
+Thời gian verify : 2110 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.35 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31  dB
+Center Frequency Error = -1610 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.46 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1680 Hz
+Phán định = PASS
+Thời gian verify : 2135 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.52 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -1661 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.47 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -1614 Hz
+Phán định = PASS
+Thời gian verify : 2113 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.18 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -1642 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.57 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1617 Hz
+Phán định = PASS
+Thời gian verify : 2137 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.88 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -1630 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.99 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.3  dB
+Center Frequency Error = -1563 Hz
+Phán định = PASS
+Thời gian verify : 2157 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.03 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -1675 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.82 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1589 Hz
+Phán định = PASS
+Thời gian verify : 2141 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.76 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1560 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.64 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1580 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.54 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1603 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.5 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -1576 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.22 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1656 Hz
+Phán định = PASS
+Thời gian verify : 2134 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.35 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1639 Hz
+Phán định = PASS
+Thời gian verify : 2157 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.3 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1645 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 18.82 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -1601 Hz
+Phán định = PASS
+Thời gian verify : 2157 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 18.7 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -1608 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.91 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -1666 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.75 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -1593 Hz
+Phán định = PASS
+Thời gian verify : 2136 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.62 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1570 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.3 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.8  dB
+Center Frequency Error = -1175 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.53 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -1245 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.65 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -1245 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.86 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.2  dB
+Center Frequency Error = -1215 Hz
+Phán định = PASS
+Thời gian verify : 2157 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.84 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.9  dB
+Center Frequency Error = -1141 Hz
+Phán định = PASS
+Thời gian verify : 2185 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.86 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -1169 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.78 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.1  dB
+Center Frequency Error = -1139 Hz
+Phán định = PASS
+Thời gian verify : 2107 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.55 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.1  dB
+Center Frequency Error = -1225 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.1 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -1212 Hz
+Phán định = PASS
+Thời gian verify : 2180 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.28 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.2  dB
+Center Frequency Error = -1183 Hz
+Phán định = PASS
+Thời gian verify : 2208 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.41 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.7  dB
+Center Frequency Error = -1170 Hz
+Phán định = PASS
+Thời gian verify : 2096 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.44 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.6  dB
+Center Frequency Error = -1128 Hz
+Phán định = PASS
+Thời gian verify : 2095 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.35 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -1182 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 114 sec.
+
+[OK] Telnet to ONT Successful.
+------------------------------------------------------------
+Bắt đầu thực hiện quá trình Verify tín hiệu 2G.
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.5 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1417 Hz
+Phán định = PASS
+Thời gian verify : 2149 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.39 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.2  dB
+Center Frequency Error = -1242 Hz
+Phán định = PASS
+Thời gian verify : 2646 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.23 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -1359 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.13 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1352 Hz
+Phán định = PASS
+Thời gian verify : 2130 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.1 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -1306 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 18.89 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -1351 Hz
+Phán định = PASS
+Thời gian verify : 2109 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.18 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1330 Hz
+Phán định = PASS
+Thời gian verify : 2104 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.29 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.1  dB
+Center Frequency Error = -1246 Hz
+Phán định = PASS
+Thời gian verify : 2106 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 18.98 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -1317 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.06 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1345 Hz
+Phán định = PASS
+Thời gian verify : 2110 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 19.36 dBm
+EVM MAX = -25  dB, EVM All Carriers = -28.9  dB
+Center Frequency Error = -1317 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 19.32 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.4  dB
+Center Frequency Error = -1416 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.22 dBm
+EVM MAX = -25  dB, EVM All Carriers = -29.5  dB
+Center Frequency Error = -1430 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.02 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.8  dB
+Center Frequency Error = -1503 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.19 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -1477 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.2 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -1434 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.39 dBm
+EVM MAX = -25  dB, EVM All Carriers = -31  dB
+Center Frequency Error = -1456 Hz
+Phán định = PASS
+Thời gian verify : 2108 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.4 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1378 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.52 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1453 Hz
+Phán định = PASS
+Thời gian verify : 2101 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.58 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.8  dB
+Center Frequency Error = -1445 Hz
+Phán định = PASS
+Thời gian verify : 2154 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.5 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.6  dB
+Center Frequency Error = -1392 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.22 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.7  dB
+Center Frequency Error = -1420 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.61 dBm
+EVM MAX = -25  dB, EVM All Carriers = -30.4  dB
+Center Frequency Error = -1406 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.92 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32  dB
+Center Frequency Error = -1425 Hz
+Phán định = PASS
+Thời gian verify : 2102 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 19.03 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32  dB
+Center Frequency Error = -1469 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11g - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 19.04 dBm
+EVM MAX = -25  dB, EVM All Carriers = -32  dB
+Center Frequency Error = -1427 Hz
+Phán định = PASS
+Thời gian verify : 2111 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.82 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.7  dB
+Center Frequency Error = -1422 Hz
+Phán định = PASS
+Thời gian verify : 2129 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.84 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1499 Hz
+Phán định = PASS
+Thời gian verify : 2129 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.66 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.2  dB
+Center Frequency Error = -1444 Hz
+Phán định = PASS
+Thời gian verify : 2131 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.6 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.9  dB
+Center Frequency Error = -1484 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.52 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -1466 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.24 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.9  dB
+Center Frequency Error = -1464 Hz
+Phán định = PASS
+Thời gian verify : 2092 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.39 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.4  dB
+Center Frequency Error = -1469 Hz
+Phán định = PASS
+Thời gian verify : 2105 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.33 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1458 Hz
+Phán định = PASS
+Thời gian verify : 2209 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 18.81 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.1  dB
+Center Frequency Error = -1435 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 18.74 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30.5  dB
+Center Frequency Error = -1471 Hz
+Phán định = PASS
+Thời gian verify : 2094 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.91 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.3  dB
+Center Frequency Error = -1466 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.77 dBm
+EVM MAX = -28  dB, EVM All Carriers = -29.6  dB
+Center Frequency Error = -1520 Hz
+Phán định = PASS
+Thời gian verify : 2098 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 1 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.65 dBm
+EVM MAX = -28  dB, EVM All Carriers = -30  dB
+Center Frequency Error = -1594 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 1
+Power Limit = 17.5~21.5 dBm, Average Power = 19.33 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.5  dB
+Center Frequency Error = -1150 Hz
+Phán định = PASS
+Thời gian verify : 2465 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 2
+Power Limit = 17.5~21.5 dBm, Average Power = 19.58 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -1140 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 3
+Power Limit = 17.5~21.5 dBm, Average Power = 19.68 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.1  dB
+Center Frequency Error = -1187 Hz
+Phán định = PASS
+Thời gian verify : 2127 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 4
+Power Limit = 17.5~21.5 dBm, Average Power = 19.88 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -1189 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 5
+Power Limit = 17.5~21.5 dBm, Average Power = 19.86 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.7  dB
+Center Frequency Error = -1110 Hz
+Phán định = PASS
+Thời gian verify : 2264 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 6
+Power Limit = 17.5~21.5 dBm, Average Power = 19.89 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.6  dB
+Center Frequency Error = -1186 Hz
+Phán định = PASS
+Thời gian verify : 2114 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 7
+Power Limit = 17.5~21.5 dBm, Average Power = 19.83 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.4  dB
+Center Frequency Error = -1209 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 8
+Power Limit = 17.5~21.5 dBm, Average Power = 19.6 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -1164 Hz
+Phán định = PASS
+Thời gian verify : 2123 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 9
+Power Limit = 17.5~21.5 dBm, Average Power = 19.13 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31.5  dB
+Center Frequency Error = -1134 Hz
+Phán định = PASS
+Thời gian verify : 2099 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 10
+Power Limit = 17.5~21.5 dBm, Average Power = 19.34 dBm
+EVM MAX = -28  dB, EVM All Carriers = -31  dB
+Center Frequency Error = -1176 Hz
+Phán định = PASS
+Thời gian verify : 2103 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 11
+Power Limit = 17.5~21.5 dBm, Average Power = 18.46 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.6  dB
+Center Frequency Error = -1097 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 12
+Power Limit = 17.5~21.5 dBm, Average Power = 18.46 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.8  dB
+Center Frequency Error = -1119 Hz
+Phán định = PASS
+Thời gian verify : 2100 ms
+
+*************************************************************************
+2G - RFIO1 - 802.11nHT20 - MCS7 - BW20 - Anten 2 - Channel 13
+Power Limit = 17.5~21.5 dBm, Average Power = 18.38 dBm
+EVM MAX = -28  dB, EVM All Carriers = -32.9  dB
+Center Frequency Error = -1177 Hz
+Phán định = PASS
+Thời gian verify : 2097 ms
+
+[OK] ĐÃ HOÀN THÀNH.
+Tổng thời gian test: 114 sec.
+

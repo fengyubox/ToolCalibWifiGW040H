@@ -57,12 +57,14 @@ namespace ToolCalibWifiForGW040H.Function {
             }
         }
 
-        public static bool Savereviewlog(string _mac) {
+        public static bool Savereviewlog(string _mac, string _result) {
             try {
                 _mac = _mac.Replace(":", "");
-                if (GlobalData.initSetting.STATION == "Sau đóng vỏ") return false;
+                //if (GlobalData.initSetting.STATION == "Sau đóng vỏ") return false;
                 if (GlobalData.datagridlogTX.Count == 0) return false;
-                string _logfile = string.Format("{0}\\{1}_{2}{3}.csv", _logReview, _mac, DateTime.Now.ToString("yyyyMMddHHmmss"), GlobalData.initSetting.ENWRITEBIN == true ? "_NewBIN" : "");
+                if (Directory.Exists(string.Format("{0}\\{1}", _logReview, DateTime.Now.ToString("yyyyMMdd"))) == false) Directory.CreateDirectory(string.Format("{0}\\{1}", _logReview, DateTime.Now.ToString("yyyyMMdd")));
+
+                string _logfile = string.Format("{0}\\{1}_{2}{3}_{4}.csv", string.Format("{0}\\{1}", _logReview, DateTime.Now.ToString("yyyyMMdd")), _mac, DateTime.Now.ToString("HHmmss"), GlobalData.initSetting.ENWRITEBIN == true ? "_NewBIN" : "", _result);
 
                 string _title = "RANGEFREQ,ANTEN,WIFI,RATE,BANDWIDTH,CHANNEL,POWER-LIMIT,POWER-ACTUAL,EVM-MAX,EVM-ACTUAL,FREQ-ERROR,RESULT";
                 StreamWriter st = new StreamWriter(_logfile, true);

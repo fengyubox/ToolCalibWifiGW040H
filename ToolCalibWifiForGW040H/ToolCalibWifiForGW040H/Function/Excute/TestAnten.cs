@@ -54,7 +54,7 @@ namespace ToolCalibWifiForGW040H.Function
         string Name_measurement = GlobalData.initSetting.INSTRUMENT;
         string RF_Port = GlobalData.initSetting.RFPORT;
 
-        private bool Verify_Signal(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument, string standard_2G_5G, string Mode, string MCS, string BW, string Channel_Freq, string Anten, double Attenuator) {
+        private bool Verify_Signal(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument, string standard_2G_5G, string Mode, string MCS, string BW, string Channel_Freq, string Anten, double Attenuator, ref string _pw, ref string _evm, ref string _freqerr, ref string _pstd, ref string _evmmax) {
             try {
                 standard_2G_5G = int.Parse(Channel_Freq.Substring(0, 4)) > 3000 ? "5G" : "2G";
                 string Result_Measure_temp = "";
@@ -108,14 +108,25 @@ namespace ToolCalibWifiForGW040H.Function
                 FreqErr_measure_temp = Decimal.Parse(Result_Measure_temp.Split(',')[7], System.Globalization.NumberStyles.Float);
 
                 //Hiển thị kết quả đo lên giao diện phần mềm (RichTextBox)
-                _ti.LOGSYSTEM += "Average Power = " + Pwr_measure_temp.ToString("0.##") + " dBm\r\n";
-                _ti.LOGSYSTEM += string.Format("EVM All Carriers = {0} {1}", EVM_measure_temp.ToString("0.##"), _wifi == "b" ? " %" : " dB\r\n");
-                _ti.LOGSYSTEM += "Center Frequency Error = " + FreqErr_measure_temp.ToString("0.##") + " Hz\r\n";
+                _limit.power_MAX = "25";
+                _limit.power_MIN = Anten == "1" ? GlobalData.initSetting.STDPWANTEN1 : GlobalData.initSetting.STDPWANTEN2;
+
+                _pw = Pwr_measure_temp.ToString("0.##");
+                _evm = EVM_measure_temp.ToString("0.##");
+                _freqerr = FreqErr_measure_temp.ToString("0.##");
+                _pstd = string.Format("{0}~{1}", _limit.power_MIN, _limit.power_MAX);
+                _evmmax = string.Format("{0}", _limit.evm_MAX);
+
+                _ti.LOGSYSTEM += "Power Limit = " + _pstd + " dBm, Average Power = " + _pw + " dBm\r\n";
+                _ti.LOGSYSTEM += string.Format("EVM MAX = {0} {2}, EVM All Carriers = {1} {2}\r\n", _evmmax, _evm, _wifi == "b" ? " %" : " dB");
+                _ti.LOGSYSTEM += "Center Frequency Error = " + _freqerr + " Hz\r\n";
+
+                //_ti.LOGSYSTEM += "Average Power = " + Pwr_measure_temp.ToString("0.##") + " dBm\r\n";
+                //_ti.LOGSYSTEM += string.Format("EVM All Carriers = {0} {1}", EVM_measure_temp.ToString("0.##"), _wifi == "b" ? " %" : " dB\r\n");
+                //_ti.LOGSYSTEM += "Center Frequency Error = " + FreqErr_measure_temp.ToString("0.##") + " Hz\r\n";
 
                 //So sánh kết quả đo với giá trị tiêu chuẩn
                 bool _result = false, _powerOK = false, _evmOK = false, _freqerrOK = true;
-                _limit.power_MAX = "25";
-                _limit.power_MIN = Anten == "1" ? GlobalData.initSetting.STDPWANTEN1 : GlobalData.initSetting.STDPWANTEN2;
                 _powerOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.power_MAX, _limit.power_MIN, Pwr_measure_temp);
                 _evmOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.evm_MAX, _limit.evm_MIN, EVM_measure_temp);
                 _freqerrOK = FunctionSupport.Compare_TXMeasure_With_Standard(_limit.freqError_MAX, _limit.freqError_MIN, FreqErr_measure_temp);
@@ -175,9 +186,10 @@ namespace ToolCalibWifiForGW040H.Function
                 _ti.LOGSYSTEM += "*************************************************************************\r\n";
                 _ti.LOGSYSTEM += string.Format("{0} - {1} - {2} - MCS{3} - BW{4} - Anten {5} - Channel {6}\r\n", _CarrierFreq, RF_Port, FunctionSupport.Get_WifiStandard_By_Mode(item.wifi, item.bandwidth), item.rate, 20 * Math.Pow(2, double.Parse(item.bandwidth)), item.anten, _channelNo);
                 int count = 0;
+                string _Power = "", _Evm = "", _FreqErr = "", _pStd = "", _eMax = "";
                 REP:
                 count++;
-                if (!Verify_Signal(_ti, ModemTelnet, instrument, _CarrierFreq, item.wifi, item.rate, item.bandwidth, _eqChannel, item.anten, _attenuator)) {
+                if (!Verify_Signal(_ti, ModemTelnet, instrument, _CarrierFreq, item.wifi, item.rate, item.bandwidth, _eqChannel, item.anten, _attenuator, ref _Power, ref _Evm, ref _FreqErr, ref _pStd, ref _eMax)) {
                     if (count < 2) {
                         _ti.LOGSYSTEM += string.Format("RETRY = {0}\r\n", count);
                         goto REP;
@@ -189,6 +201,26 @@ namespace ToolCalibWifiForGW040H.Function
 
                 }
                 else _ti.LOGSYSTEM += string.Format("Phán định = {0}\r\n", "PASS");
+
+                App.Current.Dispatcher.Invoke(new Action(() => {
+                    string _w = "", _bw = "";
+                    switch (item.wifi) {
+                        case "0": { _w = "802.11b"; break; }
+                        case "1": { _w = "802.11g"; break; }
+                        case "2": { _w = "802.11a"; break; }
+                        case "3": { _w = "802.11n"; break; }
+                        case "4": { _w = "802.11ac"; break; }
+                    }
+                    switch (item.bandwidth) {
+                        case "0": { _bw = "20"; break; }
+                        case "1": { _bw = "40"; break; }
+                        case "2": { _bw = "80"; break; }
+                        case "3": { _bw = "160"; break; }
+
+                    }
+                    GlobalData.datagridlogTX.Add(new logreviewtx() { rangeFreq = _CarrierFreq, Anten = item.anten, wifiStandard = _w, Rate = "MCS" + item.rate, Bandwidth = _bw, Channel = _channelNo, Result = result == true ? "PASS" : "FAIL", averagePower = _Power, centerFreqError = _FreqErr, Evm = _Evm, powerStd = _pStd, evmMAX = _eMax });
+                }));
+
                 st.Stop();
                 _ti.LOGSYSTEM += string.Format("Thời gian verify : {0} ms\r\n", st.ElapsedMilliseconds);
                 _ti.LOGSYSTEM += "\r\n";

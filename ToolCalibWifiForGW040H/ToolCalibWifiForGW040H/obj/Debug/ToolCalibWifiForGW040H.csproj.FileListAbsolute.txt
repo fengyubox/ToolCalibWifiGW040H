@@ -103,7 +103,6 @@ C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\To
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\bin\Debug\NationalInstruments.NiLmClientDLL.dll
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.csprojResolveAssemblyReference.cache
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\Asset\Resources\Button.baml
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\Asset\Resources\CheckBox.baml
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\Asset\Resources\Combobox.baml
@@ -149,3 +148,4 @@ C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\To
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\About.baml
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\limitAntenWindow.g.cs
 C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\SubWindow\limitAntenWindow.baml
+C:\Users\anhho\source\repos\GitHub\ToolCalibWifiGW040H\ToolCalibWifiForGW040H\ToolCalibWifiForGW040H\obj\Debug\ToolCalibWifiForGW040H.csprojAssemblyReference.cache

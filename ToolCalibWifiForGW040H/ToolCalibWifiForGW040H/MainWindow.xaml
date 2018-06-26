@@ -46,7 +46,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" Background="#FFFFFF">
-                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Version 1.0.0.2"/>
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Version 1.0.0.3"/>
                 <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
             </Grid>
             
@@ -64,7 +64,7 @@
                     </MenuItem>
                     <MenuItem FontSize="13" Height="24" Header="Setting" FontWeight="SemiBold">
                         <MenuItem Header="Thiết lập máy đo" FontWeight="Bold" Click="MenuItem_Click"/>
-                        <MenuItem Header="Thiết lập suy hao" FontWeight="Bold" Click="MenuItem_Click"/>
+                        <MenuItem x:Name="miAtten" Header="Thiết lập suy hao" FontWeight="Bold" Click="MenuItem_Click"/>
                         <Separator/>
                         <MenuItem Header="Thiết lập cấu hình" Click="MenuItem_Click"/>
                         <MenuItem Header="Thiết lập tiêu chuẩn" Click="MenuItem_Click"/>

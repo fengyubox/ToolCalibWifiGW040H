@@ -25,12 +25,14 @@ namespace ToolCalibWifiForGW040H.Function {
                 GlobalData.logRegister = new logregister();
             }
 
-            GlobalData.testingData.LOGSYSTEM += string.Format("ONT MAC Address: {0}\r\n", GlobalData.testingData.MACADDRESS);
-
             //1. Calib tần số
             if (GlobalData.initSetting.ENCALIBFREQ == true) {
                 GlobalData.testingData.CALIBFREQRESULT = InitParameters.Statuses.Wait;
-                bool ret = Calibrate_Freq(GlobalData.testingData, _modem, _instrument);
+                int count = 0;
+                REP:
+                count++;
+                bool ret = Calibrate_Freq(GlobalData.testingData, _modem, _instrument, count);
+                if (ret == false && count < 3) goto REP;
                 GlobalData.logManager.calibFreqResult = ret == true ? "PASS" : "FAIL";
                 GlobalData.testingData.CALIBFREQRESULT = GlobalData.logManager.calibFreqResult;
                 if (ret == false) {
@@ -186,7 +188,7 @@ namespace ToolCalibWifiForGW040H.Function {
         #region CALIB FREQUENCY
 
         //OK
-        private bool Calibrate_Freq(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument) {
+        private bool Calibrate_Freq(testinginfo _ti, ModemTelnet ModemTelnet, Instrument instrument, int retry) {
             Stopwatch st = new Stopwatch();
             st.Start();
             _ti.LOGSYSTEM += "------------------------------------------------------------\r\n";
@@ -255,101 +257,101 @@ namespace ToolCalibWifiForGW040H.Function {
                     if (_index > 20) break;
                 }
                 if (_configInstrIsOk == false) return false;
-               
+
                 _ti.LOGSYSTEM += string.Format("Đang phát tín hiệu ở Anten 1 - Channel 6 - Máy đo {0} - Offset = {1}", Name_measurement, Current_Freq_Offset) + "\r\n";
                 ModemTelnet.CalibFrequency_SendCommand("1", "7", "0", "6", "1", Current_Freq_Offset); //(mode,rate,bw,channel,anten,freqOffset)
                                                                                                       //Thread.Sleep(500);
-                for (int i = 0; i < 2; i++) {
-                    Freq_Err = instrument.config_Instrument_get_FreqErr("RFB", "g"); //Lệnh đọc giá trị về từ máy đo
-                                                                                     //MessageBox.Show(Freq_Err);
-                    _ti.LOGSYSTEM += "..." + "\r\n";
-                    _ti.LOGSYSTEM += "Lấy kết quả đo lần thứ: " + (i + 1).ToString() + "\r\n";
-                    if (!Freq_Err.Contains("999")) {
-                        if (Convert.ToDouble(Freq_Err) > -2000 && Convert.ToDouble(Freq_Err) < 2000) {
-                            _ti.LOGSYSTEM += "Frequency Err = " + Freq_Err + "\r\n";
-                            _ti.LOGSYSTEM += "Frequency Error đã đạt Target." + "\r\n";
-                            _ti.LOGSYSTEM += "---------------------------------" + "\r\n";
-                            FreOffset_new = Decimal.Parse(Current_Freq_Offset);
-                            //Result_FreqErr_Calib = "PASS";
-                            break;
-                        }
-                        else {
-                            _ti.LOGSYSTEM += "Giá trị Frequency Error = " + Freq_Err + "\r\n";
-                            if (Convert.ToDouble(Freq_Err) < 0)
-                                _ti.LOGSYSTEM += "Frequency Error < 0 -> Cần giảm Frequency Offset" + "\r\n";
-                            else
-                                _ti.LOGSYSTEM += "Frequency Error > 0 -> Cần tăng Frequency Offset" + "\r\n";
-
-                            _ti.LOGSYSTEM += "Mỗi 1500 Khz bị lệch tương ứng với 1 giá trị Decimal => Giá trị DEC mà Current_Freq_Offset và F6[5,0] cần thay đổi = Freq_Err / 1500 = " + Math.Round((Decimal.Parse(Freq_Err)) / 1500) + "\r\n"; //2350                  
-                            FreOffset_new = Math.Round(Decimal.Parse(Current_Freq_Offset) + Math.Round(Decimal.Parse(Freq_Err) / 1500)); //2350
-                            _ti.LOGSYSTEM += "Freq_Offset_new = Current_Freq_Offset + Freq_Err/1500 = " + FreOffset_new + "\r\n";
-                            string F6_DEC = FunctionSupport.HextoDec(F6.Substring(4, 2));
-                            string F6_toBin = "";
-                            if (Int32.Parse(F6_DEC) == 0) {
-                                F6_toBin = "00000000";
-                            }
-                            else {
-                                F6_toBin = FunctionSupport.DECtoBin(Int32.Parse(F6_DEC));
-                            }
-                            string F6_5_0_old = F6_toBin.Substring(2);
-                            Decimal F6_5_0_old_toDEC = Convert.ToInt32(F6_5_0_old, 2);
-                            _ti.LOGSYSTEM += "F6[5,0] cũ ở dạng DEC = " + F6_5_0_old_toDEC + "\r\n";
-
-                            //F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
-                            if (FreOffset_new > F4_6_0_DEC) {
-                                F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
-                            }
-                            else {
-                                F6_5_0_new_DEC = F4_6_0_DEC - FreOffset_new;
-                            }
-
-                            //F6_5_0_new_DEC = Math.Round(F6_5_0_old_toDEC - (Decimal.Parse(Freq_Err) / 1500)); //2350
-                            _ti.LOGSYSTEM += "F6[5,0] mới ở dạng DEC = " + F6_5_0_new_DEC + "\r\n";
-                            string F6_full_new_BIN = "";
-                            F7 = F6.Substring(2, 2);
-
-                            if (FreOffset_new < Convert.ToDecimal(Current_Freq_Offset)) {
-                                F6_full_new_BIN = FunctionSupport.KiemtraF6("Can Giam", Int32.Parse(F6_5_0_new_DEC.ToString()));
-                                _ti.LOGSYSTEM += "F6_Full_Bin_New = " + F6_full_new_BIN + "\r\n";
-                                _ti.LOGSYSTEM += "Giá trị F6 mới cần truyền: " + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n"; ;
-
-                                _ti.LOGSYSTEM += "iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
-                                ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN));
-                                //break;
-                            }
-                            else if (FreOffset_new > Convert.ToDecimal(Current_Freq_Offset)) {
-                                F6_full_new_BIN = FunctionSupport.KiemtraF6("Can Tang", Int32.Parse(F6_5_0_new_DEC.ToString()));
-                                _ti.LOGSYSTEM += "F6_Full_Bin_New = " + F6_full_new_BIN + "\r\n";
-                                _ti.LOGSYSTEM += "Giá trị F6 mới cần truyền: " + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
-
-                                _ti.LOGSYSTEM += "iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
-                                ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN));
-                                //break;
-                            }
-                            else {
-                                ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F6);
-                                //break;
-                            }
-                            _ti.LOGSYSTEM += "-------------------------------------------" + "\r\n";
-                            //_ti.LOGSYSTEM += "Thực hiện Write to Flash.");
-                            //Save_Flash();
-
-                            _ti.LOGSYSTEM += "-------------------------------------------" + "\r\n";
-                            _ti.LOGSYSTEM += "Bắt đầu thực hiện Verify Frequency Error." + "\r\n";
-                            _ti.LOGSYSTEM += string.Format("Đang phát tín hiệu ở Anten 1 - Channel 6") + "\r\n";
-                            ModemTelnet.CalibFrequency_SendCommand("1", "7", "0", "6", "1", FreOffset_new.ToString()); //(mode,rate,bw,channel,anten,freqOffset)
-                            Freq_Err = instrument.config_Instrument_get_FreqErr("RFB", "g"); //Lệnh đọc giá trị về từ máy đo
-                            _ti.LOGSYSTEM += "Frequency Error = " + Freq_Err + "\r\n";
-                            break;
-                        }
+                                                                                                      //for (int i = 0; i < 2; i++) {
+                Freq_Err = instrument.config_Instrument_get_FreqErr("RFB", "g"); //Lệnh đọc giá trị về từ máy đo
+                                                                                 //MessageBox.Show(Freq_Err);
+                _ti.LOGSYSTEM += "..." + "\r\n";
+                _ti.LOGSYSTEM += "Lấy kết quả đo lần thứ: " + retry.ToString() + "\r\n";
+                if (!Freq_Err.Contains("999")) {
+                    if (Convert.ToDouble(Freq_Err) > -2000 && Convert.ToDouble(Freq_Err) < 2000) {
+                        _ti.LOGSYSTEM += "Frequency Err = " + Freq_Err + "\r\n";
+                        _ti.LOGSYSTEM += "Frequency Error đã đạt Target." + "\r\n";
+                        _ti.LOGSYSTEM += "---------------------------------" + "\r\n";
+                        FreOffset_new = Decimal.Parse(Current_Freq_Offset);
+                        //Result_FreqErr_Calib = "PASS";
+                        //break;
                     }
                     else {
-                        continue;
+                        _ti.LOGSYSTEM += "Giá trị Frequency Error = " + Freq_Err + "\r\n";
+                        if (Convert.ToDouble(Freq_Err) < 0)
+                            _ti.LOGSYSTEM += "Frequency Error < 0 -> Cần giảm Frequency Offset" + "\r\n";
+                        else
+                            _ti.LOGSYSTEM += "Frequency Error > 0 -> Cần tăng Frequency Offset" + "\r\n";
+
+                        _ti.LOGSYSTEM += "Mỗi 1500 Khz bị lệch tương ứng với 1 giá trị Decimal => Giá trị DEC mà Current_Freq_Offset và F6[5,0] cần thay đổi = Freq_Err / 1500 = " + Math.Round((Decimal.Parse(Freq_Err)) / 1500) + "\r\n"; //2350                  
+                        FreOffset_new = Math.Round(Decimal.Parse(Current_Freq_Offset) + Math.Round(Decimal.Parse(Freq_Err) / 1500)); //2350
+                        _ti.LOGSYSTEM += "Freq_Offset_new = Current_Freq_Offset + Freq_Err/1500 = " + FreOffset_new + "\r\n";
+                        string F6_DEC = FunctionSupport.HextoDec(F6.Substring(4, 2));
+                        string F6_toBin = "";
+                        if (Int32.Parse(F6_DEC) == 0) {
+                            F6_toBin = "00000000";
+                        }
+                        else {
+                            F6_toBin = FunctionSupport.DECtoBin(Int32.Parse(F6_DEC));
+                        }
+                        string F6_5_0_old = F6_toBin.Substring(2);
+                        Decimal F6_5_0_old_toDEC = Convert.ToInt32(F6_5_0_old, 2);
+                        _ti.LOGSYSTEM += "F6[5,0] cũ ở dạng DEC = " + F6_5_0_old_toDEC + "\r\n";
+
+                        //F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
+                        if (FreOffset_new > F4_6_0_DEC) {
+                            F6_5_0_new_DEC = FreOffset_new - F4_6_0_DEC;
+                        }
+                        else {
+                            F6_5_0_new_DEC = F4_6_0_DEC - FreOffset_new;
+                        }
+
+                        //F6_5_0_new_DEC = Math.Round(F6_5_0_old_toDEC - (Decimal.Parse(Freq_Err) / 1500)); //2350
+                        _ti.LOGSYSTEM += "F6[5,0] mới ở dạng DEC = " + F6_5_0_new_DEC + "\r\n";
+                        string F6_full_new_BIN = "";
+                        F7 = F6.Substring(2, 2);
+
+                        if (FreOffset_new < Convert.ToDecimal(Current_Freq_Offset)) {
+                            F6_full_new_BIN = FunctionSupport.KiemtraF6("Can Giam", Int32.Parse(F6_5_0_new_DEC.ToString()));
+                            _ti.LOGSYSTEM += "F6_Full_Bin_New = " + F6_full_new_BIN + "\r\n";
+                            _ti.LOGSYSTEM += "Giá trị F6 mới cần truyền: " + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n"; ;
+
+                            _ti.LOGSYSTEM += "iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
+                            ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN));
+                            //break;
+                        }
+                        else if (FreOffset_new > Convert.ToDecimal(Current_Freq_Offset)) {
+                            F6_full_new_BIN = FunctionSupport.KiemtraF6("Can Tang", Int32.Parse(F6_5_0_new_DEC.ToString()));
+                            _ti.LOGSYSTEM += "F6_Full_Bin_New = " + F6_full_new_BIN + "\r\n";
+                            _ti.LOGSYSTEM += "Giá trị F6 mới cần truyền: " + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
+
+                            _ti.LOGSYSTEM += "iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN) + "\r\n";
+                            ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F7 + FunctionSupport.BintoHexOnly(F6_full_new_BIN));
+                            //break;
+                        }
+                        else {
+                            ModemTelnet.WriteLine("iwpriv ra0 e2p F6=" + F6);
+                            //break;
+                        }
+                        _ti.LOGSYSTEM += "-------------------------------------------" + "\r\n";
+                        //_ti.LOGSYSTEM += "Thực hiện Write to Flash.");
+                        //Save_Flash();
+
+                        _ti.LOGSYSTEM += "-------------------------------------------" + "\r\n";
+                        _ti.LOGSYSTEM += "Bắt đầu thực hiện Verify Frequency Error." + "\r\n";
+                        _ti.LOGSYSTEM += string.Format("Đang phát tín hiệu ở Anten 1 - Channel 6") + "\r\n";
+                        ModemTelnet.CalibFrequency_SendCommand("1", "7", "0", "6", "1", FreOffset_new.ToString()); //(mode,rate,bw,channel,anten,freqOffset)
+                        Freq_Err = instrument.config_Instrument_get_FreqErr("RFB", "g"); //Lệnh đọc giá trị về từ máy đo
+                        _ti.LOGSYSTEM += "Frequency Error = " + Freq_Err + "\r\n";
+                        //break;
                     }
                 }
+                else {
+                    //continue;
+                }
+                //}
                 st.Stop();
                 _ti.LOGSYSTEM += string.Format("Thời gian calib Freq : {0} ms\r\n", st.ElapsedMilliseconds);
-                return true;
+                return Math.Abs(Convert.ToDouble(Freq_Err)) < 2000;
             }
             catch {
                 st.Stop();
@@ -746,7 +748,7 @@ namespace ToolCalibWifiForGW040H.Function {
                 _ti.LOGSYSTEM += "*************************************************************************\r\n";
                 _ti.LOGSYSTEM += string.Format("{0} - {1} - {2} - MCS{3} - BW{4} - Anten {5} - Channel {6}\r\n", _CarrierFreq, RF_Port, FunctionSupport.Get_WifiStandard_By_Mode(item.wifi, item.bandwidth), item.rate, 20 * Math.Pow(2, double.Parse(item.bandwidth)), item.anten, _channelNo);
                 int count = 0;
-                string _Power = "", _Evm = "", _FreqErr = "", _pStd ="", _eMax ="";
+                string _Power = "", _Evm = "", _FreqErr = "", _pStd = "", _eMax = "";
                 bool _kq = true;
                 REP:
                 count++;

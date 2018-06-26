@@ -34,6 +34,7 @@ namespace ToolCalibWifiForGW040H {
             this.spAfter.Visibility = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? Visibility.Collapsed : Visibility.Visible;
             this.lblTitle.Content = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? "PHẦN MỀM CALIBRATION + TEST WIFI ONT GW040H" : "PHẦN MỀM TEST ANTEN WIFI ONT GW040H";
             this.miMaster.IsEnabled = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? true : false;
+            this.miAtten.IsEnabled = GlobalData.initSetting.STATION == "Trước đóng vỏ" ? true : false;
 
             timer = new DispatcherTimer();
             timer.Interval = new TimeSpan(0, 0, 0, 0, 500);
@@ -216,7 +217,7 @@ namespace ToolCalibWifiForGW040H {
             if (GlobalData.logManager != null) {
                 LogFile.Savetestlog(GlobalData.logManager);
                 LogFile.Savedetaillog(GlobalData.testingData.LOGSYSTEM);
-                LogFile.Savereviewlog(GlobalData.logManager.mac);
+                LogFile.Savereviewlog(GlobalData.logManager.mac, GlobalData.testingData.TOTALRESULT);
             }
             if (GlobalData.logRegister != null) {
                 GlobalData.logRegister.macaddress = GlobalData.logManager.mac;

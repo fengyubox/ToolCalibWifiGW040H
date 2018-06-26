@@ -39,6 +39,7 @@ namespace ToolCalibWifiForGW040H.Function
                 }
                 else {
                     GlobalData.testingData.LOGSYSTEM = "[OK] Telnet to ONT Successful.\r\n";
+                    GlobalData.testingData.LOGSYSTEM += string.Format("ONT MAC Address: {0}\r\n", GlobalData.testingData.MACADDRESS);
 
                     if (GlobalData.initSetting.INSTRUMENT == "E6640A") {
                         GlobalData.INSTRUMENT = new E6640A_VISA(GlobalData.initSetting.VISAADDRESS);

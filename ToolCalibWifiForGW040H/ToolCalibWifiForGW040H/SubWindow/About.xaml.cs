@@ -22,6 +22,16 @@ namespace ToolCalibWifiForGW040H {
             listHist.Add(new history() { ID = "1", VERSION = "1.0.0.0", CONTENT = "- Phát hành lần đầu", DATE = "14/04/2018", CHANGETYPE = "Tạo mới", PERSON = "Hồ Đức Anh" });
             listHist.Add(new history() { ID = "2", VERSION = "1.0.0.1", CONTENT = "- Tích hợp tool test anten sau đóng vỏ", DATE = "29/05/2018", CHANGETYPE = "Chỉnh sửa", PERSON = "Hồ Đức Anh" });
             listHist.Add(new history() { ID = "3", VERSION = "1.0.0.2", CONTENT = "- Cho phép test anten ở băng tần 5G", DATE = "08/06/2018", CHANGETYPE = "Chỉnh sửa", PERSON = "Hồ Đức Anh" });
+
+            listHist.Add(new history() {
+                ID = "4",
+                VERSION = "1.0.0.3",
+                CONTENT = "- Bỏ đo suy hao test anten\n" +
+                          "- Calib tần số retry 3 lần (nếu tần số đo được sau calib > 2000Hz hoặc <-2000Hz )",
+                DATE = "26/06/2018",
+                CHANGETYPE = "Chỉnh sửa",
+                PERSON = "Hồ Đức Anh"
+            });
             this.GridAbout.ItemsSource = listHist;
         }
 

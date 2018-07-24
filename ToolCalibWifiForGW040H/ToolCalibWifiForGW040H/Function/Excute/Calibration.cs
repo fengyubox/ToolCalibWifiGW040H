@@ -486,8 +486,8 @@ namespace ToolCalibWifiForGW040H.Function {
                     instrument.config_Instrument_Channel(Channel_Freq, ref _error);
                     ModemTelnet.Read_Register(Register.Split('x')[1]);
 
-                    for (int i = 0; i < 6; i++) {
-                        if (i == 0 || i == 1 || i == 2) {
+                    for (int i = 0; i < 2; i++) {
+                        if (i == 0) {
                             if (Standard_2G_or_5G == "2G") {
                                 instrument.config_Instrument_get_Power("RFB", "g");
                                 Power_Measure = FunctionSupport.RoundDecimal(Convert.ToDouble(instrument.config_Instrument_get_Power("RFB", "g")) + Attenuator);
@@ -505,7 +505,7 @@ namespace ToolCalibWifiForGW040H.Function {
                                 _ti.LOGSYSTEM += "Công suất đo được: " + Power_Measure + " (dBm)" + "\r\n";
                             }
                         }
-                        if (i == 3 || i == 4 || i == 5) {
+                        if (i == 1) {
                             if (Standard_2G_or_5G == "2G") {
                                 instrument.config_Instrument_get_Power("VID", "g");
                                 Power_Measure = FunctionSupport.RoundDecimal(Convert.ToDouble(instrument.config_Instrument_get_Power("VID", "g")) + Attenuator);
@@ -574,6 +574,8 @@ namespace ToolCalibWifiForGW040H.Function {
                 _ti.LOGSYSTEM += string.Format("Bắt đầu thực hiện quá trình Calib Công Suất {0}.\r\n", _CarrierFreq);
                 list = _CarrierFreq == "2G" ? GlobalData.listCalibPower2G : GlobalData.listCalibPower5G;
                 string _error = "";
+                bool _result = true;
+
                 instrument.config_Instrument_Total(RF_Port, "g", ref _error);
 
                 if (list.Count == 0) return true;
@@ -591,12 +593,13 @@ namespace ToolCalibWifiForGW040H.Function {
                     count++;
                     if (!Calibrate_Pwr_Detail(_ti, ModemTelnet, instrument, _CarrierFreq, RF_Port, item.anten, _eqChannel, item.register, _attenuator)) {
                         if (count < 3) goto REP;
+                        _result = false;
                     }
                     st.Stop();
                     _ti.LOGSYSTEM += string.Format("Thời gian calib : {0} ms\r\n", st.ElapsedMilliseconds);
                     _ti.LOGSYSTEM += "\r\n";
                 }
-                return true;
+                return _result;
             }
             catch {
                 return false;

@@ -26,12 +26,15 @@ namespace ToolCalibWifiForGW040H {
             listHist.Add(new history() {
                 ID = "4",
                 VERSION = "1.0.0.3",
-                CONTENT = "- Bỏ đo suy hao test anten\n" +
-                          "- Calib tần số retry 3 lần (nếu tần số đo được sau calib > 2000Hz hoặc <-2000Hz )",
-                DATE = "26/06/2018",
+                CONTENT = "- Bỏ đo suy hao test anten 26/06\n" +
+                          "- Calib tần số retry 3 lần (nếu tần số đo được sau calib > 2000Hz hoặc <-2000Hz ) 26/06\n" +
+                          "- Trước writeflash, thiết lập công suất wifi 2G chuẩn 802.11n:MCS7 = 18 dBm\n(sửa file BIN : CA từ 8181 -> 8381) 24/07\n" + 
+                          "- Thay đổi tiêu chuẩn test anten WIFI: EVM min -10dB, FreqErr: -60kHz -> +60kHz 30/07",
+                DATE = "30/07/2018",
                 CHANGETYPE = "Chỉnh sửa",
                 PERSON = "Hồ Đức Anh"
             });
+
             this.GridAbout.ItemsSource = listHist;
         }
 

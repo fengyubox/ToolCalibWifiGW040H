@@ -46,7 +46,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" Background="#FFFFFF">
-                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Version 1.0.0.3"/>
+                <Label VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" FontSize="12" Content="Version 1.0.0.4"/>
                 <Label MouseDown="Label_MouseDown" Width="50" HorizontalContentAlignment="Right" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="Black" FontSize="17" Margin="0,-5,5,0" Content="X"/>
             </Grid>
             

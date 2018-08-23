@@ -35,6 +35,16 @@ namespace ToolCalibWifiForGW040H {
                 PERSON = "Hồ Đức Anh"
             });
 
+            listHist.Add(new history() {
+                ID = "5",
+                VERSION = "1.0.0.4",
+                CONTENT = "- Tách file tiêu chuẩn TX WIFI trạm anten và calib riêng biệt :\nCalib:TxLimit-Config-NewBIN.csv <> Anten:TxLimit-Config-Anten.csv",
+                DATE = "31/07/2018",
+                CHANGETYPE = "Chỉnh sửa",
+                PERSON = "Hồ Đức Anh"
+            });
+
+
             this.GridAbout.ItemsSource = listHist;
         }
 
